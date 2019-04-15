@@ -5,6 +5,9 @@ package leetcode4;
  */
 public class Solution {
 
+    /**
+     * 合并两个有序数组，然后求中位数（O（max(n, m)））
+     */
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 
         double ret = 0;

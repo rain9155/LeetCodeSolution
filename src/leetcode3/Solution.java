@@ -14,7 +14,7 @@ public class Solution {
         int count = 0, t;
         List<Character> list = new ArrayList<Character>();
         //1、2个for循环取s的子字符串集合
-        for(int i = 0; i < s.length() - 1; i++){
+        for(int i = 0; i < s.length(); i++){
             for(int j = i; j < s.length(); j++){
                 //第3个for循环判断s的子字符串是否符合（1、不含有重复元素的条件）
                 list.clear();
