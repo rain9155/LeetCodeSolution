@@ -7,6 +7,10 @@ package leetcode10;
  * '*' 匹配零个或多个前面的元素。
  */
 public class Solution {
+
+    /**
+     * 递归实现
+     */
     public boolean isMatch(String s, String p) {
 
         //如果都为空则匹配成功
