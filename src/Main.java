@@ -1,10 +1,11 @@
-import leetcode14.Solution;
+import leetcode15.Solution;
 
 public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.print(solution.longestCommonPrefix(new String[]{"","",""}));
+        int nums[] = {-1, 0, 1, 2, -1, -4};
+        System.out.println(solution.threeSum2(nums));
     }
 
 
