@@ -1,4 +1,4 @@
-package leetcode3;
+package medium.leetcode3;
 
 import java.util.*;
 

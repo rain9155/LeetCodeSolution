@@ -1,4 +1,4 @@
-package leetcode8;
+package medium.leetcode8;
 
 /**
  * 将字符串转换成整数。

@@ -1,4 +1,4 @@
-package leetcode9;
+package easy.leetcode9;
 
 /**
  * 判断一个数是否是回文数

@@ -1,4 +1,4 @@
-package leetcode14;
+package easy.leetcode14;
 
 /**
  * 查找字符串数组中的最长公共前缀
