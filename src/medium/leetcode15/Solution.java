@@ -30,9 +30,10 @@ public class Solution {
     }
 
     /**
+     * O(n^2)
      * 先排序，定义三个指针，i，j，k，遍历i，
      * 那么这个问题就可以转化为在i之后的数组中寻找 nums[j] + nums[k] = 0 - nums[i] 这个问题，
-     * 也就将三数之和问题转变为二数之和, 用双指针遍历求两数之和。O(n^2)
+     * 也就将三数之和问题转变为二数之和, 用双指针遍历求两数之和。
      */
     public List<List<Integer>> threeSum2(int[] nums) {
         List<List<Integer>> ret = new ArrayList<List<Integer>>();
