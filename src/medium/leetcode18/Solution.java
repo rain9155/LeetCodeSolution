@@ -1,8 +1,6 @@
 package medium.leetcode18;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * 四数之和:
@@ -15,12 +13,10 @@ public class Solution {
      * 先排序，四数和转为三数和，三数和转为两数和，两数和用双指针法:O(n^3)
      */
     public List<List<Integer>> fourSum(int[] nums, int target) {
-        List<List<Integer>> ret = new ArrayList<List<Integer>>();
         Arrays.sort(nums);
+        Set<List<Integer>> set = new HashSet<List<Integer>>();
         for(int i = 0; i < nums.length - 3; i++){
-            if(i == 0 || (i > 0 && nums[i] != nums[i - 1])){
                 for(int j = i + 1; j < nums.length - 2; j++){
-                    if(j == i + 1 || (j > i + 1 && nums[j] != nums[j - 1])){
                         int start = j + 1;
                         int end = nums.length - 1;
                         int sum = target - nums[i] - nums[j];
@@ -28,25 +24,19 @@ public class Solution {
                             int temp = nums[start] + nums[end];
                             if(temp == sum){
                                 List<Integer> list = Arrays.asList(nums[i], nums[j], nums[start], nums[end]);
-                                ret.add(list);
-                                while (start < end && nums[start] == nums[start + 1]) start++;
-                                while (end > start && nums[end] == nums[end - 1]) end--;
+                                set.add(list);
                                 start++;
                                 end--;
                             }else if(temp < sum){
-                                while (start < end && nums[start] == nums[start + 1]) start++;
                                 start++;
                             }else {
-                                while (end > start && nums[end] == nums[end - 1]) end--;
                                 end--;
                             }
                         }
-                    }
-                }
-            }
 
+                }
         }
-        return ret;
+        return  new ArrayList<List<Integer>>(set);
     }
 
 }
