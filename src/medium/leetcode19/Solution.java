@@ -1,6 +1,6 @@
 package medium.leetcode19;
 
-import java.util.List;
+import common.ListNode;
 
 /**
  * 删除链表的倒数第N个节:
@@ -76,36 +76,6 @@ public class Solution {
         delete.next = null;
 
         return head;
-    }
-
-
-
-    public ListNode initList(int[] nums){
-        ListNode p = null, head = null;
-        int len = nums.length;
-        int i = 0;
-        while (i < len){
-            if(i == 0) {
-                p = new ListNode(nums[i]);
-                head = p;
-                i++;
-                continue;
-            }
-            p.next = new ListNode(nums[i]);
-            p = p.next;
-            i++;
-        }
-        return head;
-    }
-
-    public void printList(ListNode head){
-        ListNode p = head;
-        while (p != null){
-            System.out.print(p.val);
-            if(p.next != null) System.out.print(" -> ");
-            p = p.next;
-        }
-        System.out.println();
     }
 
 }
