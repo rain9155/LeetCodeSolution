@@ -1,16 +1,13 @@
-import easy.leetcode26.Solution;
+import easy.leetcode28.Solution;
 
 public class Main {
 
     public static void main(String[] args) {
 
         Solution solution = new Solution();
-        int[] nums = {1, 2, 3};
-        int len = solution.removeDuplicates2(nums);
-        System.out.println(len);
-        for(int i = 0; i < len; i++){
-            System.out.print(nums[i]  + ", ");
-        }
+       String str1 = "hello";
+       String str2 = "ll";
+       System.out.println(solution.strStr2(str1, str2));
     }
 
 
