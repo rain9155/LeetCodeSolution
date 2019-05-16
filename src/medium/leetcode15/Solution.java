@@ -1,5 +1,7 @@
 package medium.leetcode15;
 
+import common.Utils;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -15,7 +17,7 @@ public class Solution {
      */
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> ret = new ArrayList<List<Integer>>();
-        sort(nums);
+        Utils.sort(nums);
         for(int i = 0; i < nums.length; i++){
             for(int j = i + 1; j < nums.length; j++){
                 for(int t = j + 1; t < nums.length; t++){
@@ -68,19 +70,6 @@ public class Solution {
         return ret;
     }
 
-    /**
-     * 直接插入排序
-     */
-    private void sort(int[] nums){
-        for(int i = 1; i < nums.length; i++){
-           int j = i - 1;
-           int v = nums[i];
-           while (j >= 0 && nums[j] > v){
-              nums[j + 1] = nums[j];
-              j--;
-           }
-           nums[j + 1] = v;
-        }
-    }
+
 
 }
