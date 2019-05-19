@@ -1,10 +1,14 @@
-import easy.leetcode38.Solution;
+import easy.leetcode66.Solution;
 
 public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.countAndSay(7));
+        int[] nums = {9, 9, 9};
+        nums = solution.plusOne(nums);
+        for(int num : nums){
+            System.out.print(num + "  ");
+        }
     }
 
 
