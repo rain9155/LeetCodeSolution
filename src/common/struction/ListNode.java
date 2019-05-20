@@ -1,4 +1,4 @@
-package common;
+package common.struction;
 
 /**
  * list结点

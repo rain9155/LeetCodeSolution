@@ -1,6 +1,6 @@
 package easy.leetcode21;
 
-import common.ListNode;
+import common.struction.ListNode;
 
 /**
  *  合并两个有序链表

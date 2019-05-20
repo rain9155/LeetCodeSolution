@@ -1,9 +1,11 @@
 package common;
 
+import common.struction.ListNode;
+
 /**
  * 创建打印List的帮助类
  */
-public class ListHelper {
+public class List {
 
     /**
      * 给定一个数组，初始化一个链表

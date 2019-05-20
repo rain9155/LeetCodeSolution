@@ -1,6 +1,6 @@
 package medium.leetcode19;
 
-import common.ListNode;
+import common.struction.ListNode;
 
 /**
  * 删除链表的倒数第N个节:

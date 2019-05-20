@@ -16,6 +16,9 @@ package easy.leetcode66;
  */
 public class Solution {
 
+    /**
+     * 从digits最后一位开始加一，判断，如果 < 10 则表示没有产生进位直接返回，否则产生进位，把进位加到下一个数子
+     */
     public int[] plusOne(int[] digits) {
         int len = digits.length;
         int carry = 0;
@@ -39,6 +42,7 @@ public class Solution {
             int i = 1;
             for(int num : temp){
                 digits[i] = num;
+                i++;
             }
         }
         return digits;

@@ -1,6 +1,6 @@
 package medium.leetcode24;
 
-import common.ListNode;
+import common.struction.ListNode;
 
 /**
  * 两两交换链表中的节点:
