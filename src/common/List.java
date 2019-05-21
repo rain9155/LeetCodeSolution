@@ -3,7 +3,7 @@ package common;
 import common.struction.ListNode;
 
 /**
- * 创建打印List的帮助类
+ * 链表
  */
 public class List {
 

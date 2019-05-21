@@ -27,11 +27,14 @@ import common.struction.TreeNode;
  */
 public class Solution {
 
+    /**
+     * 递归比较左右子树，如果出现不相等的情况就返回false
+     */
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if(p == null && q == null) return true;
         if(p == null) return false;
         if(q == null) return false;
-        if(p.val == q.val) return true;
+        if(p.val != q.val) return false;
         boolean isLeft = isSameTree(p.left, q.left);
         boolean isRight = isSameTree(p.right, q.right);
         return isLeft && isRight;
