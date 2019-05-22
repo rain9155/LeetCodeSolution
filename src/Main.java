@@ -1,11 +1,15 @@
 import common.List;
-import medium.leetcode29.Solution;
+import medium.leetcode31.Solution;
 
 public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.divide2(-2147483648, 2));
+        int[] nums = {1, 5, 1};
+        solution.nextPermutation(nums);
+        for(int num : nums){
+            System.out.print(num + "  ");
+        }
     }
 
 

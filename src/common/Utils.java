@@ -10,7 +10,7 @@ public class Utils {
      * @param nums 待排序的数组
      */
     public static void sort(int[] nums){
-        if(nums == null || nums.length  == 0) return;
+        if(nums == null || nums.length  < 2) return;
         for(int i = 1; i < nums.length; i++){
             int j = i - 1;
             int v = nums[i];
@@ -19,6 +19,23 @@ public class Utils {
                 j--;
             }
             nums[j + 1] = v;
+        }
+    }
+
+    /**
+     * 冒泡排序
+     * @param nums 待排序的数组
+     * @param start 要排序的起始位置
+     */
+    public static void sorts(int[] nums, int start){
+        for(int i = start; i < nums.length; i++){
+            for(int j = start; j < nums.length - 1 - i + start; j++){
+                if(nums[j] > nums[j + 1]){
+                    int temp = nums[j];
+                    nums[j] = nums[j + 1];
+                    nums[j + 1] = temp;
+                }
+            }
         }
     }
 
