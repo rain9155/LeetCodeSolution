@@ -17,7 +17,7 @@ public class Solution {
      */
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> ret = new ArrayList<List<Integer>>();
-        Utils.sort(nums);
+        Utils.insertionSort(nums);
         for(int i = 0; i < nums.length; i++){
             for(int j = i + 1; j < nums.length; j++){
                 for(int t = j + 1; t < nums.length; t++){

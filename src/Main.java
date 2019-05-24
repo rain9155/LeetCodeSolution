@@ -1,15 +1,13 @@
 import common.List;
-import medium.leetcode31.Solution;
+import common.Utils;
+import medium.leetcode34.Solution;
 
 public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] nums = {1, 5, 1};
-        solution.nextPermutation(nums);
-        for(int num : nums){
-            System.out.print(num + "  ");
-        }
+        int[] nums = {5};
+        Utils.printNums(solution.searchRange(nums, 5));
     }
 
 

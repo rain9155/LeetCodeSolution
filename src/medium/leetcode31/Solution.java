@@ -34,12 +34,12 @@ public class Solution {
                 }
                 nums[i] = nums[j];
                 nums[j] = temp;
-                Utils.sorts(nums, i + 1);
+                Utils.bubbSorts(nums, i + 1);
                 break;
             }
             i--;
         }
-        if(i < 0) Utils.sorts(nums, 0);
+        if(i < 0) Utils.bubbSorts(nums, 0);
     }
 
 
