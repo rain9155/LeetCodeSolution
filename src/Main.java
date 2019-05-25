@@ -1,13 +1,13 @@
-import common.List;
 import common.Utils;
-import medium.leetcode34.Solution;
+import medium.leetcode43.Solution;
+
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] nums = {5};
-        Utils.printNums(solution.searchRange(nums, 5));
+        System.out.println(solution.multiply("123", "456"));
     }
 
 

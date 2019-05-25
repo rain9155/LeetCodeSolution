@@ -1,6 +1,5 @@
 package medium.leetcode29;
 
-import org.omg.PortableInterceptor.INACTIVE;
 
 /**
  * 两数相除:
