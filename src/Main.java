@@ -1,5 +1,4 @@
-import common.Utils;
-import medium.leetcode43.Solution;
+import medium.leetcode47.Solution;
 
 import java.util.List;
 
@@ -7,7 +6,11 @@ public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.multiply("123", "456"));
+        int[] nums = {1, 1, 2};
+        List<List<Integer>> ret = solution.permuteUnique(nums);
+        for(List<Integer> list : ret){
+            System.out.println(list);
+        }
     }
 
 
