@@ -1,4 +1,4 @@
-import medium.leetcode50.Solution;
+import medium.leetcode55.Solution;
 
 import java.util.List;
 
@@ -6,7 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.myPow5(2, Integer.MIN_VALUE));
+        int[] nums = {5, 2, 0, 0};
+        System.out.print(solution.canJump(nums));
+
     }
 
 
