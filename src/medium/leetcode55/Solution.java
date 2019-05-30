@@ -16,21 +16,18 @@ package medium.leetcode55;
  */
 public class Solution {
 
+    /**
+     * O（n）
+     * 用一个max记录当前能到达的最大跳数，然后每次比较是否大于当前索引i，如果小于，表示之前的最大跳数到达不了i位置，返回false，如果大于，就会跳出循环，表示跳出了数组，返回true
+     */
     public boolean canJump(int[] nums) {
         if(nums == null || nums.length == 0) return false;
         int i = 0;
-        int max = 0;
-        while (i < nums.length - 1){
-            max = nums[i];
-            for(int j = i + 1; j <= nums[i] + i && j < nums.length; j++){
-                if(nums[j] >= max){
-                    max = nums[j];
-                    i = j;
-                    break;
-                }
-            }
-            i += max;
-            if(i < nums.length - 1 && nums[i] == 0) return false;
+        int max = 0;//用一个max记录当前能到达的最大跳数
+        while (i < nums.length){
+            if(max < i) return false;//之前最大的跳数都跳不到这里，肯定跳不出数组
+            max = Math.max(max, nums[i] + i);
+            i++;
         }
         return true;
     }

@@ -69,6 +69,8 @@ public class Utils {
     public static void printNums(int[] nums){
       for(int num : nums)
           System.out.print(num + "  ");
+        System.out.println();
+
     }
 
 
