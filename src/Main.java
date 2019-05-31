@@ -1,5 +1,5 @@
 import common.Utils;
-import medium.leetcode56.Solution;
+import medium.leetcode60.Solution;
 
 import java.util.List;
 
@@ -7,13 +7,6 @@ public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[][] nums = {{2,3},{4,5},{6,7},{8,9},{1,10}};
-        nums = solution.merge(nums);
-        for(int[] num : nums) {
-            Utils.printNums(num);
-        }
-
+        System.out.println(solution.getPermutation2(3, 3));
     }
-
-
 }
