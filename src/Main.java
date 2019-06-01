@@ -1,12 +1,15 @@
 import common.Utils;
-import medium.leetcode60.Solution;
-
-import java.util.List;
+import common.struction.ListNode;
+import medium.leetcode61.Solution;
+import common.List;
 
 public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.getPermutation2(3, 3));
+        List list = new List();
+        ListNode head = list.initList(new int[]{1, 2, 3});
+        list.printList(head);
+        list.printList(solution.rotateRight(head, 7));
     }
 }
