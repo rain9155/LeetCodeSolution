@@ -39,6 +39,7 @@ public class Solution {
         int cur = 1;
         p1 = head;
         ListNode p2 = null, ret = head;
+        //下面找断点，并旋转链表
         while (p1 != null){
             if(cur == rotate){
                 ret = p1.next;
