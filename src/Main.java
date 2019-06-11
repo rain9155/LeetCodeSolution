@@ -1,18 +1,18 @@
 import common.Utils;
-import medium.leetcode75.Solution;
+import medium.leetcode78.Solution;
 
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.net.Socket;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] nums = {2, 0, 2, 1, 1, 0};
-        solution.sortColors2(nums);
-        Utils.printNums(nums);
+        List<List<Integer>> ret = solution.subsets(new int[]{1, 2, 3});
+        for(List<Integer> list : ret){
+            for(Integer num : list){
+                System.out.print(num + "  ");
+            }
+            System.out.println();
+        }
     }
 }
