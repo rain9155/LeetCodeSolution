@@ -1,20 +1,12 @@
 import common.Utils;
-import medium.leetcode79.Solution;
-
-import java.io.IOException;
-import java.net.*;
-import java.util.List;
+import medium.leetcode81.Solution;
 
 public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        char[][] broad = {
-                {'A', 'B', 'C', 'E'},
-                {'S', 'F', 'C', 'S'},
-                {'A', 'D', 'E', 'E'}
-        };
-        System.out.println(solution.exist(broad, "SEE"));
+        int[] nums = {1, 3, 1, 1, 1};
+        System.out.print(solution.search(nums, 3));
 
 
 //        String locAddress = "{\"code\":0,\"user\":{\"ip\":\"10.1.1.229\",\"name\":\"rain\"}}";
