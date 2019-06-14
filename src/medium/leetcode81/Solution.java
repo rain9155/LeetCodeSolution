@@ -30,7 +30,7 @@ public class Solution {
             if(nums[mid] == target){
                 return true;
             }
-            if(nums[mid] == nums[start] && nums[mid] == nums[end]){//极端情况，头尾和中间都相等，让start和end同时移动，直到打破相等的情况
+            if(nums[mid] == nums[start] && nums[mid] == nums[end]){//极端情况，头尾和中间都相等，让start和end同时移动，直到打破相等的情况, 让一边出现有序
                 start++;
                 end--;
             }else if(nums[mid] < nums[start]){//旋转点在mid的左边
