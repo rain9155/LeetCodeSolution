@@ -1,14 +1,15 @@
-import common.List;
-import common.Utils;
-import medium.leetcode86.Solution;
+import medium.leetcode89.Solution;
+
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] nums = {1, 4, 3, 2, 5, 2};
-        List list = new List();
-        list.printList(solution.partition(list.initList(nums), 3));
+        List<Integer> ret = solution.grayCode(3);
+        for(int num : ret){
+            System.out.println(num);
+        }
 
 //        String locAddress = "{\"code\":0,\"user\":{\"ip\":\"10.1.1.229\",\"name\":\"rain\"}}";
 //        String broadcastAddress = "10.1.1.255";
