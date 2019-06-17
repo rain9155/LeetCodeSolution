@@ -1,4 +1,4 @@
-import medium.leetcode89.Solution;
+import medium.leetcode90.Solution;
 
 import java.util.List;
 
@@ -6,10 +6,40 @@ public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        List<Integer> ret = solution.grayCode(3);
-        for(int num : ret){
-            System.out.println(num);
+        int[] nums = {1, 2, 2};
+        List<List<Integer>> ret = solution.subsetsWithDup2(nums);
+        for(List<Integer> list : ret){
+            System.out.println(list);
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //        String locAddress = "{\"code\":0,\"user\":{\"ip\":\"10.1.1.229\",\"name\":\"rain\"}}";
 //        String broadcastAddress = "10.1.1.255";
