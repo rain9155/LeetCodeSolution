@@ -1,4 +1,4 @@
-import medium.leetcode90.Solution;
+import medium.leetcode91.Solution;
 
 import java.util.List;
 
@@ -6,11 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] nums = {1, 2, 2};
-        List<List<Integer>> ret = solution.subsetsWithDup2(nums);
-        for(List<Integer> list : ret){
-            System.out.println(list);
-        }
+        System.out.println(solution.numDecodings("227"));
 
 
 
