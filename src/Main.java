@@ -1,12 +1,14 @@
-import medium.leetcode91.Solution;
+import common.List;
+import medium.leetcode92.Solution;
 
-import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.numDecodings("227"));
+        List list = new List();
+        int[] nums = {1, 2, 3, 4, 5};
+        list.printList(solution.reverseBetween(list.initList(nums), 1, 3));
 
 
 
