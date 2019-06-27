@@ -1,60 +1,15 @@
-import common.List;
-import medium.leetcode92.Solution;
+import medium.leetcode93.Solution;
+
+import java.util.List;
 
 
 public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        List list = new List();
-        int[] nums = {1, 2, 3, 4, 5};
-        list.printList(solution.reverseBetween(list.initList(nums), 1, 3));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//        String locAddress = "{\"code\":0,\"user\":{\"ip\":\"10.1.1.229\",\"name\":\"rain\"}}";
-//        String broadcastAddress = "10.1.1.255";
-//        DatagramSocket datagramSocket = null;
-//        try {
-//            datagramSocket = new DatagramSocket();
-//            byte[] data = locAddress.getBytes();
-//            DatagramPacket datagramPacket = new DatagramPacket(data, 0, data.length, InetAddress.getByName(broadcastAddress), 9156);
-//            datagramSocket.send(datagramPacket);
-//        } catch (SocketException e) {
-//            e.printStackTrace();
-//        } catch (UnknownHostException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }finally {
-//            if(datagramSocket != null) datagramSocket.close();
-//        }
+         List<String> ret = solution.restoreIpAddresses("25525511135");
+         for(String s : ret){
+             System.out.println(s);
+         }
     }
 }
