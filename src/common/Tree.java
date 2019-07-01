@@ -2,6 +2,9 @@ package common;
 
 import common.struction.TreeNode;
 
+import java.util.*;
+import java.util.List;
+
 /**
  * 树
  */
@@ -15,8 +18,27 @@ public class Tree {
         return t;
     }
 
-    private TreeNode createBiTree(TreeNode node, int[] nums, int index){
-        return node;
+    private TreeNode createBiTree(TreeNode root, int[] nums, int index){
+        return root;
+    }
+
+    public List<Integer> preorderTree(TreeNode root){
+        List<Integer> ret = new ArrayList<>();
+        traversal(root, ret);
+        return ret;
+    }
+
+    private void traversal(TreeNode node, List<Integer> ret) {
+        if(node == null){
+            return;
+        }
+        ret.add(node.val);
+        if(node.left != null){
+            traversal(node.left, ret);
+        }
+        if(node.right != null){
+            traversal(node.right, ret);
+        }
     }
 
 }
