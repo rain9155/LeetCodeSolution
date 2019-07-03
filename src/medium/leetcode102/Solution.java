@@ -1,4 +1,4 @@
-package easy.leetcode102;
+package medium.leetcode102;
 
 import common.struction.TreeNode;
 
