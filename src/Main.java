@@ -1,6 +1,6 @@
 import common.Tree;
 import common.struction.TreeNode;
-import medium.leetcode95.Solution;
+import easy.leetcode125.Solution;
 
 import java.util.List;
 
@@ -9,10 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        Tree tree = new Tree();
-        List<TreeNode> trees = solution.generateTrees(3);
-        for(TreeNode node : trees){
-            System.out.println(tree.preorderTree(node));
-        }
+        String s = "A man, a plan, a canal: Panama";
+        solution.isPalindrome(s);
     }
 }
