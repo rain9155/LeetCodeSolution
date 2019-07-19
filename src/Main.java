@@ -1,24 +1,19 @@
-import common.Tree;
-import common.struction.TreeNode;
-import medium.leetcode127.Solution;
+import medium.leetcode130.Solution;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        String s = "A man, a plan, a canal: Panama";
-        List<String> list = new ArrayList<>(){{
-            add("hot");
-            add("dot");
-            add("dog");
-            add("lot");
-            add("log");
-            add("cog");
-        }};
-        solution.ladderLength("hit", "cog", list);
+        char[][] broad = {
+                {'X','X', 'X'},
+                {'X', 'O', 'X'},
+                {'X', 'X', 'O'},
+        };
+        solution.solve(broad);
+        for(int i = 0; i < broad.length; i++){
+            System.out.println(Arrays.toString(broad[i]));
+        }
     }
 }
