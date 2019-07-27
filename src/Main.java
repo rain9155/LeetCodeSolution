@@ -1,4 +1,4 @@
-import medium.leetcode139.Solution;
+import medium.leetcode146.LRUCache;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,10 +7,15 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        List<String> list = new ArrayList<>();
-        list.add("leet");
-        list.add("code");
-        System.out.println(solution.wordBreak("leetcode", list));
+        LRUCache cache = new LRUCache(2);
+        cache.put(1, 1);
+        cache.put(2, 2);
+        System.out.println(cache.get(1));
+        cache.put(3, 3);
+        System.out.println(cache.get(2));
+        cache.put(4, 4);
+        System.out.println(cache.get(1));
+        System.out.println(cache.get(3));
+        System.out.println(cache.get(4));
     }
 }
