@@ -1,4 +1,4 @@
-import medium.leetcode146.LRUCache;
+import medium.leetcode152.Solution;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,15 +7,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        LRUCache cache = new LRUCache(2);
-        cache.put(1, 1);
-        cache.put(2, 2);
-        System.out.println(cache.get(1));
-        cache.put(3, 3);
-        System.out.println(cache.get(2));
-        cache.put(4, 4);
-        System.out.println(cache.get(1));
-        System.out.println(cache.get(3));
-        System.out.println(cache.get(4));
+      Solution solution = new Solution();
+      int[] nums = {-2, 0, 2, -1};
+      System.out.println(solution.maxProduct(nums));
     }
 }
