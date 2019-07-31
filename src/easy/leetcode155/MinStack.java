@@ -48,18 +48,21 @@ public class MinStack {
     }
 
     public void pop() {
-        if(stack.isEmpty()) return;
+        if(stack.isEmpty())
+            return;
         int num = stack.pop();
         if(num == helper.pop()) helper.pop();
     }
 
     public int top() {
-        if(stack.isEmpty()) return -1;
+        if(stack.isEmpty())
+            return -1;
         return stack.peek();
     }
 
     public int getMin() {
-        if(helper.isEmpty()) return -1;
+        if(helper.isEmpty())
+            return -1;
         return helper.peek();
     }
 
