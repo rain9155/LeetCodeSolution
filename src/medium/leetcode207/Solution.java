@@ -3,6 +3,10 @@ package medium.leetcode207;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.concurrent.locks.AbstractQueuedLongSynchronizer;
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * 课程表:
@@ -76,6 +80,9 @@ public class Solution {
                 }
             }
         }
+
+
+
         return numCourses == 0;
     }
 
