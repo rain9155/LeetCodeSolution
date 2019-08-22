@@ -1,5 +1,5 @@
 import common.Utils;
-import medium.leetcode189.Solution;
+import medium.leetcode210.Solution;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,9 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] nums = {1, 2, 3, 4, 5, 6, 7};
-        Utils.printNums(nums);
-        solution.rotate2(nums, 3);
-        Utils.printNums(nums);
+        int[][] nums = {{0, 1}};
+        Utils.printNums(solution.findOrder2(2, nums));
     }
 }
