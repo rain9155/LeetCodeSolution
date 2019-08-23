@@ -92,7 +92,7 @@ public class Utils {
      * @param nums 要进行划分的数组
      * @param left 子数组在数组中的左边界
      * @param right 子数组在数组中的右边界
-     * @return 子数组的中值
+     * @return 子数组的中值的位置
      */
     private static int lomutoPartition(int[] nums, int left, int right){
         int key = nums[left];
@@ -113,7 +113,7 @@ public class Utils {
      * @param nums 要进行划分的数组
      * @param left 子数组在数组中的左边界
      * @param right 子数组在数组中的右边界
-     * @return 子数组的中值
+     * @return 子数组的中值的位置
      */
     private static int hoarePartition(int[] nums, int left, int right){
         int key = nums[left];
