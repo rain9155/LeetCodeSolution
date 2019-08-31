@@ -1,5 +1,6 @@
 package medium.leetcode216;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,8 +20,29 @@ import java.util.List;
  */
 public class Solution {
 
-    public List<List<Integer>> combinationSum3(int k, int n) {
+    List<List<Integer>> ret = new ArrayList<>();
 
+    /**
+     * 回溯算法
+     */
+    public List<List<Integer>> combinationSum3(int k, int n) {
+        if(k < 0 || n < 0 || k > n) return ret;
+        combinationSum(1, k, n, new ArrayList<>(), 0);
+        return ret;
     }
 
+    private void combinationSum(int start, int k, int n, List<Integer> tempList, int tempSum) {
+        if(tempList.size() == k){
+            if(tempSum == n)
+                ret.add(new ArrayList<>(tempList));
+            return;
+        }
+        for(int i = start; i <= 9; i++){
+            tempList.add(i);
+            tempSum += i;
+            combinationSum(i + 1, k, n, tempList, tempSum);
+            tempList.remove(tempList.size() - 1);
+            tempSum -= i;
+        }
+    }
 }
