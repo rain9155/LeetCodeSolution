@@ -66,6 +66,7 @@ public class Solution {
         for(int num : nums){
             if(num == candiA){
                 countA++;
+                continue;
             }
             if(num == candiB){
                 countB++;
