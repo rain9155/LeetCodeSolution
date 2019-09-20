@@ -17,16 +17,31 @@ package medium.leetcode300;
  */
 public class Solution {
 
+    /**
+     * O（n^2）
+     * 动态规划：
+     * 1、初始化dp[i] == 1，至少有一个长度的子序列，dp[i]表示在nums中从0到i的最大上升子序列的长度
+     * 2、然后遍历nums，假设遍历到i
+     *      这时dp[0]到dp[i - 1]已经知道
+     * 3、然后我们再遍历nums[0...i - 1]，
+     *      如果num[i] > nums[0...i - 1]之间的某一个数，则表示nums[i]可以拼接到nums[0...i - 1]的最后组成一个长度加1的上升子序列，
+     *      这时我们就取dp[i] = max(dp[i], dp[j] + 1), dp[j]表示从0到i - 1的nums的最大上升子序列
+     * 4、最后取max(dp[i])就是结果
+     */
     public int lengthOfLIS(int[] nums) {
         if(nums.length == 0) return 0;
-        int len = 1;
-        int max = 0;
-        for (int i = 1; i < nums.length; i++){
-            if(nums[i] > nums[i - 1]){
-                max = nums[i];
-            }
+        int maxLen = 1;
+        int[] dp = new int[nums.length];
+        for (int i = 0; i < nums.length; i++){
+            dp[i] = 1;
+           for(int j = 0; j < i ; j++){
+              if(nums[i] > nums[j]){
+                  dp[i] = Math.max(dp[i], dp[j] + 1);
+              }
+           }
+           maxLen = Math.max(maxLen, dp[i]);
         }
-        return len;
+        return maxLen;
     }
 
 }
