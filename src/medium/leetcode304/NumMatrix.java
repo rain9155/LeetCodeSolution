@@ -1,4 +1,4 @@
-package medium;
+package medium.leetcode304;
 
 /**
  * 二维区域和检索 - 矩阵不可变:
