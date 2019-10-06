@@ -22,8 +22,34 @@ import common.struction.ListNode;
  */
 public class Solution {
 
+    /**
+     * 双指针：
+     * 初始化两个指针oddP和eventP，oddP指向奇数节点，eventP指向偶数节点，
+     * oddP的下一个节点就是偶数节点，eventP的下一个节点就是奇数节点，
+     * 所以当移动oddP时，oddP.next = eventP.next; oddP = oddP.next;
+     * 当移动eventP eventP.next = oddP.next; eventP = eventP.next;
+     * 最后把oddP的连上eventP的头节点即可
+     */
     public ListNode oddEvenList(ListNode head) {
-
+        if(head == null) return head;
+        ListNode oddHead = head;
+        ListNode oddP = oddHead;
+        ListNode eventHead = head.next;
+        ListNode eventP = eventHead;
+        while (oddP != null && eventP != null){
+            oddP.next = eventP.next;
+            oddP = oddP.next;
+            if(oddP != null){
+                eventP.next = oddP.next;
+                eventP = eventP.next;
+            }
+        }
+        if(oddP == null){
+            oddP = oddHead;
+            while (oddP != null && oddP.next != null) oddP = oddP.next;
+        }
+        oddP.next = eventHead;
+        return oddHead;
     }
 
 }
