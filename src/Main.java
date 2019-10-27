@@ -1,12 +1,11 @@
 import common.Utils;
-import medium.leetcode373.Solution;
+import medium.leetcode385.Solution;
 
 
 public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        solution.kSmallestPairs(new int[]{1, 7, 11}, new int[]{2, 4, 6}, 3);
-
+        solution.deserialize("[123,[456,[789]]]");
     }
 }
