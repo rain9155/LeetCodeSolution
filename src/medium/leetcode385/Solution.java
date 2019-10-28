@@ -32,7 +32,7 @@ public class Solution {
         if(s.length() == 0) return new NestedInteger();
         Stack<NestedInteger> stack = new Stack<>();
         for(int i = 0; i < s.length(); i++){
-            int c = s.charAt(i);
+            char c = s.charAt(i);
             if(c == '['){
                 stack.push(new NestedInteger(c));
             }else if(c == ']'){
@@ -78,7 +78,7 @@ public class Solution {
                         Integer.valueOf(s1)
                 ));
 
-                if(s.charAt(i) == ']'){
+                if(i < s.length() && s.charAt(i) == ']'){
                     i--;
                 }
             }
