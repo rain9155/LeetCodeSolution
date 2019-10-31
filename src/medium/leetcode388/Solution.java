@@ -42,41 +42,45 @@ public class Solution {
     public int lengthLongestPath(String input) {
         if(input.length() == 0) return 0;
         input = input.replace("\n    ","\n\t");
-        lengthLongestPath(input, new LinkedList<>(), 0, 0);
+        lengthLongestPath(input, new LinkedList<>(), "",  0, 0);
         return output.size() + (output.size() - 1);
     }
 
-    private int lengthLongestPath(String input, LinkedList<String> tempList, int start, int curLever){
+    private int lengthLongestPath(String input, LinkedList<String> tempList, String fileName, int start, int lever){
         if(start >= input.length()){
             return input.length() - 1;
         }
         if(tempList.size() != 0){
-            if(curLever == tempList.size()){
-                return start;
-            }else if(curLever < tempList.size()){
-                return -1;
-            }
-        }
-        int i = start;
-        int nextLever = 0;
-        while (i < input.length()){
-            if(input.charAt(i) == '\\' || i == input.length() - 1) {
-                String curFile = input.substring(start, i);
-                tempList.add(curFile);
-                if (curFile.contains(".")) {//是文件
+            if(lever <= tempList.size()){
+                if (fileName.contains(".")) {//是文件
                     if (tempList.size() > output.size()) {
                         output = new ArrayList<>(tempList);
                     }
-                    return start;
                 }
-                nextLever = lever(input, i);
-                int ret = lengthLongestPath(input, tempList, i + nextLever * 2, nextLever);
+                return fileName.length() + lever * 2;
+            }
+            //当层数 大于 目前最大层数，表示属于子目录
+        }
+        int i = start;
+        int nextLever = 0;
+        int preStart = start;
+        while (i <= input.length()){
+            if(i == input.length() || input.charAt(i) == '\\') {
+                String curFile = input.substring(start, i);//取出子目录
+                tempList.add(curFile);//添加到文件路径
+                nextLever = lever(input, i);//计算下一层的层数
+                int nextSkip = nextLever * 2;
+                int skip = lengthLongestPath(input, tempList,  curFile, i + nextSkip, nextLever);
                 tempList.removeLast();
-                if(ret != -1){
-                    i = ret - 1;
-                }else {
-                    break;
+                int tempLever = (skip - curFile.length()) / 2;
+                if(tempLever == lever){//同级目录
+                    start = i + nextSkip;
+                    i += (skip + nextSkip);
+                    continue;
+                }else{//不是同级目录，回溯到上一层，并返回需要跳过的字符数
+                    return i - preStart + skip - curFile.length();
                 }
+
             }
             i++;
         }
