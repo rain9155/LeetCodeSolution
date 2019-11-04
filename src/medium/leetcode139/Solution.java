@@ -9,9 +9,9 @@ import java.util.List;
  * 拆分时可以重复使用字典中的单词。
  * 你可以假设字典中没有重复的单词。
  * 示例 1：
- * 输入: s = "leetcode", wordDict = ["leet", "code"]
+ * 输入: s = "leetcode395", wordDict = ["leet", "code"]
  * 输出: true
- * 解释: 返回 true 因为 "leetcode" 可以被拆分成 "leet code"。
+ * 解释: 返回 true 因为 "leetcode395" 可以被拆分成 "leet code"。
  * 示例 2：
  * 输入: s = "applepenapple", wordDict = ["apple", "pen"]
  * 输出: true
@@ -70,7 +70,7 @@ public class Solution {
 
     /**
      * 动态规划;
-     * 对于s = leetcode, 如果s划分后在wordDict中，则把s划分成两部分leet 和 code也在wordDict中，同理，如果leet在wordDict中，则把leet逐个划分成两部分""和leet也在wordDict中
+     * 对于s = leetcode395, 如果s划分后在wordDict中，则把s划分成两部分leet 和 code也在wordDict中，同理，如果leet在wordDict中，则把leet逐个划分成两部分""和leet也在wordDict中
      * 所以对于s，我们用i和j两个指针，用i从0到s.length划分s的字串，j则继续把从[0 ... i]的字串继续划分成[0 ... j]和[j ... i]的子串, 然后判断[0 ... j]和[j ... i]是否包含在wordDict中
      * 如果[0 ... j]和[j ... i]包含在wordDict中则，[0 ... i]包含在wordDict中，则dp[i] = true, 否则dp[i] = false, 然后我们初始化dp[0] = true, 表示空字符串一定包含在wordDict中，就这样直到i == s.length
      */

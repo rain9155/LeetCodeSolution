@@ -16,66 +16,40 @@ import java.util.Stack;
  */
 public class Solution {
 
+    /**
+     * 参考：https://leetcode-cn.com/problems/decode-string/solution/decode-string-fu-zhu-zhan-fa-di-gui-fa-by-jyd/
+     * 双栈：
+     */
     public String decodeString(String s) {
         if(s.length() == 0) return "";
         char[] chars = s.toCharArray();
-        StringBuilder builder = new StringBuilder();
+        StringBuilder ret = new StringBuilder();
         Stack<Integer> numStack = new Stack<>();
-        Stack<String> charStack = new Stack<>();
-        int flag = 0;
+        Stack<String> strStack = new Stack<>();
+        int count = 0;
         for(int i = 0; i < chars.length; i++){
             char c = chars[i];
-            if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == '['){
-                if(c == '['){
-                    flag++;
+            if(c == '[') {
+                numStack.push(count);
+                strStack.push(ret.toString());
+                count = 0;
+                ret = new StringBuilder();
+            } else if(c == ']') {
+                StringBuilder tmp = new StringBuilder();
+                int cur_count =  numStack.pop();
+                for(int j = 0; j < cur_count; j++) {
+                    tmp.append(ret);
                 }
-                charStack.push(String.valueOf(c));
-            }else if(c == ']'){
-                flag--;
-                int count = numStack.pop();
-                StringBuilder temp = new StringBuilder();
-                while (!charStack.isEmpty()){
-                    if(charStack.peek().equals("[")){
-                        charStack.pop();
-                        break;
-                    }
-                    temp.append(charStack.pop());
-                }
-                temp.reverse();
-                String tempStr = temp.toString();
-                for(int j = 1; j < count; j++){
-                    temp.append(tempStr);
-                }
-                if(flag > 0){//有嵌套
-                    charStack.push(temp.toString());
-                }else {
-                    available(builder, charStack);
-                    builder.append(temp);
-                }
-            }else {
-                int j = i;
-                StringBuilder temp = new StringBuilder();
-                while (j < chars.length && chars[j] != '['){
-                    temp.append(chars[j]);
-                    j++;
-                }
-                numStack.push(Integer.valueOf(temp.toString()));
-                i = j - 1;
+                ret = new StringBuilder(strStack.pop() + tmp);
+            } else if(c >= '0' && c <= '9'){
+                count = count * 10 + Integer.parseInt("" + c);
+            } else {
+                ret.append(c);
             }
-
         }
-        available(builder, charStack);
-        return builder.toString();
+        return ret.toString();
     }
 
-    private void available(StringBuilder builder, Stack<String> charStack) {
-        if(!charStack.isEmpty()){
-            StringBuilder temp = new StringBuilder();
-            while (!charStack.isEmpty()){
-                temp.append(charStack.pop());
-            }
-            builder.append(temp.reverse().toString());
-        }
-    }
+
 
 }
