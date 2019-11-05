@@ -1,5 +1,5 @@
 import common.Utils;
-import medium.leetcode394.Solution;
+import medium.leetcode396.Solution;
 
 import java.util.Optional;
 
@@ -8,6 +8,6 @@ public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        solution.decodeString("3[z]2[2[y]pq4[2[jk]e1[f]]]ef");
+        solution.maxRotateFunction(new int[]{4, 3, 2, 6});
     }
 }
