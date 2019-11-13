@@ -21,6 +21,9 @@ package medium.leetcode400;
  */
 public class Solution {
 
+    /**
+     * 通过50%：
+     */
     public int findNthDigit(int n) {
         if(n < 10){
             return n;
