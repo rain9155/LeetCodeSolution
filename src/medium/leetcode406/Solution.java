@@ -1,9 +1,6 @@
 package medium.leetcode406;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * 根据身高重建队列:
@@ -46,6 +43,7 @@ public class Solution {
         for(int[] pair : people){
             list.add(pair[1], pair);
         }
+
 
         return list.toArray(new int[people.length][2]);
     }
