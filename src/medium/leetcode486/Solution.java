@@ -62,6 +62,9 @@ public class Solution {
     }
 
 
+    /**
+     * 动态规划：
+     */
     public boolean PredictTheWinner2(int[] nums) {
         int len = nums.length;
         if((len & 1) == 0){//偶数，玩家1一定能取得最大分数，因为
