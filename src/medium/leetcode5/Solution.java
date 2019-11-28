@@ -100,7 +100,7 @@ public class Solution {
                   end = i + 1;
               }
           }
-          for(int j = i ; j < length; j++){
+          for(int j = i; j < length; j++){
               if(j - i > 1)//排除调一个字符和相邻两个字符的情况，因为前面已经判断过了
                 P[i][j] = s.charAt(i) == s.charAt(j) && P[i + 1][j - 1];//状态转移公式
               //判断是否是回文
