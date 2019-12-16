@@ -6,16 +6,18 @@ package easy.leetcode28;
  * 示例 1:
  * 输入: haystack = "hello", needle = "ll"
  * 输出: 2
+ *
  * 说明:
  * 当 needle 是空字符串时，我们应当返回什么值呢？这是一个在面试中很好的问题。
- * 对于本题而言，当 needle 是空字符串时我们应当返回 0 。这与C语言的 strstr() 以及 Java的 indexOf() 定义相符。
+ * 对于本题而言，当 needle 是空字符串时我们应当返回 0 。
+ * 这与C语言的 strstr() 以及 Java的 indexOf() 定义相符。
  */
 public class Solution {
 
 
     /**
-     * O（n）
-     * BM算法：
+     * O（n^2）
+     * BF算法（Brute Force，蛮力）：
      * 放置两个指针p1，p2，p1指向父字符串的第一个元素，p2指向待匹配模式的第一个元素，从左到右比较
      * 如果p1和p2指向的元素相等，p1和p2同时后移
      * 如果p1和p2指向的元素不相等，则p1指针回溯到(p1 - p2 + 1)的位置，即p1初始位置 + 1的位置，同时p2指针回到待匹配模式的第一个元素，相当于p1每次向右移动一位，模式也向右滑动一位
@@ -43,8 +45,7 @@ public class Solution {
 
     /**
      * KMP算法：
-     * 改进BF算法，每次匹配的过程中出现字符串不等时，不回溯主指针p1，利用已得到的“部分匹配”结果将模式向右滑动尽可能远的一段距离即回溯p2，继续进行比较
-     *
+     * 改进的BF算法，每次匹配的过程中出现字符串不等时，不回溯主指针p1，利用已得到的“部分匹配”结果将模式向右滑动尽可能远的一段距离即回溯p2，继续进行比较
      */
     public int strStr2(String haystack, String needle) {
         if(needle == null || needle.length() == 0) return 0;

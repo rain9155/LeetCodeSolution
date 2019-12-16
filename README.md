@@ -6,6 +6,12 @@
 
 1、[两数之和](https://leetcode-cn.com/problems/two-sum/)
 
+26、[删除排序数组中的重复项](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode26/Solution.java)
+
+27、[移除元素](https://github.com/rain9155/LeetCodeSolution/blob/76f3bf73ff16ec170b9b9aac5e40b1bdbbf57828/src/easy/leetcode27/Solution.java)
+
+35、[搜索插入位置](https://github.com/rain9155/LeetCodeSolution/blob/76f3bf73ff16ec170b9b9aac5e40b1bdbbf57828/src/easy/leetcode35/Solution.java)
+
 ### 题型：链表
 
 21、[合并两个有序链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode21/Solution.java)
@@ -17,6 +23,10 @@
 ### 题型：字符串
 
 14、[最长公共子串](https://github.com/rain9155/LeetCodeSolution/blob/b0618cc851d249e33785f490f9c689ff12d5cc00/src/easy/leetcode14/Solution.java)
+
+28、[字符串匹配](https://github.com/rain9155/LeetCodeSolution/blob/76f3bf73ff16ec170b9b9aac5e40b1bdbbf57828/src/easy/leetcode28/Solution.java)
+
+35、[报数](https://github.com/rain9155/LeetCodeSolution/blob/76f3bf73ff16ec170b9b9aac5e40b1bdbbf57828/src/easy/leetcode38/Solution.java)
 
 ### 题型：哈希表
 
