@@ -13,6 +13,7 @@ import common.struction.ListNode;
 public class Solution {
 
     /**
+     * 常规做法：
      * 遍历链表，如果下一个节点与当前节点相同，就删除下一个节点，直到下一个节点与当前节点不相同
      */
     public ListNode deleteDuplicates(ListNode head) {
@@ -32,6 +33,28 @@ public class Solution {
             }
         }
         return head;
+    }
+
+    /**
+     * 递归：
+     * 1、先递归到链表底部，此时只剩下一个节点，肯定不会重复，返回这个节点
+     * 2、当递归返回时，比较当前节点和返回的节点的值是否重复，如果重复，丢弃当前节点，返回返回的节点，否则把返回节点连接上当前节点，返回当前节点
+     */
+    public ListNode deleteDuplicates2(ListNode head) {
+        if(head == null){
+            return null;
+        }
+        if(head.next == null){//只有一个节点，肯定不会重复，返回这个节点
+            return head;
+        }
+        ListNode next = deleteDuplicates2(head.next);
+        //当递归返回时，比较当前节点head是否和下一个节点next重复
+        if(head.val == next.val){//如果重复，不要head节点
+            return next;
+        }else {//如果不重复，连接，返回head节点
+            head.next = next;
+            return head;
+        }
     }
 
 }

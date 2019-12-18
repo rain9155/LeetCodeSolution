@@ -37,12 +37,31 @@ public class Solution {
     }
 
     /**
+     * O(n)
      * 动态规划：
-     * 边界：max = Integer.MIN_VALUE，thisSum = 0
-     * 最优子结构：thisSum = Math.max(nums[i], nums[i] + thisSum) -》 根据当前值和加上当前值的子序列，推导出最大值
-     * 状态转移公式：max = Math.max(max, thisSum) -》 和以前保存过的子序列比较，推导出最大值
+     * dp[i]表示，到i为止的连续子序列的最大和
+     * 每遍历到数组的一个元素时，取这个元素和这个元素加上前一个连续和的最大值为当前dp[i]的值
+     * 状态转移公式：dp[i] = Math.max(nums[i], nums[i] + dp[i - 1])
+     * 初始条件：dp[0] = nums[i], 当nums只有一个元素时，这个元素就是连续子序列的最大值
      */
     public int maxSubArray2(int[] nums) {
+        if(nums == null || nums.length == 0) return 0;
+        int[] dp = new int[nums.length];
+        dp[0] = nums[0];
+        int max = dp[0];//最大值
+        for(int i = 1; i < nums.length; i++){
+            dp[i] = Math.max(nums[i], nums[i] + dp[i - 1]);
+            max = Math.max(max, dp[i]);
+        }
+        return max;
+    }
+
+
+    /**
+     * 优化的动态规划：
+     * 因为当前状态只跟前一个状态有关，所以只用一个变量thisSum保存到当前i的连续子序列的最大和就行，降低了空间复杂度
+     */
+    public int maxSubArray3(int[] nums) {
         if(nums == null || nums.length == 0) return 0;
         int max = Integer.MIN_VALUE;//子序列的最大值
         int thisSum = 0;//当前的最大值
@@ -52,5 +71,11 @@ public class Solution {
         }
         return max;
     }
+
+    //O(nlogn)
+    //还可用分治法：
+    //每次把数组nums一分为二，找到中间位置，所求的最大连续子串这时就在中间的两边 或 中间的左边 或 中间的右边；
+    //中间左边和中间右边的和最大的子串可以递归地求得，而中间两边的和可以从中间向两边扩展累加求得；
+    //返回结果就是求出来的三个和中的最大值
 
 }

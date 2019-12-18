@@ -15,11 +15,34 @@ package easy.leetcode69;
  */
 public class Solution {
 
+
     /**
-     * 二分法：
-     * 因为对于一个非负数x，它的平方根的范围是[0, (x / 2 +_1)]， 所以只要在这个范围内使用二分查找就行
+     * O(n)
+     * 暴力法：
+     * 因为对于一个非负数x，它的平方根的范围是[0, (x / 2 +_1)]， 所以只要在这个范围内查找就行
      */
     public int mySqrt(int x) {
+        if(x <= 0) return 0;
+        int limit = x / 2 + 1;///对于一个非负数x，它的平方根不会大于（x/2+1）
+        //找到第一个 i * i >= limit的i值就是结果
+        for(int i = 0; i <= limit; i++){
+            long temp = i * i;
+            if(temp == x){
+                return i;
+            }else if(temp > x){
+                return i - 1;
+            }
+        }
+        //特殊情况：x = MAX值
+        return 46340;
+    }
+
+    /**
+     * O(logn)
+     * 二分法：
+     * 在[0, (x / 2 +_1)]范围内使用二分查找
+     */
+    public int mySqrt2(int x) {
         if(x <= 0) return 0;
         long i = 0;
         long j = x / 2 + 1;///对于一个非负数x，它的平方根不会大于（x/2+1）
@@ -43,7 +66,7 @@ public class Solution {
      * 有没有发现，我们作的切线再逐渐向左偏，切线与t轴的交点也慢慢接近图像与t轴的交点，并且切线与t轴的交点也慢慢接近切线与图像的切点
      * (3) 重复（2），一直重复以上作切线过程，最后它们会无限逼近，当切线与t轴的交点与切线与图像的切点重合，此时的t0就是要求的平方根
      */
-    public int mySqrt2(int x) {
+    public int mySqrt3(int x) {
         if(x <= 0) return 0;
         //切线与t轴的交点
         double last = 0;
