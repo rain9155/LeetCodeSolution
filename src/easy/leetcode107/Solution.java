@@ -9,6 +9,7 @@ import java.util.List;
 /**
  * 二叉树的层次遍历 II:
  * 给定一个二叉树，返回其节点值自底向上的层次遍历。 （即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历）
+ *
  * 例如：
  * 给定二叉树 [3,9,20,null,null,15,7],
  *     3
@@ -28,7 +29,7 @@ public class Solution {
     List<List<Integer>> ret = new ArrayList<>();
 
     /**
-     * 递归：
+     * bfs(层次遍历)：
      * 思路和102题的层次遍历一样，这里只是把最后层次遍历的结果逆序一遍
      */
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
@@ -50,5 +51,7 @@ public class Solution {
             orderBottom(root.right, lever + 1);
         }
     }
+
+    //树的层次遍历可以使用队列实现，参考104题
 
 }
