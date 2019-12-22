@@ -17,12 +17,32 @@ package easy.leetcode121;
  */
 public class Solution {
 
+
     /**
-     * 一次遍历：
+     * 动态规划：
+     * dp[i]表示到第i天为止，手上持有的最大利润
+     * 状态转移方程：dp[i] = max（dp[i - 1], prices[i] - min）, 其中min为prices中价格最低的股票
+     * 初始条件：dp[0] = 0, 表示如果prices只有一支股票，利润为零，因为买入就不能卖出，亏本
+     */
+    public int maxProfit(int[] prices) {
+        if(prices == null || prices.length == 0) return 0;
+        int[] dp = new int[prices.length];
+        dp[0] = 0;
+        int min = prices[0];
+        for(int i = 1; i < prices.length; i++){
+            min = Math.min(min, prices[i]);
+            dp[i] = Math.max(dp[i - 1], prices[i] - min);
+        }
+        return dp[prices.length - 1];
+    }
+
+
+    /**
+     * 波谷波峰：
      * 对于一次买卖股票要想得到最大利润就要低价买入高价卖出，所以我们把prices中各个元素的值想象成坐标点，然后把坐标点连成一条线，最大利润就是波谷和波峰的差值且波峰一定要在波谷的后面
      * 所以我们可以用valley表示波谷，grest表示波峰，即最大利润，然后遍历prices数组，每次先更新更新波谷为最低值，否则再更新更新波峰，即最大利润
      */
-    public int maxProfit(int[] prices) {
+    public int maxProfit2(int[] prices) {
         if(prices == null || prices.length < 2) return 0;
         int valley = Integer.MAX_VALUE;//波谷
         int grest = 0;//波峰，即最大利润

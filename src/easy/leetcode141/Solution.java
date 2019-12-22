@@ -18,10 +18,15 @@ import common.struction.ListNode;
  * 输入：head = [1], pos = -1
  * 输出：false
  * 解释：链表中没有环。
+ *
  * 进阶：
  * 你能用 O(1)（即，常量）内存解决此问题吗？
  */
 public class Solution {
+
+
+    //使用O(n)的空间，使用哈希表
+    //在遍历链表时记录节点的引用，如果在哈希表中有相同的引用，就说明存在环
 
     /**
      * 快慢指针：

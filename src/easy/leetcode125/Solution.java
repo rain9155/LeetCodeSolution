@@ -15,6 +15,11 @@ public class Solution {
 
     /**
      * 双指针法：
+     * 定义两个指针，从头尾开始
+     * 如果两个元素相同，就移动两个指针；
+     * 如果两个元素不相同，就返回false；
+     * 如果某个指针遇到不是字母或数字的字符，就跳过；
+     * 直到两个指针相遇，返回true
      */
     public boolean isPalindrome(String s) {
         int i = 0, j = s.length() - 1;

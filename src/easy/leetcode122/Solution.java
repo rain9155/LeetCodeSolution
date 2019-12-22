@@ -23,11 +23,12 @@ package easy.leetcode122;
  */
 public class Solution {
 
+
     /**
-     * 一次遍历：
+     * 波谷波峰：
      * 思路和121题一样，只是这次可以多次买卖，所以只要对波谷波峰连续求和就行，且波峰要在波谷之后
      */
-    public int maxProfit(int[] prices) {
+    public int maxProfit2(int[] prices) {
         if(prices == null || prices.length < 2) return 0;
         int money = 0;//最大利润
         for(int i = 1; i < prices.length; i++){

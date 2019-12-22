@@ -4,6 +4,8 @@
 
 ### 题型：数组
 
+关键思想：双指针，位运算
+
 1、[两数之和](https://leetcode-cn.com/problems/two-sum/)
 
 26、[删除排序数组中的重复项](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode26/Solution.java)
@@ -22,11 +24,20 @@
 
 ### 题型：链表
 
+关键思想：快慢指针，双指针，哈希表
+
 21、[合并两个有序链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode21/Solution.java)
 
 83、[删除排序链表中的重复元素](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode83/Solution.java)
 
+141、[环形链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode141/Solution.java)
+
+160、[相交链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode160/Solution.java)
+
+
 ### 题型：树
+
+关键思想：bfs，dfs，树的遍历(前序、中序、后序、层次)
 
 100、[相同的树](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode100/Solution.java)
 
@@ -47,9 +58,15 @@
 
 ### 题型：栈
 
+关键思想：递归，遍历，辅助栈
+
 20、[有效的括号](https://github.com/rain9155/LeetCodeSolution/blob/b0618cc851d249e33785f490f9c689ff12d5cc00/src/easy/leetcode20/Solution.java)
 
+155、[最小栈](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode155/MinStack.java)
+
 ### 题型：字符串
+
+关键思想：哈希表，双指针
 
 14、[最长公共子串](https://github.com/rain9155/LeetCodeSolution/blob/b0618cc851d249e33785f490f9c689ff12d5cc00/src/easy/leetcode14/Solution.java)
 
@@ -61,24 +78,40 @@
 
 68、[二进制求和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode67/Solution.java)
 
+125、[验证回文串](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode125/Solution.java)
+
 ### 题型：哈希表
 
 13、[罗马数字转化为整数](https://github.com/rain9155/LeetCodeSolution/blob/b0618cc851d249e33785f490f9c689ff12d5cc00/src/easy/leetcode13/Solution.java)
 
 ### 题型：动态规划
 
+关键思想：记忆化，备忘录
+
 53、[最大子序和](https://github.com/rain9155/LeetCodeSolution/blob/76f3bf73ff16ec170b9b9aac5e40b1bdbbf57828/src/easy/leetcode53/Solution.java)
 
 70、[爬楼梯](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode70/Solution.java)
 
+121、[买卖股票的最佳时机](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode121/Solution.java)
+
+122、[买卖股票的最佳时机II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode122/Solution.java)
+
 
 ### 题型：数学
+
+关键思想：找数学规律
 
 7、[整数反转](https://github.com/rain9155/LeetCodeSolution/blob/9561243dff12b3e091db788f766c6d0da1564ffc/src/easy/leetcode7/Solution.java)
 
 9、[回文数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode9/Solution.java)
 
 69、[x的平方根](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode69/Solution.java)
+
+### 题型：位运算
+
+关键思想：异或，或，与
+
+136、[只出现一次的数字](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode136/Solution.java)
 
 
 

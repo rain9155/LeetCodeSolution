@@ -10,6 +10,7 @@ import java.util.Stack;
  * pop() -- 删除栈顶的元素。
  * top() -- 获取栈顶元素。
  * getMin() -- 检索栈中的最小元素。
+ *
  * 示例:
  * MinStack minStack = new MinStack();
  * minStack.push(-2);
@@ -67,3 +68,9 @@ public class MinStack {
     }
 
 }
+
+//使用单个栈,参考：https://github.com/azl397985856/leetcode/blob/master/problems/155.min-stack.md
+//栈内保存的入栈的元素值和这个元素入栈时的最小值之差
+//push时：入栈元素与min做差（入栈元素 - min）放入栈顶，入栈后，如果入栈的元素值小于min，则更新当前最小值min为入栈的元素值
+//pop时：如果栈顶元素 > 0, 返回（栈顶元素 + min）; 否则返回min，并更新min = （min - 栈顶元素）
+//getMin时：直接返回min
