@@ -17,6 +17,10 @@ public class Solution {
     /**
      * O(n)
      * 双指针法：
+     * 因为数组是有序的，所以，从左往右，元素值依此增大
+     * 1、设置两个指针，p1在头部，p2在尾部
+     * 2、如果p1和p2所指元素的和 == target，就返回p1，p2
+     * 3、如果p1和p2所指元素的和 > target, 则p2--；如果p1和p2所指元素的和 < target, 则p1++
      */
     public int[] twoSum(int[] numbers, int target) {
         int p1 = 0;

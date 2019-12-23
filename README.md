@@ -2,6 +2,12 @@
 
 ## 题目前的数字是在leetcode中的题目序号
 
+**推荐阅读**：
+
+- [Leetcode题解](https://github.com/azl397985856/leetcode)
+- [图解leetcode](https://github.com/ZXZxin/ZXBlog/blob/master/Algorithm/LeetCode/LeetCodeSolutionIndex.md)
+- [Leetcode动画](https://github.com/MisterBooo/LeetCodeAnimation)
+
 ### 题型：数组
 
 关键思想：双指针，位运算
@@ -21,6 +27,12 @@
 118、[杨辉三角](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode118/Solution.java)
 
 119、[杨辉三角 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode119/Solution.java)
+
+167、[两数之和 II - 输入有序数组](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode167/Solution.java)
+
+169、[求众数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode169/Solution.java)
+
+189、[旋转数组](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode189/Solution.java)
 
 ### 题型：链表
 
@@ -106,6 +118,12 @@
 9、[回文数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode9/Solution.java)
 
 69、[x的平方根](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode69/Solution.java)
+
+168、[Excel表列名称](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode168/Solution.java)
+
+171、[Excel表列序号](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode171/Solution.java)
+
+172、[阶乘后的零](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode172/Solution.java)
 
 ### 题型：位运算
 

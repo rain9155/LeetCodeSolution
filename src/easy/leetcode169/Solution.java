@@ -15,6 +15,10 @@ import java.util.Arrays;
  */
 public class Solution {
 
+
+    //使用哈希表：
+    //统计nums中每个元素的数目，返回大于数目n / 2的元素
+
     /**
      * O（nlogn）
      * 先排序，然后返回数组中间那个数
@@ -26,8 +30,11 @@ public class Solution {
 
     /**
      * O（n）
-     * Boyer-Moore 投票算法:
-     * 从第一个数开始count=1，遇到相同的就加1，遇到不同的就减1，减到0就重新换个数开始计数，总能找到最多的那个
+     * Boyer-Moore（投票算法):
+     * 1、首先维护一个计数器count，初始值等于0，然后定义一个投票候选人num
+     * 2、从第一个数开始，遇到值等于num的数，计数器就加1；遇到值不等于num的数，计数器就减1
+     * 3、当计数器减到0时，就更换候选人为当前遍历的数，然后重新计数
+     * 4、最后返回投票候选人num，就是在数组中出现最多的元素
      */
     public int majorityElement2(int[] nums) {
         int count = 0;
