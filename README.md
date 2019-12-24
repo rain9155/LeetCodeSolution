@@ -127,9 +127,12 @@
 
 ### 题型：位运算
 
-关键思想：异或，或，与
+关键思想：异或，或，与, 左移，右移
 
 136、[只出现一次的数字](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode136/Solution.java)
 
+190、[颠倒二进制位](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode190/Solution.java)
+
+191、[1的个数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode191/Solution.java)
 
 

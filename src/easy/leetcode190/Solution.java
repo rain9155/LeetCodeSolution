@@ -27,7 +27,7 @@ public class Solution {
 
     /**
      * 位运算：
-     * 依此取出低位，再依此放到高位
+     * 依此取出n的最低位，再从高位到低位依此放到ret上
      */
     public int reverseBits(int n) {
         int ret = 0;
@@ -36,6 +36,20 @@ public class Solution {
             temp &= 1;
             temp <<= 31 - i;
             ret |= temp;
+        }
+        return ret;
+    }
+
+    /**
+     * 位运算2：
+     * 然后依此取出n的最低位，放到ret的最低位，每次取出n的最低位之前，先把ret左移一位，让ret的最低位留出来
+     */
+    public int reverseBits2(int n) {
+        int ret = 0;
+        for(int i = 0; i < 32; i++){
+            ret <<= 1;
+            ret |= n & 1;
+            n >>= 1;
         }
         return ret;
     }
