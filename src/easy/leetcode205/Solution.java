@@ -62,6 +62,7 @@ public class Solution {
 
     /**
      * 哈希表:
+     * 用一个map建立两个字符串在每个字符的映射关系，在遍历s时，取出字符c，判断c在map中的映射是否等于t相应位置的字符
      */
     public boolean isIsomorphic2(String s, String t) {
         if(s.length() != t.length()) return false;

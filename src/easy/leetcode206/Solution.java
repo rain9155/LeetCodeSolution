@@ -15,9 +15,10 @@ import common.struction.ListNode;
 public class Solution {
 
     /**
-     * 迭代：
-     * 三个指针，一个指向当前遍历结点，一个保存当前遍历结点的下一个结点，一个指向当前遍历结点的上一个结点
-     * 遍历时，把当前遍历结点的next指向上一个结点，并3个指针都同时向后移动一步，直到链表尾部
+     * 三个指针：
+     * 1、初始化3个指针p1，p2，p3，一个指向当前遍历结点的上一个结点，一个指向当前遍历结点，一个保存当前遍历结点的下一个结点
+     * 2、遍历时，把当前遍历结点的next指向上一个结点，并3个指针都同时向后移动一步，直到链表尾部
+     * 3、最终p2 = p3 = null， p1指向反转后的链表底部，所以返回p1
      */
     public ListNode reverseList(ListNode head) {
         if(head == null) return head;
@@ -34,14 +35,30 @@ public class Solution {
     }
 
     /**
-     * 递归：
-     * 递归的主要难点就是如何返回反转后链表的头结点，而我们知道递归的过程就是入栈的过程，
-     * 所以我们一直把head.next入栈，直到head.next == null即到达链表尾部才返回到上一层递归，这样就拿到了反转后链表的头结点，
-     * 接着我们就把head.next.next = head，即把下一个结点的指向当前结点，实现链表反转
+     * 双指针：
+     * 1、初始化两个指针pre，cur，一个指向当前遍历结点的上一个结点，一个指向当前遍历结点
+     * 2、遍历时，先把临时变量保存当前遍历节点的下一个节点，然后把当前遍历结点的next指向上一个结点，然后两个指针都向后移动一步，直到链表底部
+     * 3、最终cur = null， pre指向反转后的链表底部，所以返回pre
      */
     public ListNode reverseList2(ListNode head) {
+        ListNode pre = null;
+        ListNode cur = head;
+        while(cur != null){
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+        return pre;
+    }
+
+    /**
+     * 递归：
+     * 递归的过程就是入栈的过程，递归到底部拿到尾节点作为反转后的头节点，然后在递归返回时进行反转（head.next.next = head），最后一定记得head.next = null，避免造成循环链表
+     */
+    public ListNode reverseList3(ListNode head) {
         if(head == null || head.next == null) return head;
-        ListNode newHead = reverseList2(head.next);
+        ListNode newHead = reverseList3(head.next);
         head.next.next = head;
         head.next = null;
         return newHead;

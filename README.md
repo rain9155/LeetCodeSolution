@@ -36,7 +36,7 @@
 
 ### 题型：链表
 
-关键思想：快慢指针，双指针，哈希表
+关键思想：快慢指针，双指针，递归（相当于链表的前序、后序遍历，栈的思想），哈希表
 
 21、[合并两个有序链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode21/Solution.java)
 
@@ -45,6 +45,10 @@
 141、[环形链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode141/Solution.java)
 
 160、[相交链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode160/Solution.java)
+
+203、[移除链表元素](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode203/Solution.java)
+
+206、[反转链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode206/Solution.java)
 
 
 ### 题型：树
@@ -92,9 +96,14 @@
 
 125、[验证回文串](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode125/Solution.java)
 
+434、[字符串中的单词数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode434/Solution.java)
+
 ### 题型：哈希表
 
 13、[罗马数字转化为整数](https://github.com/rain9155/LeetCodeSolution/blob/b0618cc851d249e33785f490f9c689ff12d5cc00/src/easy/leetcode13/Solution.java)
+
+205、[同构字符串](https://github.com/rain9155/LeetCodeSolution/blob/b0618cc851d249e33785f490f9c689ff12d5cc00/src/easy/leetcode205/Solution.java)
+
 
 ### 题型：动态规划
 
@@ -107,6 +116,8 @@
 121、[买卖股票的最佳时机](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode121/Solution.java)
 
 122、[买卖股票的最佳时机II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode122/Solution.java)
+
+198、[打家劫舍](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode198/Solution.java)
 
 
 ### 题型：数学
@@ -125,9 +136,14 @@
 
 172、[阶乘后的零](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode172/Solution.java)
 
+202、[快乐数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode202/Solution.java)
+
+204、[计数质数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode204/Solution.java)
+
+
 ### 题型：位运算
 
-关键思想：异或，或，与, 左移，右移
+关键思想：n & 1，n & (n - 1), 左移，右移，异或
 
 136、[只出现一次的数字](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode136/Solution.java)
 

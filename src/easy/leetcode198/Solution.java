@@ -45,4 +45,34 @@ public class Solution {
         return dp[nums.length - 1];
     }
 
+    /**
+     * 动态规划2:
+     * 得出状态转移公式：dp[i + 1] = Math.max(dp[i], dp[i - 1] + nums[i]);
+     */
+    public int rob2(int[] nums) {
+        if(nums.length == 0) return 0;
+        int[] dp = new int[nums.length + 1];
+        dp[1] = nums[0];
+        for(int i = 1; i < nums.length; i++){
+            dp[i + 1] = Math.max(nums[i] + dp[i - 1], dp[i]);
+        }
+        return dp[nums.length];
+    }
+
+    /**
+     * 动态规划3：
+     * 只需要dp[i - 1] 和dp[i - 2]就可以推出下一个
+     */
+    public int rob3(int[] nums) {
+        if(nums.length == 0) return 0;
+        int prepre = 0;
+        int pre = nums[0];
+        for(int i = 1; i < nums.length; i++){
+            int cur = Math.max(nums[i] + prepre, pre);
+            prepre = pre;
+            pre = cur;
+        }
+        return pre;
+    }
+
 }
