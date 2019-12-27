@@ -26,6 +26,8 @@ public class Solution {
 
     /**
      * 哈希表：
+     * 1、首先用哈希表记录s中每个字符的出现次数
+     * 2、然后再遍历t，看t中的字符出现的次数与s是否相同
      */
     public boolean isAnagram(String s, String t) {
         if(s.length() != t.length()) return false;
@@ -47,6 +49,7 @@ public class Solution {
 
     /**
      * 排序：
+     * 如果两个字符串是有效的字母异位词，那么排序后，两个字符串相同
      */
     public boolean isAnagram2(String s, String t) {
         if(s.length() != t.length()) return false;

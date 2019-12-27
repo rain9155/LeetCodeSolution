@@ -26,9 +26,24 @@ import java.util.Set;
 public class Solution {
 
     /**
-     * 哈希表
+     * 暴力法：
      */
     public boolean containsNearbyDuplicate(int[] nums, int k) {
+        for(int i = 0; i < nums.length; i++){
+            for(int j = i + 1; j < nums.length; j++){
+                if(nums[j] == nums[i] && j - i <= k){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 哈希表：
+     * 在遍历时，用哈希表保存元素与索引的映射，如果哈希表中已经有该元素的映射，就取出该元素的下标与当前下标做差看是否满足条件
+     */
+    public boolean containsNearbyDuplicate2(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>(nums.length);
         for(int i = 0; i < nums.length; i++){
             if(map.containsKey(nums[i])){

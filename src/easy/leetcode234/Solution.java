@@ -18,7 +18,12 @@ import common.struction.ListNode;
  */
 public class Solution {
 
+
+    //还有一种方法：
+    //把链表反转，然后同时遍历，看反转后的链表和原来的链表是否相同
+
     /**
+     * 快慢指针：
      * 1、使用快慢指针找到链表中点
      * 2、从中点开始逆序后半部分
      * 3、从头部、尾部开始比较是否相同
@@ -39,11 +44,11 @@ public class Solution {
             end = p1;
             p1 = next;
         }
-        //从head和pre分别开始找，即从链表的头部和尾部开始找，如果有不同的直接返回false
+        //从head和end分别开始找，即从链表的头部和尾部开始找，如果有不同的直接返回false
         while (head != null && end != null){
-            if(head.val != end.val){
-                return false;
-            }
+                if(head.val != end.val){
+                    return false;
+                }
             head = head.next;
             end = end.next;
         }

@@ -15,7 +15,7 @@ package easy.leetcode258;
 public class Solution {
 
     /**
-     * 递归：
+     * 递归（暴力法）：
      */
     public int addDigits(int num) {
         if(num <= 9) return num;

@@ -10,7 +10,7 @@
 
 ### 题型：数组
 
-关键思想：双指针，位运算
+关键思想：双指针，位运算，排序预处理
 
 1、[两数之和](https://leetcode-cn.com/problems/two-sum/)
 
@@ -34,6 +34,11 @@
 
 189、[旋转数组](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode189/Solution.java)
 
+217、[存在重复元素](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode217/Solution.java)
+
+219、[存在重复元素 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode219/Solution.java)
+
+
 ### 题型：链表
 
 关键思想：快慢指针，双指针，递归（相当于链表的前序、后序遍历，栈的思想），哈希表
@@ -50,10 +55,13 @@
 
 206、[反转链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode206/Solution.java)
 
+234、[回文链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode234/Solution.java)
+
+237、[删除链表中的节点](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode237/Solution.java)
 
 ### 题型：树
 
-关键思想：bfs，dfs，树的遍历(前序、中序、后序、层次)
+关键思想：bfs，dfs，树的遍历(前序、中序、后序、层次)，递归
 
 100、[相同的树](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode100/Solution.java)
 
@@ -71,18 +79,17 @@
 
 112、[路径总和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode112/Solution.java)
 
+226、[翻转一棵二叉树](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode226/Solution.java)
 
-### 题型：栈
+235、[二叉搜索树的最近公共祖先](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode235/Solution.java)
 
-关键思想：递归，遍历，辅助栈
-
-20、[有效的括号](https://github.com/rain9155/LeetCodeSolution/blob/b0618cc851d249e33785f490f9c689ff12d5cc00/src/easy/leetcode20/Solution.java)
-
-155、[最小栈](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode155/MinStack.java)
+257、[二叉树的所有路径](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode257/Solution.java)
 
 ### 题型：字符串
 
 关键思想：哈希表，双指针
+
+13、[罗马数字转化为整数](https://github.com/rain9155/LeetCodeSolution/blob/b0618cc851d249e33785f490f9c689ff12d5cc00/src/easy/leetcode13/Solution.java)
 
 14、[最长公共子串](https://github.com/rain9155/LeetCodeSolution/blob/b0618cc851d249e33785f490f9c689ff12d5cc00/src/easy/leetcode14/Solution.java)
 
@@ -96,14 +103,24 @@
 
 125、[验证回文串](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode125/Solution.java)
 
-434、[字符串中的单词数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode434/Solution.java)
-
-### 题型：哈希表
-
-13、[罗马数字转化为整数](https://github.com/rain9155/LeetCodeSolution/blob/b0618cc851d249e33785f490f9c689ff12d5cc00/src/easy/leetcode13/Solution.java)
-
 205、[同构字符串](https://github.com/rain9155/LeetCodeSolution/blob/b0618cc851d249e33785f490f9c689ff12d5cc00/src/easy/leetcode205/Solution.java)
 
+242、[有效的字母异位词](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode242/Solution.java)
+
+
+434、[字符串中的单词数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode434/Solution.java)
+
+### 题型：栈
+
+关键思想：递归，遍历，辅助栈
+
+20、[有效的括号](https://github.com/rain9155/LeetCodeSolution/blob/b0618cc851d249e33785f490f9c689ff12d5cc00/src/easy/leetcode20/Solution.java)
+
+155、[最小栈](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode155/MinStack.java)
+
+225、[用队列实现栈](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode225/MyStack.java)
+
+232、[用栈实现队列](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode232/MyQueue.java)
 
 ### 题型：动态规划
 
@@ -118,7 +135,6 @@
 122、[买卖股票的最佳时机II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode122/Solution.java)
 
 198、[打家劫舍](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode198/Solution.java)
-
 
 ### 题型：数学
 
@@ -140,6 +156,7 @@
 
 204、[计数质数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode204/Solution.java)
 
+258、[各位相加](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode258/Solution.java)
 
 ### 题型：位运算
 
@@ -151,4 +168,4 @@
 
 191、[1的个数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode191/Solution.java)
 
-
+231、[2的幂](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode231/Solution.java)

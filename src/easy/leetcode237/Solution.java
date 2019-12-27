@@ -25,6 +25,10 @@ import common.struction.ListNode;
  */
 public class Solution {
 
+    /**
+     * 小技巧：
+     * 用给定node的后一个节点的值覆盖当前节节点的值，然后把当前节点的下一个指针指向当前节点的下一个节点的下一个节点
+     */
     public void deleteNode(ListNode node) {
         node.val = node.next.val;
         node.next = node.next.next;

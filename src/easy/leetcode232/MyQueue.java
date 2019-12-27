@@ -27,7 +27,11 @@ import java.util.Stack;
 
 /**
  * 使用两个栈：
- * 一个fromStack用来保存数据，当要pop时，把fromStack中的元素移动到toStack中，pop toStack的元素即可，当要peek时同理
+ * 使用两个栈fromStack，toStack，fromStack用来暂时保存元素，当获取元素时，从toStack中获取
+ * push: 把元素直接插入fromStack中
+ * pop：如果toStack为空，把fromStack的元素移动到toStack中，这样toStack的栈顶元素就是队列的第一个元素， 返回toStack的栈顶元素，如果如果toStack不为空，直接返回toStack的栈顶元素
+ * peek：和pop一样，如果toStack为空，把fromStack的元素移动到toStack中，再取出toStack的栈顶元素
+ * empty：判断fromStack和toStack是否为空
  */
 public class MyQueue {
 
@@ -65,3 +69,8 @@ public class MyQueue {
     }
 
 }
+
+// 使用两个栈实现方式2：
+// 使用两个栈stack，stackHelper，stack用来保存元素，stackHelper是辅助栈，除了push，stackHelper都保持为空
+// 在push时，把stack中的元素放入stackHelper中，然后把要插入的元素放入stack中，然后再把stackHelper中的元素重新返回stack，这样stack中的最后一个元素就是最近进来的元素，栈顶元素就是很久之前进来的元素，符合队列的结构
+// 在pop、peek时直接返回stack的栈顶元素，empty时判断stack是否为空就行

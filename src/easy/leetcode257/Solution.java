@@ -26,7 +26,8 @@ import java.util.List;
 public class Solution {
 
     /**
-     * 递归：
+     * 树的前序遍历：
+     * 在递归的过程中把路径用字符串拼接
      */
     public List<String> binaryTreePaths(TreeNode root) {
         List<String> ret = new ArrayList<>();

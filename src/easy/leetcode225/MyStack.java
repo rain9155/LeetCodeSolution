@@ -27,7 +27,12 @@ import java.util.Queue;
  */
 
 /**
- * 使用两个队列实现
+ * 使用两个队列实现:
+ * 使用两个队列queue1，queue2，queue1用来保存插入的元素，queue2辅助栈，再用一个top变量保存栈顶元素，除了pop，使得queue2为空
+ * push：直接往queue1中插入元素，然后更新top变量
+ * pop：queue1中的最后一个元素即栈顶元素，所以把queue1中的元素放入queue2，直到queue1中只剩下一个元素，返回这个元素，然后再交换queue1和queue2，使得queue2保持为空，queue1为pop出一个元素后的队列
+ * top：直接返回top
+ * empty：判断queue1是否为空
  */
 public class MyStack {
 
@@ -41,19 +46,21 @@ public class MyStack {
 
     /** Push element x onto stack. */
     public void push(int x) {
-
+        queue1.add(x);
+        top = x;
     }
 
     /** Removes the element on top of the stack and returns that element. */
     public int pop() {
         if(empty()) return -1;
         while (queue1.size() != 1){
-            queue2.add(queue1.poll());
+            top = queue1.poll();
+            queue2.add(top);
         }
         int poll = queue1.poll();
-        while (!queue2.isEmpty()){
-            push(queue2.poll());
-        }
+        Queue<Integer> temp = queue1;
+        queue1 = queue2;
+        queue2 = temp;
         return poll;
     }
 
@@ -69,4 +76,9 @@ public class MyStack {
     }
 
 }
+
+//使用队列实现方式2：
+//同样使用两个队列queue1，queue2，但不使用top变量保存栈顶元素，queue2还是辅助栈，除了push，保持queue2为空
+//在push时，往queue2中插入元素，然后把queue1中的元素逐个放入queue2，这样queue2的第一个元素就是栈顶元素，然后再交换queue1和queue2，使得queue2保持为空，queue1为push一个元素后的队列
+//对于pop，top，直接返回queue1的第一个元素，对于empty，判断queue1就行
 
