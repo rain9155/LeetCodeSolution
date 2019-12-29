@@ -21,7 +21,8 @@ package easy.leetcode303;
  */
 
 /**
- * 用一个一维数组缓存每个数相加的结果
+ * 哈希表：
+ * 用一个一维数组datas缓存[0, i]累加的和，然后在求[i, j]范围的和时，只需要返回datas[j + 1] - datas[i]
  */
 public class NumArray {
 

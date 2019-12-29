@@ -22,13 +22,25 @@ package easy.leetcode326;
  */
 public class Solution {
 
+
+    /**
+     * 递归：
+     * 把n一直除以3，直到n等于1，就说明它是3的幂次方，否则不是
+     */
+    public boolean isPowerOfThree(int n) {
+        if(n <= 0) return false;
+        if(n == 1) return true;
+        return n % 3 == 0 && isPowerOfThree(n / 3);
+    }
+
     /**
      * 数学：
      * n=3^i => i=log3(n) => i = log?(n) / log?(3)
      * 如果要n是3的幂，则i一定为整数，所以通过计算log?(3) / log?(n)，判断结果是否是整数即可
      */
-    public boolean isPowerOfThree(int n) {
-        return (Math.log10(n) / Math.log10(3)) % 1 == 0;
+    public boolean isPowerOfThree2(int n) {
+        double num = Math.log10(n) / Math.log10(3);
+        return (num - (int)num) < Double.MIN_VALUE;
     }
 
 }

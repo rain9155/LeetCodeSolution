@@ -1,9 +1,6 @@
 package easy.leetcode349;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * 两个数组的交集:
@@ -24,6 +21,7 @@ public class Solution {
 
     /**
      * 哈希表：
+     * 先用一个哈希表把nums1中的保存起来，然后再遍历nums2，如果哈希表中存在nums2相应元素，就输出
      */
     public int[] intersection(int[] nums1, int[] nums2) {
         if(nums1.length == 0 || nums2.length == 0) return new int[0];

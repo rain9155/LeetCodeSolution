@@ -16,7 +16,7 @@ package easy.leetcode344;
 public class Solution {
 
     /**
-     * 双指针
+     * 双指针：
      */
     public void reverseString(char[] s) {
         if(s == null || s.length == 0) return;

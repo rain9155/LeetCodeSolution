@@ -52,4 +52,31 @@ public class Solution {
         return ret;
     }
 
+    /**
+     * 排序：
+     * 1、首先把两个数组排序，然后初始化3个指针p1、p2、p3，p1指向nums1，p2指向nums2，p3指向输出数组ret
+     * 2、然后遍历两个数组，如果遇到相等的元素，就把元素复制到ret中，同时移动指针到下一位
+     * 3、如果遇到不相等的元素，哪边元素小，哪边指针移动
+     */
+    public int[] intersect2(int[] nums1, int[] nums2) {
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
+        int len = nums1.length > nums2.length ? nums2.length : nums1.length;
+        int[] ret = new int[len];
+        int p1 = 0, p2 = 0, p3 = 0;
+        while(p1 < nums1.length && p2 < nums2.length){
+            if(nums1[p1] == nums2[p2]){
+                ret[p3] = nums2[p2];
+                p1++;
+                p2++;
+                p3++;
+            }else if(nums1[p1] < nums2[p2]){
+                p1++;
+            }else{
+                p2++;
+            }
+        }
+        return ret;
+    }
+
 }

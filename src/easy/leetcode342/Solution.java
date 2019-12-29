@@ -34,4 +34,17 @@ public class Solution {
         return (num & mask) == num;
     }
 
+    /**
+     * 数学规律：
+     * 如果一个数是4的幂次方，那么：
+     * 1、它是2的幂次方
+     * 2、减去1之后它是3的倍数
+     */
+    public boolean isPowerOfFour2(int num) {
+        if(num <= 0){
+            return false;
+        }
+        return (num & num - 1) == 0 && (num - 1) % 3 == 0;
+    }
+
 }

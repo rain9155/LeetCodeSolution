@@ -17,6 +17,7 @@ public class Solution {
 
     /**
      * 方法1：二分查找
+     * 在[1, num]的范围内寻找是否有某个数的平方数等于num
      */
     public boolean isPerfectSquare(int num) {
         if(num <= 0) return false;

@@ -28,21 +28,24 @@ public class Solution {
 
     /**
      * 哈希表：
+     * 建立pattern中每个字符和str中每个单词的映射，并且每个映射是唯一的，在遍历的过程中，如果发现不存在这样的映射或映射不唯一，就返回false，
      */
     public boolean wordPattern(String pattern, String str) {
         String[] strs = str.split(" ");
-        if(pattern.length() != strs.length) return false;
-        Map<Character, String> map = new HashMap<>(strs.length);
+        if(pattern.length() != strs.length){
+            return false;
+        }
+        Map<Character, String> map = new HashMap<>();
         for(int i = 0; i < pattern.length(); i++){
-            char c = pattern.charAt(i);
-            if(!map.containsKey(c)){
+            if(!map.containsKey(pattern.charAt(i))){
                 if(map.containsValue(strs[i])){
                     return false;
                 }
-                map.put(c, strs[i]);
-            }
-            if(!map.get(c).equals(strs[i])){
-                return false;
+                map.put(pattern.charAt(i), strs[i]);
+            }else{
+                if(!strs[i].equals(map.get(pattern.charAt(i)))){
+                    return false;
+                }
             }
         }
         return true;

@@ -10,7 +10,7 @@
 
 ### 题型：数组
 
-关键思想：双指针，位运算，排序预处理
+关键思想：双指针，位运算，排序预处理，二分查找
 
 1、[两数之和](https://leetcode-cn.com/problems/two-sum/)
 
@@ -37,6 +37,16 @@
 217、[存在重复元素](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode217/Solution.java)
 
 219、[存在重复元素 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode219/Solution.java)
+
+268、[缺失数字](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode268/Solution.java)
+
+283、[移动零](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode283/Solution.java)
+
+303、[区域和检索](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode303/Solution.java)
+
+349、[两个数组的交集](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode349/Solution.java)
+
+350、[两个数组的交集II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode350/Solution.java)
 
 
 ### 题型：链表
@@ -107,6 +117,10 @@
 
 242、[有效的字母异位词](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode242/Solution.java)
 
+290、[单词规律](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode290/Solution.java)
+
+344、[反转字符串](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode344/Solution.java)
+
 
 434、[字符串中的单词数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode434/Solution.java)
 
@@ -136,6 +150,8 @@
 
 198、[打家劫舍](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode198/Solution.java)
 
+292、[Nim 游戏](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode292/Solution.java)
+
 ### 题型：数学
 
 关键思想：找数学规律
@@ -158,6 +174,12 @@
 
 258、[各位相加](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode258/Solution.java)
 
+263、[丑数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode263/Solution.java)
+
+326、[3的幂](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode326/Solution.java)
+
+367、[有效的完全平方数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode367/Solution.java)
+
 ### 题型：位运算
 
 关键思想：n & 1，n & (n - 1), 左移，右移，异或
@@ -169,3 +191,5 @@
 191、[1的个数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode191/Solution.java)
 
 231、[2的幂](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode231/Solution.java)
+
+342、[4的幂](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode342/Solution.java)
