@@ -12,6 +12,9 @@ package easy.leetcode415;
  */
 public class Solution {
 
+    /**
+     * 遍历两个字符串，逐个取出相加，然后拼接，最后把结果反转返回
+     */
     public String addStrings(String num1, String num2) {
         StringBuilder ret = new StringBuilder();
         int p1 = num1.length() - 1;

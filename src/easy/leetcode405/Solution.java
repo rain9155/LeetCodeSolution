@@ -25,6 +25,7 @@ public class Solution {
 
     /**
      * 位运算：
+     * 把num的二进制位每4位为一组，分别计算出每组的16进制，然后拼接
      */
     public String toHex(int num) {
         if(num == 0) return "0";

@@ -23,7 +23,8 @@ import java.util.TreeSet;
 public class Solution {
 
     /**
-     * 维护一个大小为3的红黑树
+     * 维护一个大小为3的红黑树：
+     * 因为红黑树是一颗二分查找树，所以这个3个数在大小为3的红黑树中一定是从小到大排列，每当由第4个数加入时，就把第一次个数删除就行
      */
     public int thirdMax(int[] nums) {
         if(nums.length == 0) return 0;

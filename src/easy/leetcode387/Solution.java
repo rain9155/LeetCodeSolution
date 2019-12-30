@@ -17,6 +17,11 @@ import java.util.Map;
  */
 public class Solution {
 
+    /**
+     * 哈希表：
+     * 1、第一次遍历使用哈希表来保存每个字符出现的次数
+     * 2、第二次遍历看哪个字符第一次出现了一次
+     */
     public int firstUniqChar(String s) {
         if(s.length() == 0) return -1;
         Map<Character, Integer> map = new HashMap<>();

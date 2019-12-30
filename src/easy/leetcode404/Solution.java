@@ -18,6 +18,10 @@ import common.struction.TreeNode;
 public class Solution {
 
 
+    /**
+     * 递归：
+     * 在递归的过程中，用一个Boolean标志当前是左子树，还是右子树，当递归到叶子时，返回左叶子的数值给上一层累加
+     */
     public int sumOfLeftLeaves(TreeNode root) {
         if(root == null) return 0;
         return sumOfLeftLeaves(root, false);

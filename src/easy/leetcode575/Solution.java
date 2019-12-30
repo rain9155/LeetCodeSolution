@@ -23,6 +23,10 @@ import java.util.Set;
  */
 public class Solution {
 
+    /**
+     * 如果糖果的种类数大于n / 2, 那么妹妹可以分得糖果种类数只能是n / 2，因为糖果要平均分
+     * 如果糖果的种类数小于n / 2, 那么妹妹可以分得糖果种类数只能是糖果种类数，因为要保证妹妹可以获得最大糖果种类数，所以把每种种类的糖果都给至少一个给妹妹
+     */
     public int distributeCandies(int[] candies) {
         Set<Integer> set = new HashSet<>();
         for(int i = 0; i < candies.length; i++){

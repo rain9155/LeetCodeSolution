@@ -16,6 +16,10 @@ package easy.leetcode374;
  * 输出: 6
  */
 public class Solution {
+
+    /**
+     * 二分查找：
+     */
     public int guessNumber(int n) {
         int start = 1;
         int end = n;
