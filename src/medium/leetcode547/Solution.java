@@ -1,5 +1,7 @@
 package medium.leetcode547;
 
+import common.UF;
+
 /**
  * 朋友圈:
  * 班上有 N 名学生。其中有些人是朋友，有些则不是。他们的友谊具有是传递性。如果已知 A 是 B 的朋友，B 是 C 的朋友，那么我们可以认为 A 也是 C 的朋友。
@@ -29,8 +31,22 @@ package medium.leetcode547;
  */
 public class Solution {
 
+    /**
+     * 并查集：
+     * 如果i和j是朋友，就把它们union起来，最后返回连通分量的数量
+     */
     public int findCircleNum(int[][] M) {
-
+        if(M.length == 0 || M[0].length == 0) return 0;
+        int n = M.length;
+        UF uf = new UF(n + 1);
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                if(M[i][j] == 1){
+                    uf.union(i, j);
+                }
+            }
+        }
+        return uf.getCount();
     }
 
 }

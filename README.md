@@ -44,9 +44,14 @@
 
 448、[找到所有数组中消失的数字](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode448/Solution.java)
 
+#### 中等：
+
+11、[盛最多水的容器](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode11/Solution.java)
+
+
 ### 题型：字符串
 
-关键思想：哈希表，双指针
+关键思想：哈希表，双指针(滑动窗口)
 
 #### 简单：
 
@@ -70,8 +75,15 @@
 
 415、[字符串相加](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode415/Solution.java)
 
-
 434、[字符串中的单词数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode434/Solution.java)
+
+#### 中等：
+
+5、[最长回文子串](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode5/Solution.java)
+
+6、[Z 字形变换](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode6/Solution.java)
+
+
 
 ### 题型：哈希表
 
@@ -98,6 +110,10 @@
 389、[找不同](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode389/Solution.java)
 
 409、[最长回文串](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode409/Solution.java)
+
+#### 中等：
+
+3、[无重复字符的最长子串](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode3/Solution.java)
 
 ### 题型：链表
 
@@ -228,6 +244,14 @@
 
 
 575、[分糖果](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode575/Solution.java)
+
+#### 中等：
+
+8、[字符串转换整数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode8/Solution.java)
+
+12、[整数转罗马数字](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode12/Solution.java)
+
+
 
 ### 题型：位运算
 

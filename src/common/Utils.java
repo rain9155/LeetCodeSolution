@@ -6,38 +6,6 @@ package common;
 public class Utils {
 
     /**
-     * 直接插入排序
-     * @param nums 待排序的数组
-     */
-    public static void insertionSort(int[] nums){
-        if(nums == null || nums.length  < 2) return;
-        for(int i = 1; i < nums.length; i++){
-            int j = i - 1;
-            int v = nums[i];
-            while (j >= 0 && nums[j] > v){
-                nums[j + 1] = nums[j];
-                j--;
-            }
-            nums[j + 1] = v;
-        }
-    }
-
-    /**
-     * 冒泡排序
-     * @param nums 待排序的数组
-     * @param start 要排序的起始位置
-     */
-    public static void bubbSorts(int[] nums, int start){
-        for(int i = start; i < nums.length; i++){
-            for(int j = start; j < nums.length - 1 - i + start; j++){
-                if(nums[j] > nums[j + 1]){
-                   swap(nums, j, j + 1);
-                }
-            }
-        }
-    }
-
-    /**
      * 二分查找法
      * @param nums 有序数组
      * @param target 要查找的值
@@ -58,6 +26,38 @@ public class Utils {
             }
         }
         return -1;
+    }
+
+    /**
+     * 冒泡排序
+     * @param nums 待排序的数组
+     * @param start 要排序的起始位置
+     */
+    public static void bubbSorts(int[] nums, int start){
+        for(int i = start; i < nums.length; i++){
+            for(int j = start; j < nums.length - 1 - i + start; j++){
+                if(nums[j] > nums[j + 1]){
+                    swap(nums, j, j + 1);
+                }
+            }
+        }
+    }
+
+    /**
+     * 直接插入排序
+     * @param nums 待排序的数组
+     */
+    public static void insertionSort(int[] nums){
+        if(nums == null || nums.length  < 2) return;
+        for(int i = 1; i < nums.length; i++){
+            int j = i - 1;
+            int v = nums[i];
+            while (j >= 0 && nums[j] > v){
+                nums[j + 1] = nums[j];
+                j--;
+            }
+            nums[j + 1] = v;
+        }
     }
 
     /**
