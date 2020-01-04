@@ -1,6 +1,6 @@
 package medium.leetcode328;
 
-import common.struction.ListNode;
+import common.node.ListNode;
 
 /**
  * 奇偶链表:

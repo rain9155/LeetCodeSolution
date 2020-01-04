@@ -1,6 +1,6 @@
 package easy.leetcode203;
 
-import common.struction.ListNode;
+import common.node.ListNode;
 
 /**
  * 移除链表元素：

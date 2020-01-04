@@ -1,6 +1,6 @@
 package medium.leetcode222;
 
-import common.struction.TreeNode;
+import common.node.TreeNode;
 
 /**
  * 完全二叉树的节点个数：

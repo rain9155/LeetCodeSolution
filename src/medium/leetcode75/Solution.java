@@ -1,5 +1,6 @@
 package medium.leetcode75;
 
+import common.Sorts;
 import common.Utils;
 
 /**
@@ -24,7 +25,7 @@ public class Solution {
      */
     public void sortColors(int[] nums) {
         if(nums == null || nums.length == 0) return;
-        Utils.quickSort(nums);
+        Sorts.quickSort(nums);
     }
 
     /**
@@ -48,9 +49,9 @@ public class Solution {
         int p2 = nums.length - 1;
         while (curr < p2){
             if(nums[curr] == 0){
-                Utils.swap(nums, curr++, p0++);
+                Sorts.swap(nums, curr++, p0++);
             }else if(nums[curr] == 2){
-                Utils.swap(nums, curr, p2--);
+                Sorts.swap(nums, curr, p2--);
             }else {
                 curr++;
             }

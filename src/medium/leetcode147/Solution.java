@@ -1,6 +1,6 @@
 package medium.leetcode147;
 
-import common.struction.ListNode;
+import common.node.ListNode;
 
 /**
  * 对链表进行插入排序:

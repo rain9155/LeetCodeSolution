@@ -1,8 +1,7 @@
 package easy.leetcode101;
 
-import common.struction.TreeNode;
+import common.node.TreeNode;
 
-import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.Queue;
 

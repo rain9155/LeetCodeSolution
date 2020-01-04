@@ -1,9 +1,6 @@
 package medium.leetcode129;
 
-import common.Tree;
-import common.struction.TreeNode;
-
-import java.util.List;
+import common.node.TreeNode;
 
 /**
  * 求根到叶子节点数字之和:

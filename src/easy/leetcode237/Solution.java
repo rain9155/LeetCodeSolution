@@ -1,6 +1,6 @@
 package easy.leetcode237;
 
-import common.struction.ListNode;
+import common.node.ListNode;
 
 /**
  * 删除链表中的节点：

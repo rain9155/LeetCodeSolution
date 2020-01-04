@@ -1,5 +1,6 @@
 package medium.leetcode31;
 
+import common.Sorts;
 import common.Utils;
 
 import java.util.Arrays;
@@ -34,12 +35,12 @@ public class Solution {
                 }
                 nums[i] = nums[j];
                 nums[j] = temp;
-                Utils.bubbSorts(nums, i + 1);
+                Sorts.bubbleSort(nums, i + 1);
                 break;
             }
             i--;
         }
-        if(i < 0) Utils.bubbSorts(nums, 0);
+        if(i < 0) Sorts.bubbleSort(nums, 0);
     }
 
 

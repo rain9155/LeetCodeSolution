@@ -1,4 +1,4 @@
-package common.struction;
+package common.node;
 
 /**
  * 树的节点

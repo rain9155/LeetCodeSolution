@@ -8,7 +8,9 @@
 - [图解leetcode](https://github.com/ZXZxin/ZXBlog/blob/master/Algorithm/LeetCode/LeetCodeSolutionIndex.md)
 - [Leetcode动画](https://github.com/MisterBooo/LeetCodeAnimation)
 
-### 题型：数组
+## 一、数据结构
+
+### 数组
 
 关键思想：双指针，位运算，排序预处理，二分查找
 
@@ -49,7 +51,7 @@
 11、[盛最多水的容器](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode11/Solution.java)
 
 
-### 题型：字符串
+### 字符串
 
 关键思想：哈希表，双指针(滑动窗口)
 
@@ -83,11 +85,11 @@
 
 6、[Z 字形变换](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode6/Solution.java)
 
-
-
-### 题型：哈希表
+### 哈希表
 
 关键思想：映射（map，数组）
+
+## 简单：
 
 205、[同构字符串](https://github.com/rain9155/LeetCodeSolution/blob/b0618cc851d249e33785f490f9c689ff12d5cc00/src/easy/leetcode205/Solution.java)
 
@@ -115,7 +117,10 @@
 
 3、[无重复字符的最长子串](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode3/Solution.java)
 
-### 题型：链表
+17、[电话号码的字母组合](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode17/Solution.java)
+
+
+### 链表
 
 关键思想：快慢指针，双指针，递归（相当于链表的前序、后序遍历，栈的思想），哈希表
 
@@ -137,7 +142,7 @@
 
 237、[删除链表中的节点](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode237/Solution.java)
 
-### 题型：树
+### 树
 
 关键思想：bfs，dfs，树的遍历(前序、中序、后序、层次)，递归
 
@@ -169,7 +174,7 @@
 
 437、[路径总和 III](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode437/Solution.java)
 
-### 题型：栈、队列
+### 栈、队列
 
 关键思想：递归，遍历，辅助栈
 
@@ -183,7 +188,10 @@
 
 232、[用栈实现队列](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode232/MyQueue.java)
 
-### 题型：动态规划
+
+## 二、算法思维
+
+### 动态规划
 
 关键思想：记忆化，备忘录
 
@@ -201,7 +209,7 @@
 
 292、[Nim 游戏](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode292/Solution.java)
 
-### 题型：二分查找
+### 二分查找
 
 关键思想：找位置，找边界，找目标值
 
@@ -215,7 +223,37 @@
 
 367、[有效的完全平方数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode367/Solution.java)
 
-### 题型：数学
+### 双指针
+
+关键思想：双指针、三指针、快慢指针
+
+## 简单：
+
+## 中等：
+
+15、[三数之和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode15/Solution.java)
+
+16、[最接近的三数之和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode16/Solution.java)
+
+18、[四数之和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode18/Solution.java)
+
+19、[删除链表的倒数第N个节点](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode19/Solution.java)
+
+24、[两两交换链表中的节点](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode24/Solution.java)
+
+
+### 回溯算法：
+
+关键思想：字符串，递归
+
+### 简单：
+
+### 中等：
+
+22、[括号生成](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode22/Solution.java)
+
+
+### 数学
 
 关键思想：找数学规律
 
@@ -251,9 +289,10 @@
 
 12、[整数转罗马数字](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode12/Solution.java)
 
+29、[两数相除](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode29/Solution.java)
 
 
-### 题型：位运算
+### 位运算
 
 关键思想：n & 1， n & (n - 1),  >> ， << ， ^ 
 
@@ -272,3 +311,4 @@
 371、[两整数之和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode371/Solution.java)
 
 401、[二进制手表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode401/Solution.java)
+

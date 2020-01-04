@@ -1,7 +1,6 @@
 package medium.leetcode199;
 
-import common.Tree;
-import common.struction.TreeNode;
+import common.node.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

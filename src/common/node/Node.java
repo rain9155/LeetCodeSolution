@@ -1,4 +1,4 @@
-package common.struction;
+package common.node;
 
 public class Node {
 

@@ -1,6 +1,6 @@
 package easy.leetcode107;
 
-import common.struction.TreeNode;
+import common.node.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,6 +1,6 @@
 package medium.leetcode82;
 
-import common.struction.ListNode;
+import common.node.ListNode;
 
 /**
  * 删除排序链表中的重复元素 II:

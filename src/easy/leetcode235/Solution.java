@@ -1,6 +1,6 @@
 package easy.leetcode235;
 
-import common.struction.TreeNode;
+import common.node.TreeNode;
 
 /**
  * 二叉搜索树的最近公共祖先:

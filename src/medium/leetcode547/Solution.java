@@ -1,6 +1,6 @@
 package medium.leetcode547;
 
-import common.UF;
+import common.structure.UF;
 
 /**
  * 朋友圈:

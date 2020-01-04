@@ -1,6 +1,6 @@
 package medium.leetcode116;
 
-import common.struction.Node;
+import common.node.Node;
 
 import java.util.LinkedList;
 import java.util.Queue;

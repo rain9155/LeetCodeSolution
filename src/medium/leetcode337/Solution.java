@@ -1,6 +1,6 @@
 package medium.leetcode337;
 
-import common.struction.TreeNode;
+import common.node.TreeNode;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,11 +1,8 @@
 package medium.leetcode109;
 
-import common.struction.ListNode;
-import common.struction.TreeNode;
+import common.node.ListNode;
+import common.node.TreeNode;
 
-import java.io.UncheckedIOException;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package easy.leetcode206;
 
-import common.struction.ListNode;
+import common.node.ListNode;
 
 /**
  * 反转链表:

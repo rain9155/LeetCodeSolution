@@ -1,6 +1,6 @@
 package medium.leetcode61;
 
-import common.struction.ListNode;
+import common.node.ListNode;
 
 /**
  * 旋转链表:

@@ -1,6 +1,6 @@
 package medium.leetcode98;
 
-import common.struction.TreeNode;
+import common.node.TreeNode;
 
 /**
  * 验证二叉搜索树:

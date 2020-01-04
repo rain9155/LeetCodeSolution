@@ -1,6 +1,6 @@
 package easy.leetcode110;
 
-import common.struction.TreeNode;
+import common.node.TreeNode;
 
 /**
  * 平衡二叉树:

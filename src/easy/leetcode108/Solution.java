@@ -1,6 +1,6 @@
 package easy.leetcode108;
 
-import common.struction.TreeNode;
+import common.node.TreeNode;
 
 /**
  * 将有序数组转换为二叉搜索树：

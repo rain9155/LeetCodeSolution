@@ -1,6 +1,6 @@
 package easy.leetcode112;
 
-import common.struction.TreeNode;
+import common.node.TreeNode;
 
 /**
  * 路径总和:

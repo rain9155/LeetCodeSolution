@@ -1,5 +1,6 @@
 package medium.leetcode15;
 
+import common.Sorts;
 import common.Utils;
 
 import java.util.ArrayList;
@@ -10,6 +11,15 @@ import java.util.List;
  * 三数之和：
  * 给定一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，
  * 使得 a + b + c = 0 ？找出所有满足条件且不重复的三元组。
+ *
+ * 注意：答案中不可以包含重复的三元组。
+ *
+ * 例如, 给定数组 nums = [-1, 0, 1, 2, -1, -4]，
+ * 满足要求的三元组集合为：
+ * [
+ *   [-1, 0, 1],
+ *   [-1, -1, 2]
+ * ]
  */
 public class Solution {
 
@@ -18,7 +28,7 @@ public class Solution {
      */
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> ret = new ArrayList<List<Integer>>();
-        Utils.insertionSort(nums);
+        Sorts.insertionSort(nums);
         for(int i = 0; i < nums.length; i++){
             for(int j = i + 1; j < nums.length; j++){
                 for(int t = j + 1; t < nums.length; t++){
@@ -34,6 +44,7 @@ public class Solution {
 
     /**
      * O(n^2)
+     * 双指针：
      * 先排序，定义三个指针，i，j，k，遍历i，
      * 那么这个问题就可以转化为在i之后的数组中寻找 nums[j] + nums[k] = 0 - nums[i] 这个问题，
      * 也就将三数之和问题转变为二数之和, 用双指针遍历求两数之和。

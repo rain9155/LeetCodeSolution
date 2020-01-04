@@ -1,6 +1,6 @@
 package medium.leetcode236;
 
-import common.struction.TreeNode;
+import common.node.TreeNode;
 
 /**
  * 二叉树的最近公共祖先:

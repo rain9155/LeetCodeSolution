@@ -1,6 +1,6 @@
 package medium.leetcode382;
 
-import common.struction.ListNode;
+import common.node.ListNode;
 
 import java.util.Arrays;
 import java.util.Random;

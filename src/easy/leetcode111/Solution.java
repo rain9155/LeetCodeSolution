@@ -1,6 +1,6 @@
 package easy.leetcode111;
 
-import common.struction.TreeNode;
+import common.node.TreeNode;
 
 /**
  * 二叉树的最小深度:

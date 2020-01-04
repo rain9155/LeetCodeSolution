@@ -1,6 +1,6 @@
 package medium.leetcode144;
 
-import common.struction.TreeNode;
+import common.node.TreeNode;
 
 import java.util.*;
 

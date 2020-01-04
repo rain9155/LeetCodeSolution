@@ -1,7 +1,5 @@
 package medium.leetcode279;
 
-import common.struction.Node;
-
 import java.util.LinkedList;
 import java.util.Queue;
 

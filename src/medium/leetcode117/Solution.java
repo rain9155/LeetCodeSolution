@@ -1,11 +1,9 @@
 package medium.leetcode117;
 
-import common.struction.Node;
+import common.node.Node;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 /**
  * 填充每个节点的下一个右侧节点指针 II:

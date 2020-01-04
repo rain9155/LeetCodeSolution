@@ -1,7 +1,6 @@
 package medium.leetcode86;
 
-import common.List;
-import common.struction.ListNode;
+import common.node.ListNode;
 
 /**
  * 分隔链表:

@@ -1,6 +1,6 @@
 package easy.leetcode404;
 
-import common.struction.TreeNode;
+import common.node.TreeNode;
 
 /**
  * 左叶子之和:

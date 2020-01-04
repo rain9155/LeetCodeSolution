@@ -1,6 +1,6 @@
 package medium.leetcode114;
 
-import common.struction.TreeNode;
+import common.node.TreeNode;
 
 /**
  * 二叉树展开为链表:

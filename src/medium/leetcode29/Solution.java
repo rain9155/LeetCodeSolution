@@ -34,7 +34,7 @@ public class Solution {
 
     /**
      * 位移法：
-     * 找出除数最接近被除数的那个数close， close % divistor == 0，而商就是close / divistor
+     * 找出除数最接近被除数的那个数close， close % divisor == 0，而商就是close / divisor
      */
     public int divide2(int dividend, int divisor) {
         int ret = 0;

@@ -1,4 +1,4 @@
-package common;
+package common.structure;
 
 /**
  * 并查集

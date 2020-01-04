@@ -1,6 +1,6 @@
-package common;
+package common.structure;
 
-import common.struction.ListNode;
+import common.node.ListNode;
 
 /**
  * 链表

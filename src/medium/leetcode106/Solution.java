@@ -1,6 +1,6 @@
 package medium.leetcode106;
 
-import common.struction.TreeNode;
+import common.node.TreeNode;
 
 /**
  * 从中序与后序遍历序列构造二叉树:

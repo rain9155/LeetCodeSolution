@@ -1,6 +1,6 @@
 package medium.leetcode24;
 
-import common.struction.ListNode;
+import common.node.ListNode;
 
 /**
  * 两两交换链表中的节点:
@@ -12,6 +12,7 @@ import common.struction.ListNode;
 public class Solution {
 
     /**
+     * 三指针：
      * 用三个指针p1、p2、p3
      * p1指向要交换的第一个结点，p2指向要交换的第二结点，p3指向p2的下一个结点
      * 每次交换p1，p2，并检查p3是否满足条件进行下一次交换，条件是：p3也有相邻的结点

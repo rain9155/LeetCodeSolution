@@ -1,6 +1,6 @@
 package medium.leetcode133;
 
-import common.struction2.Node;
+import common.node2.Node;
 
 import java.util.*;
 
