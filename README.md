@@ -89,7 +89,7 @@
 
 关键思想：映射（map，数组）
 
-## 简单：
+#### 简单：
 
 205、[同构字符串](https://github.com/rain9155/LeetCodeSolution/blob/b0618cc851d249e33785f490f9c689ff12d5cc00/src/easy/leetcode205/Solution.java)
 
@@ -142,6 +142,9 @@
 
 237、[删除链表中的节点](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode237/Solution.java)
 
+#### 中等：
+
+
 ### 树
 
 关键思想：bfs，dfs，树的遍历(前序、中序、后序、层次)，递归
@@ -174,6 +177,8 @@
 
 437、[路径总和 III](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode437/Solution.java)
 
+#### 中等：
+
 ### 栈、队列
 
 关键思想：递归，遍历，辅助栈
@@ -187,6 +192,8 @@
 225、[用队列实现栈](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode225/MyStack.java)
 
 232、[用栈实现队列](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode232/MyQueue.java)
+
+#### 中等：
 
 
 ## 二、算法思维
@@ -223,13 +230,15 @@
 
 367、[有效的完全平方数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode367/Solution.java)
 
+#### 中等：
+
 ### 双指针
 
 关键思想：双指针、三指针、快慢指针
 
-## 简单：
+#### 简单：
 
-## 中等：
+#### 中等：
 
 15、[三数之和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode15/Solution.java)
 
@@ -246,9 +255,9 @@
 
 关键思想：字符串，递归
 
-### 简单：
+#### 简单：
 
-### 中等：
+#### 中等：
 
 22、[括号生成](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode22/Solution.java)
 
@@ -311,4 +320,6 @@
 371、[两整数之和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode371/Solution.java)
 
 401、[二进制手表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode401/Solution.java)
+
+#### 中等：
 
