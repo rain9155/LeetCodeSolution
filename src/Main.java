@@ -12,7 +12,7 @@ public class Main {
         System.out.println("排序前：");
         Utils.printNums(nums);
         System.out.println("排序后：");
-        Sorts.selectSort(nums);
+        Sorts.mergeSort(nums);
         Utils.printNums(nums);
     }
 }
