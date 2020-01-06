@@ -50,6 +50,8 @@
 
 11、[盛最多水的容器](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode11/Solution.java)
 
+31、[下一个排列](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode31/Solution.java)
+
 
 ### 字符串
 
@@ -118,6 +120,8 @@
 3、[无重复字符的最长子串](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode3/Solution.java)
 
 17、[电话号码的字母组合](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode17/Solution.java)
+
+36、[有效的数独](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode36/Solution.java)
 
 
 ### 链表
@@ -232,6 +236,11 @@
 
 #### 中等：
 
+33、[搜索旋转排序数组](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode33/Solution.java)
+
+34、[在排序数组中查找元素的第一个和最后一个位置](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode34/Solution.java)
+
+
 ### 双指针
 
 关键思想：双指针、三指针、快慢指针
@@ -260,6 +269,14 @@
 #### 中等：
 
 22、[括号生成](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode22/Solution.java)
+
+39、[组合总和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode39/Solution.java)
+
+40、[组合总和 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode40/Solution.java)
+
+46、[全排列](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode46/Solution.java)
+
+47、[全排列 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode47/Solution.java)
 
 
 ### 数学
@@ -299,6 +316,9 @@
 12、[整数转罗马数字](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode12/Solution.java)
 
 29、[两数相除](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode29/Solution.java)
+
+43、[字符串相乘](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode43/Solution.java)
+
 
 
 ### 位运算

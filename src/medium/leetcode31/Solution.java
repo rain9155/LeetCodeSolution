@@ -40,7 +40,9 @@ public class Solution {
             }
             i--;
         }
-        if(i < 0) Sorts.bubbleSort(nums, 0);
+        if(i < 0){
+            Sorts.bubbleSort(nums, 0);
+        }
     }
 
 

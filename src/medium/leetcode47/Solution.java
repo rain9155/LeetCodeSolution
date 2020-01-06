@@ -1,5 +1,7 @@
 package medium.leetcode47;
 
+import common.Sorts;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -49,5 +51,4 @@ public class Solution {
             tempList.remove(tempList.size() - 1);
         }
     }
-
 }

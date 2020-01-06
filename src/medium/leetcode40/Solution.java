@@ -32,6 +32,7 @@ public class Solution {
 
     /**
      * 回溯法：
+     * 与39题类似，注意去重
      */
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> ret = new ArrayList<>();

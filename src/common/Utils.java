@@ -24,6 +24,7 @@ public class Utils {
             }else {
                 start = middle + 1;
             }
+
         }
         return -1;
     }

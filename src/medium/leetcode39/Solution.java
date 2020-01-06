@@ -34,23 +34,24 @@ public class Solution {
      * 在本题里，在每次递归中都把(remain - nums[i]), remain表示到target的距离，如果等于0则表示，这个组合满足条件。否则回溯，并把不满足条件的num从tempList中移除掉
      */
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<List<Integer>> ret = new ArrayList<>();
-        if(candidates == null || candidates.length == 0) return ret;
         Arrays.sort(candidates);
-        backtrack(ret,  new ArrayList<>(), candidates,  target, 0);
+        List<List<Integer>> ret = new ArrayList<>();
+        combinationSum(candidates, target, 0, new LinkedList<>(), ret);
         return ret;
     }
 
-    private void backtrack(List<List<Integer>> ret, List<Integer> tempList, int[] nums, int remain, int start){
-        if(remain < 0) return;
-        if(remain == 0){
+    private void combinationSum(int[] candidates, int target, int start,  LinkedList<Integer> tempList, List<List<Integer>> ret) {
+        if(target < 0){
+            return;
+        }
+        if(target == 0){
             ret.add(new ArrayList<>(tempList));//深拷贝，避免后续递归修改ret里面的结果
         }
-        for(int i = start; i < nums.length; i++){
-            if(i == 0 || nums[i] != nums[i - 1]){//剔除重复数据
-                tempList.add(nums[i]);
-                backtrack(ret, tempList, nums, remain - nums[i], i);//这里传i表示重复使用这个数字
-                tempList.remove(tempList.size() - 1);
+        for(int i = start; i < candidates.length; i++){
+            if(i == 0 || candidates[i - 1] != candidates[i]){//剔除重复数据
+                tempList.add(candidates[i]);
+                combinationSum(candidates, target - candidates[i], i, tempList, ret);//这里传i表示重复使用这个数字
+                tempList.removeLast();
             }
         }
     }

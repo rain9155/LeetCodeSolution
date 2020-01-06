@@ -1,7 +1,8 @@
 package medium.leetcode46;
 
-import java.util.ArrayList;
-import java.util.List;
+import common.Sorts;
+
+import java.util.*;
 
 /**
  * 全排列:
@@ -18,7 +19,8 @@ import java.util.List;
  *   [3,2,1]
  * ]
  */
-public class Solution {
+public class Solution<T> {
+
 
     /**
      * 回溯法：
@@ -41,6 +43,35 @@ public class Solution {
             tempList.add(nums[i]);
             find(ret, tempList, nums);
             tempList.remove(tempList.size() - 1);
+        }
+    }
+
+    /**
+     * 回溯法2:
+     * 全排列的所有可能为n!
+     * 1、把nums的第一位和后面的任一位交换，直到和后面的所有元素都交换过
+     * 2、重复1步骤(n-1次)
+     */
+    public List<List<Integer>> permute2(int[] nums) {
+        List<List<Integer>> ret = new ArrayList<>();
+        helper(nums, 0, ret);
+
+        return ret;
+    }
+
+    private void helper(int[] nums, int start, List<List<Integer>> ret){
+        if(start >= nums.length){
+            ArrayList<Integer> list = new ArrayList<>();
+            for(int i = 0; i < nums.length; i++){
+                list.add(nums[i]);
+            }
+            ret.add(list);
+            return;
+        }
+        for(int i = start; i < nums.length; i++){
+            Sorts.swap(nums, start, i);
+            helper(nums, start + 1, ret);
+            Sorts.swap(nums, start, i);
         }
     }
 
