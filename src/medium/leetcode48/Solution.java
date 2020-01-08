@@ -38,11 +38,27 @@ package medium.leetcode48;
 public class Solution {
 
     /**
+     * 使用额外的空间：
+     * 从上到下的每一行的放到从左到右的每一列
+     */
+    public void rotate(int[][] matrix) {
+        if(matrix.length == 0 || matrix[0].length == 0){
+            return;
+        }
+        int n = matrix.length;
+        int[][] clone = matrix.clone();
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                matrix[j][n - i - 1] = clone[i][j];
+            }
+        }
+    }
+
+    /**
      * O（n^2）
      * 先转置，再翻转每一行
      */
-    public void rotate(int[][] matrix) {
-
+    public void rotate2(int[][] matrix) {
         if(matrix.length == 0 || matrix.length != matrix[0].length) return;
 
         int n = matrix.length;
@@ -74,7 +90,7 @@ public class Solution {
      *              (n-i-1, n-j-1)
      * 就是上面四个索引号上的数交换.
      */
-    public void rotate2(int[][] matrix) {
+    public void rotate3(int[][] matrix) {
 
         if(matrix.length == 0 || matrix.length != matrix[0].length) return;
 

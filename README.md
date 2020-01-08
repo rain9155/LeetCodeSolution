@@ -52,6 +52,10 @@
 
 31、[下一个排列](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode31/Solution.java)
 
+48、[旋转图像](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode48/Solution.java)
+
+54、[螺旋矩阵](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode54/Solution.java)
+
 
 ### 字符串
 
@@ -122,6 +126,8 @@
 17、[电话号码的字母组合](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode17/Solution.java)
 
 36、[有效的数独](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode36/Solution.java)
+
+49、[字母异位词分组](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode49/Solution.java)
 
 
 ### 链表
@@ -278,10 +284,17 @@
 
 47、[全排列 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode47/Solution.java)
 
+### 贪心算法
+
+#### 简单：
+
+#### 中等：
+
+55、[跳跃游戏](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode55/Solution.java)
 
 ### 数学
 
-关键思想：找数学规律
+关键思想：找数学规律，位运算
 
 #### 简单：
 
@@ -318,6 +331,8 @@
 29、[两数相除](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode29/Solution.java)
 
 43、[字符串相乘](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode43/Solution.java)
+
+50、[Pow(x, n)](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode50/Solution.java)
 
 
 

@@ -1,5 +1,9 @@
 package common;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * 各种排序算法
  */
@@ -242,6 +246,105 @@ public class Sorts {
         }
         while (start2 <= end2){
             nums[i++] = temp[start2++];
+        }
+    }
+
+
+    /**
+     * O(n)
+     * 计数排序
+     */
+    public static void countSort(int[] nums){
+        if(nums.length == 0) return;
+        int max = nums[0];
+        int min = nums[0];
+        for(int i = 0; i < nums.length; i++){
+            max = Math.max(nums[i], max);
+            min = Math.min(nums[i], min);
+        }
+        int d = max - min;//处理极端情况，防止nums中大部分元素都大时创建计数数组会浪费空间，所以使用每个元素与最小值的偏移量来代表该元素统计该元素在nums中的出现次数
+        int[] counts = new int[d + 1];
+        //counts数组中的值代表下标值在nums中出现的次数
+        for(int i = 0; i < nums.length; i++){
+            counts[nums[i] - min]++;
+        }
+        //按照每个元素的出现次数输出，出现多少次就输出多少次
+        int index = 0;
+        for(int i = 0; i < counts.length; i++){
+            while (counts[i]-- > 0){
+                nums[index++] = i;
+            }
+        }
+    }
+
+    /**
+     * O(n)
+     * 稳定的计数排序
+     */
+    public static void countSort2(int[] nums){
+        if(nums.length == 0) return;
+        int max = nums[0];
+        int min = nums[0];
+        for(int i = 0; i < nums.length; i++){
+            max = Math.max(nums[i], max);
+            min = Math.min(nums[i], min);
+        }
+        int d = max - min;
+        int[] counts = new int[d + 1];
+        for(int i = 0; i < nums.length; i++){
+            counts[nums[i] - min]++;
+        }
+        //从第二位开始，每一位累加前一位的数值，这时counts数组中的值代表下标值在排序数组中的位置
+        for(int i = 1; i < counts.length; i++){
+            counts[i] += counts[i - 1];
+        }
+        //新建一个存放排序后元素的数组
+        int[] sorts = new int[nums.length];
+        //从后往前遍历nums，把nums的每个元素依此放入相应的位置
+        for(int i = nums.length - 1; i >= 0; i--){
+            sorts[counts[nums[i] - min] - 1] = nums[i];
+            counts[nums[i] - min]--;
+        }
+        for(int i = 0; i < sorts.length; i++){
+            nums[i] = sorts[i];
+        }
+    }
+
+    /**
+     * O(n)(在桶数量为n的前提下)
+     * 桶排序
+     */
+    public static void bucketSort(int[] nums){
+        if(nums.length == 0) return;
+        int max = nums[0];
+        int min = nums[0];
+        for(int i = 0; i < nums.length; i++){
+            max = Math.max(max, nums[i]);
+            min = Math.min(min, nums[i]);
+        }
+        int d = max - min;
+        //确定桶的长度为数组的长度
+        int bucketNum = nums.length;
+        List<ArrayList<Integer>> buckets = new ArrayList<>(bucketNum);
+        //初始化每个桶
+        for(int i = 0; i < bucketNum; i++){
+            buckets.add(new ArrayList<>());
+        }
+        //遍历原始数组，将每个元素放入相应的桶中
+        for(int i = 0; i < nums.length; i++){
+            int bucketIndex = ((nums[i] - min) / d) * (bucketNum - 1);
+            buckets.get(bucketIndex).add(nums[i]);
+        }
+        //遍历每个桶，分别对桶中的元素进行排序
+        for(int i = 0; i < bucketNum; i++){
+            Collections.sort(buckets.get(i));
+        }
+        int index = 0;
+        //把每个桶中的元素依此输出到数组中
+        for(List<Integer> bucket : buckets){
+            for(Integer num : bucket){
+                nums[index++] = num;
+            }
         }
     }
 
