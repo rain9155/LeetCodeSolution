@@ -56,6 +56,10 @@
 
 54、[螺旋矩阵](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode54/Solution.java)
 
+56、[合并区间](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode56/Solution.java)
+
+59、[螺旋矩阵 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode59/Solution.java)
+
 
 ### 字符串
 
@@ -154,6 +158,8 @@
 
 #### 中等：
 
+61、[旋转链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode61/Solution.java)
+
 
 ### 树
 
@@ -205,6 +211,8 @@
 
 #### 中等：
 
+71、[ 简化路径](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode71/Solution.java)
+
 
 ## 二、算法思维
 
@@ -225,6 +233,16 @@
 198、[打家劫舍](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode198/Solution.java)
 
 292、[Nim 游戏](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode292/Solution.java)
+
+#### 中等：
+
+62、[不同路径](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode62/Solution.java)
+
+63、[不同路径 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode63/Solution.java)
+
+64、[最小路径和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode64/Solution.java)
+
+
 
 ### 二分查找
 
@@ -283,6 +301,9 @@
 46、[全排列](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode46/Solution.java)
 
 47、[全排列 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode47/Solution.java)
+
+60、[第k个排列](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode60/Solution.java)
+
 
 ### 贪心算法
 

@@ -17,8 +17,7 @@ package medium.leetcode64;
 public class Solution {
 
     /**
-     * O(mn)
-     * 动态规划：
+     * 二维动态规划：
      * 把右下角看作起点，左上角看作终点。
      * 我们新建一个额外的 dp 数组，与原矩阵大小相同。
      * 在这个矩阵中，dp(i, j)表示从坐标 (i, j) 到右下角的最小路径权值。
@@ -51,6 +50,29 @@ public class Solution {
         }
         //以左上角为终点
         return dp[0][0];
+    }
+
+    /**
+     * 一维动态规划：
+     */
+    public int minPathSum2(int[][] grid) {
+        if(grid.length == 0 || grid[0].length == 0){
+            return 0;
+        }
+        int r = grid.length;
+        int c = grid[0].length;
+        int[] dp = new int[c];
+        dp[c - 1] = grid[r - 1][c - 1];
+        for(int i = c - 2; i >= 0; i--){
+            dp[i] = grid[r - 1][i] + dp[i + 1];
+        }
+        for(int i = r - 2; i >= 0; i--){
+            dp[c - 1] += grid[i][c - 1];
+            for(int j = c - 2; j >= 0; j--){
+                dp[j] = grid[i][j] + Math.min(dp[j], dp[j + 1]);
+            }
+        }
+        return dp[0];
     }
 
 }
