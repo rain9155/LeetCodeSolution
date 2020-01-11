@@ -32,13 +32,24 @@ public class Utils {
 
     /**
      * 打印数组
-     * @param nums 要打印的数组
      */
     public static void printNums(int[] nums){
       for(int num : nums){
           System.out.print(num + "  ");
       }
       System.out.println();
+    }
+
+    /**
+     * 打印二维数组
+=     */
+    public static void printMartix(int[][] martix){
+        for(int[] nums : martix){
+            for(int num : nums){
+                System.out.print(num + " ");
+            }
+            System.out.println();
+        }
     }
 
 

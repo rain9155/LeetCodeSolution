@@ -8,6 +8,7 @@ package medium.leetcode91;
  * ...
  * 'Z' -> 26
  * 给定一个只包含数字的非空字符串，请计算解码方法的总数。
+ *
  * 示例 1:
  * 输入: "12"
  * 输出: 2
@@ -22,7 +23,7 @@ public class Solution {
     /**
      * 动态规划：
      * 状态转移公式：count[i] = count[i - 1] + count[i - 2]
-     * i是遍历s时的索引，每次遍历时取出取出到i为止的最后两个数字，记为lastTwoNum，记lastTwoNum的第一个数为preLastNum， 第二个数为lastNum，然后根据lastTwoNum是否大于26分为两种情况：
+     * i是遍历s时的索引，每次遍历时取出到i为止的最后两个数字，记为lastTwoNum，记lastTwoNum的第一个数为preLastNum， 第二个数为lastNum，然后根据lastTwoNum是否大于26分为两种情况：
      *  第一种情况 lastTwoNum > 26：
      *      又分2种情况：
      *            （1）lastNum == 0 && preLastNum != 0，如170，任何组合都无法解析，所以返回0

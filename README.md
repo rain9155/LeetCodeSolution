@@ -60,6 +60,8 @@
 
 59、[螺旋矩阵 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode59/Solution.java)
 
+73、[矩阵置零](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode73/Solution.java)
+
 
 ### 字符串
 
@@ -242,6 +244,7 @@
 
 64、[最小路径和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode64/Solution.java)
 
+91、[解码方法](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode91/Solution.java)
 
 
 ### 二分查找
@@ -264,6 +267,12 @@
 
 34、[在排序数组中查找元素的第一个和最后一个位置](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode34/Solution.java)
 
+74、[搜索二维矩阵](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode74/Solution.java)
+
+81、[搜索旋转排序数组 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode81/Solution.java)
+
+
+
 
 ### 双指针
 
@@ -282,6 +291,15 @@
 19、[删除链表的倒数第N个节点](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode19/Solution.java)
 
 24、[两两交换链表中的节点](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode24/Solution.java)
+
+75、[颜色分类](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode75/Solution.java)
+
+80、[删除排序数组中的重复项 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode80/Solution.java)
+
+82、[删除排序链表中的重复元素 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode82/Solution.java)
+
+86、[分隔链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode86/Solution.java)
+
 
 
 ### 回溯算法：
@@ -303,6 +321,24 @@
 47、[全排列 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode47/Solution.java)
 
 60、[第k个排列](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode60/Solution.java)
+
+77、[组合](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode77/Solution.java)
+
+78、[子集](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode78/Solution.java)
+
+90、[子集 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode90/Solution.java)
+
+
+
+### 搜索算法
+
+关键思想：dfs，bfs
+
+#### 简单：
+
+#### 中等：
+
+79、[单词搜索](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode79/Solution.java)
 
 
 ### 贪心算法
@@ -378,4 +414,7 @@
 401、[二进制手表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode401/Solution.java)
 
 #### 中等：
+
+89、[格雷编码](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode89/Solution.java)
+
 
