@@ -16,6 +16,8 @@ package medium.leetcode96;
  */
 public class Solution {
 
+    //可以参考95题：生成包含所有二叉搜索树的集合，返回集合的大小
+
     /**
      * 动态规划：卡特兰数
      * 假设n个节点存在二叉排序树的个数是G(n)，令f(i)为以i为根的二叉搜索树的个数，则

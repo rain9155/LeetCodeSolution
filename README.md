@@ -162,6 +162,9 @@
 
 61、[旋转链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode61/Solution.java)
 
+92、[反转链表 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode92/Solution.java)
+
+
 
 ### 树
 
@@ -196,6 +199,11 @@
 437、[路径总和 III](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode437/Solution.java)
 
 #### 中等：
+
+94、[二叉树的中序遍历](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode94/Solution.java)
+
+95、[不同的二叉搜索树 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode95/Solution.java)
+
 
 ### 栈、队列
 
@@ -245,6 +253,9 @@
 64、[最小路径和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode64/Solution.java)
 
 91、[解码方法](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode91/Solution.java)
+
+96、[不同的二叉搜索树](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode96/Solution.java)
+
 
 
 ### 二分查找
