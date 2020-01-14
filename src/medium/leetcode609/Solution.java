@@ -1,5 +1,10 @@
 package medium.leetcode609;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * 在系统中查找重复文件:
  * 给定一个目录信息列表，包括目录路径，以及该目录中的所有包含内容的文件，您需要找到文件系统中的所有重复文件组的路径。一组重复的文件至少包括二个具有完全相同内容的文件。
@@ -32,4 +37,33 @@ package medium.leetcode609;
  * 如何确保您发现的重复文件不是误报？
  */
 public class Solution {
+
+    /**
+     * 哈希表：
+     * 1、遍历paths，用空格分割path，取出里面的目录和文件，然后以文件的内容为key，文件的路径为value放入哈希表中
+     * 2、遍历哈希表的所有value，当有重复文件组的路径，即value的长度大于1时，才添加到结果中
+     */
+    public List<List<String>> findDuplicate(String[] paths) {
+        Map<String, List<String>> map = new HashMap<>();
+        for(String path : paths){
+            String[] files = path.split(" ");
+            String dir = files[0];
+            for(int i = 1; i < files.length; i++){
+                String file = files[i];
+                int index = file.indexOf("(");
+                String content = file.substring(index + 1, file.length() - 1);
+                String fileName = file.substring(0, index);
+                map.putIfAbsent(content, new ArrayList<>());
+                map.get(content).add(dir + "/" + fileName);
+            }
+        }
+        List<List<String>> ret = new ArrayList<>();
+        for(List<String> files : map.values()){
+            if(files.size() > 1){
+                ret.add(files);
+            }
+        }
+        return ret;
+    }
+
 }

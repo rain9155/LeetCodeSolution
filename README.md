@@ -204,6 +204,12 @@
 
 95、[不同的二叉搜索树 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode95/Solution.java)
 
+98、[验证二叉搜索树](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode98/Solution.java)
+
+102、[二叉树的层次遍历](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode102/Solution.java)
+
+103、[二叉树的锯齿形层次遍历](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode103/Solution.java)
+
 
 ### 栈、队列
 

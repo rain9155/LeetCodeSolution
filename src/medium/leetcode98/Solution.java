@@ -29,22 +29,31 @@ import common.node.TreeNode;
  */
 public class Solution {
 
-    Integer preVal = null;
+    long pre = Long.MIN_VALUE;
 
     /**
      * 中序遍历：
      * 因为二叉搜索树中序遍历的过程就是升序的过程，所以如果在中序遍历的过程中发现某一个结点的值比上一个小，就说明这不是一颗合法的二叉搜索树
      */
     public boolean isValidBST(TreeNode root) {
-        if(root == null) return true;
-        if(root.left != null){
-            if(!isValidBST(root.left)) return false;
+        if(root == null){
+            return true;
         }
-        if(preVal != null && root.val <= preVal){
+        if(root.left != null){
+            if(!isValidBST(root.left)){
+                return false;
+            }
+        }
+        if(root.val <= pre){
             return false;
         }
-        preVal = root.val;
-        return isValidBST(root.right);
+        pre = root.val;
+        if(root.right != null){
+            if(!isValidBST(root.right)){
+                return false;
+            }
+        }
+        return true;
     }
 
 

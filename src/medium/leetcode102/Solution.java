@@ -29,9 +29,9 @@ public class Solution {
     List<List<Integer>> ret = new ArrayList<>();//ret的长度就是目前保存的最大层数
 
     /**
-     * 递归：广度优先遍历
-     * 逐层遍历，从左到右，用一个ret集合保存每层的遍历结果，ret的长度就是目前保存的最大层数
-     * 用一个lever追踪当前遍历到哪一层，如果lever比ret的长度大，说明lever层还没被创建，就创建一个集合存进ret，后续用lever为索引取出当前层的集合，把当前元素保存进集合
+     * 递归(前序遍历)：
+     * 1、逐层遍历，从左到右，用一个ret集合保存每层的遍历结果，ret的长度就是目前保存的最大层数
+     * 2、用一个lever追踪当前遍历到哪一层，如果lever比ret的长度大，说明lever层还没被创建，就创建一个集合存进ret，后续用lever为索引取出当前层的集合，把当前元素保存进集合
      */
     public List<List<Integer>> levelOrder(TreeNode root) {
         if(root == null) return ret;
@@ -53,9 +53,9 @@ public class Solution {
     }
 
     /**
-     * 递归：用队列实现
-     * 用一个队列保存每一层的结点数，然后当遍历队列的所有元素并把它添加进ret中
-     * 在每一次的遍历中都把当前遍历的node的左右结点add进队列，这样直到队列为空，
+     * 迭代(用队列实现):
+     * 1、用一个队列保存每一层的结点数，然后当遍历队列的所有元素并把它添加进ret中
+     * 2、在每一次的遍历中都把当前遍历的node的左右结点add进队列，这样直到队列为空，
      */
     public List<List<Integer>> levelOrder2(TreeNode root) {
         List<List<Integer>> ret = new ArrayList<>();
