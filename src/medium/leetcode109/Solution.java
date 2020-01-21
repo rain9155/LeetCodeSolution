@@ -55,11 +55,11 @@ public class Solution {
 
     /**
      * 递归 + 快慢指针
-     * 由于我们得到的是一个有序链表而不是数组，我们不能直接使用下标来访问元素。我们需要知道链表中的中间元素。
-     * 我们可以利用两个指针来访问链表中的中间元素。假设我们有两个指针 slow_ptr 和 fast_ptr。slow_ptr 每次向后移动一个节点而 fast_ptr 每次移动两个节点。
-     * 当 fast_ptr 到链表的末尾时 slow_ptr 就访问到链表的中间元素，记为midListNode
-     * 当找到链表中的中间元素后，我们将链表从中间元素的左侧断开，做法是使用一个 prev_ptr 的指针记录 slow_ptr 之前的元素，也就是满足 prev_ptr.next = slow_ptr，断开左侧部分就是让 prev_ptr.next = None。
-     * 所以递归调用的时候，左半部分我们只需要将链表的头指针传递给转换函数，右半部分传midListNode.next
+     * 由于我们得到的是一个有序链表而不是数组，我们不能直接使用下标来访问元素,
+     * 我们需要知道链表中的中间元素,我们可以利用两个指针来访问链表中的中间元素
+     * 1、假设我们有两个指针 slow_ptr 和 fast_ptr。slow_ptr 每次向后移动一个节点而 fast_ptr 每次移动两个节点，当 fast_ptr 到链表的末尾时 slow_ptr 就访问到链表的中间元素，记为midListNode
+     * 2、当找到链表中的中间元素后，我们将链表从中间元素的左侧断开，做法是使用一个 prev_ptr 的指针记录 slow_ptr 之前的元素，也就是满足 prev_ptr.next = slow_ptr，断开左侧部分就是让 prev_ptr.next = None。
+     * 3、所以递归调用的时候，左半部分我们只需要将链表的头指针传递给转换函数，右半部分传midListNode.next
      */
     public TreeNode sortedListToBST2(ListNode head) {
         if(head == null) return null;
