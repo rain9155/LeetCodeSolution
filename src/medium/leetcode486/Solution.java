@@ -28,6 +28,10 @@ package medium.leetcode486;
  */
 public class Solution {
 
+    /**
+     * 递归：
+     * 首先算出总分sum，然后通过递归求得玩家1的最优得分，然后根据sum得出玩家2的得分，比较玩家1和玩家2的得分
+     */
     public boolean PredictTheWinner(int[] nums) {
         int sum = 0;
         for(int num : nums){
@@ -63,34 +67,72 @@ public class Solution {
 
 
     /**
-     * 动态规划：
+     * 二维dp：
+     * dp[i][j]表示玩家1在[i, j]位置的数字中能拿到的最大分数
+     * 只有一个数字时，玩家1先拿，玩家1必胜
+     * 当只有两个数字时，玩家1肯定会拿最大的那个，玩家1必胜
+     * ...
+     * 当有n个数字时，轮到玩家1时，玩家1可以从nums的最左边i或者最右边j取数字
+     *                           当玩家1取最左边的数字nums[i]后，轮到玩家2取，玩家2也可以取最左边或者最右边的数字，玩家2会取走最大的，玩家2取走后，又轮到玩家1，这时玩家1只能取最小的
+     *                           当玩家1取最右边的数字nums[j]后，轮到玩家2取，玩家2也可以取最左边或者最右边的数字，玩家2会取走最大的，玩家2取走后，又轮到玩家1，这时玩家1只能取最小的
+     *                           所以本轮玩家1的得分为max(nums[i] + min(dp[i + 1][j - 1], dp[i + 2][j]), nums[j] + min(dp[i + 1][j - 1], dp[i][j - 2]))
      */
     public boolean PredictTheWinner2(int[] nums) {
         int len = nums.length;
-        if((len & 1) == 0){//偶数，玩家1一定能取得最大分数，因为
+        //偶数，玩家1一定能取得最大分数，因为玩家1可以提前计算好奇数下标的得分和偶数下标的得分，那个得分高就取哪边，所以玩家1总是会获胜
+        //例如nums = [2, 3, 6, 1， 5， 7], 偶数下标的2、6得分为8，奇数下标的3、1得分为4，而8 > 4, 所以玩家1一开始选择偶数下标即最左边的数拿就一定必胜
+        if((len & 1) == 0){
             return true;
         }
         int sum = 0;
         for(int num : nums){
             sum += num;
         }
-        //奇数，使用动态规划, dp[i][j]表示玩家1在[i, j]位置的数字中能拿到的最大分数
+        //奇数，使用动态规划
         int[][] dp = new int[len][len];
+        //dp对角线：当只有一个数字时，玩家1先拿；当只有两个数字时，玩家1肯定会拿最大的那个
         for(int i = 0; i < len; i++){
             dp[i][i] = nums[i];
             if(i + 1 < len){
                 dp[i][i + 1] = Math.max(nums[i], nums[i + 1]);
             }
         }
+        //从下往上，从左往右遍历dp数组
         for(int i = len - 3; i >= 0; i--){
             for(int j = i + 2; j < len; j++){
+                //获得玩家1在每个[i, j]范围的最大得分
                 dp[i][j] = Math.max(
                         nums[i] + Math.min(dp[i + 1][j - 1], dp[i + 2][j]),
                         nums[j] + Math.min(dp[i + 1][j - 1], dp[i][j - 2])
                 );
             }
         }
+        //玩家1的最终分数大于玩家2就赢了
         return dp[0][nums.length - 1] >= sum - dp[0][nums.length - 1];
+    }
+
+    /**
+     * 二维dp2：参考877题
+     * dp[i][j]表示在[i, j]范围的数字内玩家1多出玩家2的分数，最终只要玩家1的多出的分数大于等于0，玩家1就赢了
+     */
+    public boolean PredictTheWinner3(int[] nums) {
+        int len = nums.length;
+        int[][] dp = new int[len][len];
+        //dp对角线：当只有一个数字时，玩家1先拿
+        for(int i = 0; i < len; i++){
+            dp[i][i] = nums[i];
+        }
+        //从下往上，从左往右遍历dp数组
+        for(int i = len - 2; i >= 0; i--){
+            for(int j = i + 1; j < len; j++){
+                //获得玩家1在每个[i, j]范围内大于玩家2的分数
+                dp[i][j] = Math.max(
+                        nums[i] - dp[i + 1][j],
+                        nums[j] - dp[i][j - 1]
+                );
+            }
+        }
+        return dp[0][nums.length - 1] >= 0;
     }
 
 }

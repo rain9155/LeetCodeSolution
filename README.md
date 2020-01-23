@@ -165,10 +165,9 @@
 92、[反转链表 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode92/Solution.java)
 
 
-
 ### 树
 
-关键思想：bfs，dfs，树的遍历(前序、中序、后序、层次)，递归
+关键思想：bfs，dfs，树的遍历(前序、中序、后序、层次)，递归，分治法，链表
 
 #### 简单：
 
@@ -210,6 +209,12 @@
 
 103、[二叉树的锯齿形层次遍历](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode103/Solution.java)
 
+105、[从前序与中序遍历序列构造二叉树](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode105/Solution.java)
+
+106、[从中序与后序遍历序列构造二叉树](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode106/Solution.java)
+
+109、[有序链表转换二叉搜索树](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode109/Solution.java)
+
 
 ### 栈、队列
 
@@ -234,7 +239,7 @@
 
 ### 动态规划
 
-关键思想：记忆化，备忘录
+关键思想：递归 + 备忘录，dp数组(一维，二维)
 
 #### 简单：
 
@@ -262,6 +267,23 @@
 
 96、[不同的二叉搜索树](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode96/Solution.java)
 
+### 博弈问题
+
+关键思想：极大极小化
+
+#### 简单：
+
+292、[Nim 游戏](https://github.com/rain9155/LeetCodeSolution/blob/76f3bf73ff16ec170b9b9aac5e40b1bdbbf57828/src/easy/leetcode292/Solution.java)
+
+#### 中等:
+
+375、[猜数字大小 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode375/Solution.java)
+
+464、[我能赢吗](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode464/Solution.java)
+
+486、[预测赢家](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode486/Solution.java)
+
+877、[石子游戏](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode877/Solution.java)
 
 
 ### 二分查找
@@ -287,8 +309,6 @@
 74、[搜索二维矩阵](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode74/Solution.java)
 
 81、[搜索旋转排序数组 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode81/Solution.java)
-
-
 
 
 ### 双指针
