@@ -253,8 +253,6 @@
 
 198、[打家劫舍](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode198/Solution.java)
 
-292、[Nim 游戏](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode292/Solution.java)
-
 #### 中等：
 
 62、[不同路径](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode62/Solution.java)
@@ -365,6 +363,7 @@
 
 90、[子集 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode90/Solution.java)
 
+113、[路径总和 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode113/Solution.java)
 
 
 ### 搜索算法
