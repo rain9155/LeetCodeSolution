@@ -215,6 +215,8 @@
 
 109、[有序链表转换二叉搜索树](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode109/Solution.java)
 
+114、[二叉树展开为链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode114/Solution.java)
+
 
 ### 栈、队列
 
