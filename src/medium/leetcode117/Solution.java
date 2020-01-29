@@ -23,7 +23,7 @@ import java.util.List;
 public class Solution {
 
     /**
-     * 递归：
+     * 递归(层次遍历)：
      * 在递归中用一个list保存当前层的结点，如果当前层结点还没有放入list中，就放入，如果当前层list中已经有了该层的结点，就取出把该结点的next指向目前结点，然后更新该结点
      */
     public Node connect(Node root) {

@@ -23,8 +23,7 @@ import java.util.Queue;
 public class Solution {
 
     /**
-     * 使用了额外的空间
-     * 非递归 + 使用队列：
+     * 非递归 + 使用队列(使用了额外的空间)：
      * 使用队列保存逐层的结点，然后按层把结点连起来就行
      */
     public Node connect(Node root) {
@@ -46,10 +45,9 @@ public class Solution {
 
 
     /**
-     * 不使用额外的空间
-     * 递归：
-     * 按层遍历，每次从最左边的结点开始，记为curNode
-     * 先把curNode的左右结点连起来，如果curNode有next结点，就把curNode的右结点和curNode的next结点的左结点连起来;
+     * 递归( 不使用额外的空间)：
+     * 按层遍历，每次从最左边的结点开始，记为curNode,先把curNode的左右结点连起来
+     * 如果curNode有next结点，就把curNode的右结点和curNode的next结点的左结点连起来
      */
     public Node connect2(Node root) {
         if(root == null) return null;

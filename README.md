@@ -217,6 +217,12 @@
 
 114、[二叉树展开为链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode114/Solution.java)
 
+116、[填充每个节点的下一个右侧节点指针](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode116/Solution.java)
+
+117、[填充每个节点的下一个右侧节点指针 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode117/Solution.java)
+
+129、[求根到叶子节点数字之和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode129/Solution.java)
+
 
 ### 栈、队列
 
@@ -265,7 +271,7 @@
 
 91、[解码方法](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode91/Solution.java)
 
-96、[不同的二叉搜索树](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode96/Solution.java)
+120、[三角形最小路径和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode120/Solution.java)
 
 ### 博弈问题
 
@@ -377,6 +383,8 @@
 #### 中等：
 
 79、[单词搜索](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode79/Solution.java)
+
+127、[单词接龙](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode127/Solution.java)
 
 
 ### 贪心算法

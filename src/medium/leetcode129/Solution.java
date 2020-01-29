@@ -36,6 +36,10 @@ public class Solution {
 
     int sum = 0;
 
+    /**
+     * 前序遍历：
+     * 到叶子节点结束
+     */
     public int sumNumbers(TreeNode root) {
         if(root == null) return 0;
         numbers(root, 0);
