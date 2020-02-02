@@ -164,6 +164,9 @@
 
 92、[反转链表 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode92/Solution.java)
 
+138、[复制带随机指针的链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode138/Solution.java)
+
+
 
 ### 树
 
@@ -343,8 +346,6 @@
 
 86、[分隔链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode86/Solution.java)
 
-
-
 ### 回溯算法：
 
 关键思想：字符串，递归
@@ -373,6 +374,8 @@
 
 113、[路径总和 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode113/Solution.java)
 
+131、[分割回文串](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode131/Solution.java)
+
 
 ### 搜索算法
 
@@ -386,6 +389,10 @@
 
 127、[单词接龙](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode127/Solution.java)
 
+130、[被围绕的区域](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode130/Solution.java)
+
+133、[克隆图](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode133/Solution.java)
+
 
 ### 贪心算法
 
@@ -394,6 +401,9 @@
 #### 中等：
 
 55、[跳跃游戏](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode55/Solution.java)
+
+134、[加油站](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode134/Solution.java)
+
 
 ### 数学
 
@@ -462,5 +472,8 @@
 #### 中等：
 
 89、[格雷编码](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode89/Solution.java)
+
+137、[只出现一次的数字 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode137/Solution.java)
+
 
 

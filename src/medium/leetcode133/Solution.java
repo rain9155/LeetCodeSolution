@@ -1,30 +1,45 @@
 package medium.leetcode133;
 
-import common.node2.Node;
-
 import java.util.*;
 
 /**
  * 克隆图:
- * 给定无向连通图中一个节点的引用，返回该图的深拷贝（克隆）。图中的每个节点都包含它的值 val（Int） 和其邻居的列表（map[Node]）。
+ * 给定无向连通图中一个节点的引用，返回该图的深拷贝（克隆）。
+ * 图中的每个节点都包含它的值 val（Int） 和其邻居的列表（map[Node]）。
  */
 public class Solution {
 
-    Map<Node, Node> map = new HashMap<>();
+    class Node{
+        public int val;
+        public List<Node> neighbors;
+
+        Node(int val){
+            this.val = val;
+            this.neighbors = new ArrayList<>();
+        }
+    }
+
+    Map<Node, Node> cache = new HashMap<>();
 
     /**
      * dfs + Map:
-     * 这就是一个图的遍历，用一个map保存遍历过的结点，key是旧结点，value是新结点
-     * 每次递归时查找该旧结点是否创建过新结点，如果有，说明已经遍历过该旧结点，直接返回新结点就行，否则，把旧结点克隆到新结点，放入map中
-     * 然后对旧结点的邻居结点进行dfs克隆，并把返回的新节点放入新结点的邻接列表
+     * 图的遍历，用一个map保存遍历过的结点，key是旧结点，value是新结点
+     * 1、每遍历到一个节点时，就创建这个节点的副本，把值复制，然后遍历这个节点的邻居节点，递归复制每个邻居节点，最后返回这个节点的副本
+     * 2、在递归的时候，把已经复制过的节点缓存到map中，每次先检查map，如果当前节点已经复制过，就直接从map中返回当前节点的副本
      */
     public Node cloneGraph(Node node) {
-        if(node == null) return null;
-        if(map.containsKey(node)) return map.get(node);
-        Node newNode = new Node(node.val, new ArrayList<>());
-        map.put(node, newNode);
-        node.neighbors.forEach(node1 -> newNode.neighbors.add(cloneGraph(node1)));
-        return map.get(node);
+        if(node == null){
+            return node;
+        }
+        if(cache.containsKey(node)){
+            return cache.get(node);
+        }
+        Node clone = new Node(node.val);
+        cache.put(node, clone);
+        for(Node neighbor : node.neighbors){
+            clone.neighbors.add(cloneGraph(neighbor));
+        }
+        return clone;
     }
 
 }

@@ -7,6 +7,7 @@ import java.util.Map;
  * 复制带随机指针的链表:
  * 给定一个链表，每个节点包含一个额外增加的随机指针，该指针可以指向链表中的任何节点或空节点。
  * 要求返回这个链表的深拷贝。
+ *
  * 输入：
  * {"$id":"1","next":{"$id":"2","next":null,"random":{"$ref":"2"},"val":2},"random":{"$ref":"2"},"val":1}
  * 解释：
@@ -20,31 +21,89 @@ public class Solution {
         public Node next;
         public Node random;
 
-        public Node() {}
-
-        public Node(int _val, Node _next, Node _random) {
+        public Node(int _val) {
             val = _val;
-            next = _next;
-            random = _random;
+            next = null;
+            random = null;
         }
     }
 
     Map<Node, Node> map = new HashMap<>();
 
     /**
-     * 回溯 + Map:
-     * 假设这个链表没有random指针，那么它就是一个普通的链表，这时我们就可以按照普通的写法把链表拷贝出来
-     * 但是本题是有random指针，而就是说，random指针可以指向任意结点，所以我们要用一个map保存已经遍历过的node结点，防止重复创建
-     * 所以我们先从按照普通的链表的拷贝写法，跟着它的next走到尽头，把链表的所有结点先拷贝，并放入map中，然后回溯，拷贝random指向的结点，如果map中有，直接返回就行
+     * dfs + Map:
+     * 1、首先按照普通的链表的拷贝写法，递归复制它的next节点，一直走到链表的尽头，在递归的过程中把已经复制过的节点放入map缓存
+     * 2、然后递归返回，复制它的random节点，由于在1中链表的所有节点已经被复制并且缓存起来了，所以random指向的节点直接从map中取就行
      */
     public Node copyRandomList(Node head) {
         if(head == null) return null;
         if(map.containsKey(head)) return map.get(head);
-        Node node = new Node(head.val, null, null);
-        map.put(head, node);
-        node.next = copyRandomList(head.next);
-        node.random = copyRandomList(head.random);
-        return node;
+        Node clone = new Node(head.val);
+        map.put(head, clone);
+        clone.next = copyRandomList(head.next);
+        clone.random = copyRandomList(head.random);
+        return clone;
+    }
+
+    /**
+     * 原地算法：
+     * 把复制链表的过程分为3个步骤：
+     * 1、首先把链表中的每个节点复制，并让每个原始节点的next指针指向复制节点
+     * 2、然后把每个复制节点的random指向原始节点的random节点的next节点(因为random节点的next节点就是它的复制节点)
+     * 3、最后把奇数下标和偶数下标的节点分别串联成两个链表，奇数下标的链表就是原始链表，偶数下标的链表就是复制后的链表
+     */
+    public Node copyRandomList2(Node head) {
+        if(head == null){
+            return null;
+        }
+        copyNextNode(head);
+        copyRandomNode(head);
+        return disConnect(head);
+    }
+
+    /**
+     * 把链表的每个节点复制，然后把复制节点放在每个节点的next位置
+     */
+    private void copyNextNode(Node head){
+        Node p = head;
+        while(p != null){
+            Node clone = new Node(p.val);
+            clone.next = p.next;
+            p.next = clone;
+            p = clone.next;
+        }
+    }
+
+    /**
+     * 把每个复制节点的random指针指向原始节点的random节点的next节点
+     */
+    private void copyRandomNode(Node head){
+        Node p = head;
+        while(p != null){
+            Node clone = p.next;
+            if(p.random != null){
+                clone.random = p.random.next;
+            }
+            p = clone.next;
+        }
+    }
+
+    /**
+     * 分别把奇数下标和偶数下标的节点串联成两个链表，然后返回偶数下标链表的头节点
+     */
+    private Node disConnect(Node head){
+        Node p1 = head;
+        Node p2 = head.next;
+        Node newHead = p2;
+        while(p1 != null && p2 != null){
+            p1.next = p2.next;
+            p1 = p1.next;
+            if(p1 != null){
+                p2.next = p1.next;
+                p2 = p2.next;
+            }
+        }
+        return newHead;
     }
 
 }

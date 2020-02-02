@@ -15,12 +15,14 @@ package medium.leetcode137;
 public class Solution {
 
     /**
+     * 参考：https://leetcode-cn.com/problems/single-number-ii/solution/single-number-ii-mo-ni-san-jin-zhi-fa-by-jin407891/
      * 位运算：
      * 通过某种运算$，使a $ a $ a = 0，0 $ a = a：
      * 看到下面一堆与、或、非、异或运算应该很懵吧……下面一条条分析：
      * ones记录至目前元素，各位元素出现1次的位置；
      * twos记录至目前元素，各位元素出现2次的位置；
-     * threes记录至目前元素，各位元素出现3次的位置 每轮完成时，当threes里某位为1时（代表此位出现了3次），需要将ones twos的对应位清零。
+     * threes记录至目前元素，各位元素出现3次的位置 ;
+     * 每轮完成时，当threes里某位为1时（代表此位出现了3次），需要将ones twos的对应位清零。
      * 这样将整个arr遍历后，出现3次的位都被置零了，留下的都是只出现一次的位，即one
      */
     public int singleNumber(int[] nums) {

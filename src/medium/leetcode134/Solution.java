@@ -5,10 +5,12 @@ package medium.leetcode134;
  * 在一条环路上有 N 个加油站，其中第 i 个加油站有汽油 gas[i] 升。
  * 你有一辆油箱容量无限的的汽车，从第 i 个加油站开往第 i+1 个加油站需要消耗汽油 cost[i] 升。你从其中的一个加油站出发，开始时油箱为空。
  * 如果你可以绕环路行驶一周，则返回出发时加油站的编号，否则返回 -1。
+ *
  * 说明: 
  * 如果题目有解，该答案即为唯一答案。
  * 输入数组均为非空数组，且长度相同。
  * 输入数组中的元素均为非负数。
+ *
  * 示例 1:
  * 输入:
  * gas  = [1,2,3,4,5]
@@ -66,28 +68,31 @@ public class Solution {
 
 
     /**
-     * O（n）:
+     * O（n）
+     * 证明：https://leetcode-cn.com/problems/gas-station/solution/java-1ms-xiang-xi-shuo-ming-qi-shi-dian-xuan-qu-gu/
      * 一次遍历：
-     * gas总量大于cost总量时一定存在某个站点能够开完全程，所以我们遍历整个加油站点，同时记录能够作为起点的加油站
-     * 当遍历完整个加油站点并且整个路程总加油量与总油耗的差值大于0，就说明有这个站点，否则没有
+     * gas总量大于cost总量时一定存在某个站点能够开完全程，所以我们遍历整个加油站点，找出这个站点
+     * 1、我们假设以startPos站点出发，用currTank记录行驶过程中剩余的油量，如果在某个站点currTank < 0, 说明从startPos出发无法到达当前站点
+     * 2、同时到无法到达站点之前的任意站点也无法到达当前站点，所以当currTank < 0时，就可以直接更新startPos为当前站点(无法到达的站点)重新出发
+     * 3、当某个startPos能够一直以currTank > 0到达最后的站点时，这个startPos就是返回结果
      */
     public int canCompleteCircuit2(int[] gas, int[] cost) {
         int n = gas.length;
-        int total_tank = 0;//记录整个路程总加油量与总油耗的差值
-        int curr_tank = 0;//记录当前油箱的剩余油量
-        int starting_station = 0;
+        int totalTank = 0;//记录整个路程总加油量与总油耗的差值
+        int currTank = 0;//记录当前油箱的剩余油量
+        int startPos = 0;//记录出发站点
         for (int i = 0; i < n; ++i) {
-            total_tank += gas[i] - cost[i];
-            curr_tank += gas[i] - cost[i];
-            //如果要到达下一站，但是剩余油量 < 0，说明不能从原本的starting_station开始出发
-            if (curr_tank < 0) {
+            totalTank += gas[i] - cost[i];
+            currTank += gas[i] - cost[i];
+            //如果要到达下一站，但是剩余油量 < 0，说明不能从原本的startPos开始出发
+            if (currTank < 0) {
                 //选择下一个站点作为出发点
-                starting_station = i + 1;
+                startPos = i + 1;
                 //清空油箱
-                curr_tank = 0;
+                currTank = 0;
             }
         }
-        return total_tank >= 0 ? starting_station : -1;
+        return totalTank >= 0 ? startPos : -1;
     }
 
 
