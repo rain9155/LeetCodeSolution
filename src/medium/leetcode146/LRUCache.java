@@ -23,14 +23,13 @@ import java.util.*;
  */
 
 /**
- * 哈希表 + 双向链表实现:
- * 最近访问的元素，把它移动到链表的头部的下一个
- * 如果要插入元素，如果哈希表中由该元素就直接更新，否则如果哈希表还没满，就把它插入链表的头部的下一个，如果哈希表满了，就删除链表尾部的上一个元素，把它插入到链表的头部的下一个
+ * 参考LinkedHashMap实现(哈希表 + 双向链表):
+ * 哈希表用来保存插入的元素，实现O(1)效率的查找和插入
+ * 双向链表用来实现LRU缓存机制：最近访问过或待插入的元素，把它移动到链表的尾部，如果哈希表满了，就删除链表头部的元素(最近未访问过)
  */
 public class LRUCache {
 
-
-    ListNode head, tail;//链表的头部和尾部
+    ListNode head, tail;//双向链表的头部和尾部
 
     class ListNode{
         ListNode pre;
@@ -40,30 +39,29 @@ public class LRUCache {
     }
 
     /**
-     * 在链表头部的右边插入元素
+     * 在链表头部的右边删除一个元素
      */
-    public void addNodeAfterHead(ListNode node){
+    public ListNode removeFirst(){
+        return removeNode(head.next);
+    }
+
+    /**
+     * 在链表尾部的左边插入一个元素
+     */
+    public void addLast(ListNode node){
         if(node == null) return;
-        node.pre = head;
-        node.next = head.next;
-
-        node.next.pre = node;
-        head.next = node;
+        node.pre = tail.pre;
+        tail.pre.next = node;
+        tail.pre = node;
+        node.next = tail;
     }
 
     /**
-     * 移动元素到链表的头部的右边
+     * 移动元素到链表尾部的左边
      */
-    public void moveNodeAfterHead(ListNode node){
+    public void moveToLast(ListNode node){
         removeNode(node);
-        addNodeAfterHead(node);
-    }
-
-    /**
-     * 在链表的尾部的左边删除一个元素
-     */
-    public ListNode removeNodeAfterTial(){
-        return removeNode(tail.pre);
+        addLast(node);
     }
 
     /**
@@ -93,20 +91,20 @@ public class LRUCache {
 
     /**
      * 获取元素：
-     * 并把这个元素移动到链表的头部的右边
+     * 如果存在这个元素就获取返回，并把这个元素移动到链表的尾部，如果不存在就返回-1
      */
     public int get(int key) {
         ListNode node = cache.getOrDefault(key, null);
-        moveNodeAfterHead(node);
+        moveToLast(node);
         return node == null ? -1 : node.value;
     }
 
     /**
      * 添加元素:
-     * 如果哈希表中有该元素，就直接更新该元素，并移动到链表的头部的右边
+     * 如果哈希表中有该元素，就直接更新该元素，并把该元素移动到链表的尾部
      * 如果哈希表中没有该元素，就判断哈希表有没有满：
-     *      如果哈希表还没满，就把它插入链表的头部的下一个;
-     *      如果哈希表满了，删除链表尾部的上一个元素，把它插入到链表的头部的下一个
+     *      如果哈希表还没满，就把待插入元素直接插入到链表的尾部
+     *      如果哈希表满了，就删除链表头部的元素，并把待插入元素插入到链表的尾部
      */
     public void put(int key, int value) {
         ListNode cacheNode = cache.get(key);
@@ -115,13 +113,13 @@ public class LRUCache {
             newNode.value = value;
             newNode.key = key;
             if(cache.size() >= capacity){
-                cache.remove(removeNodeAfterTial().key);
+                cache.remove(removeFirst().key);
             }
-            addNodeAfterHead(newNode);
+            addLast(newNode);
             cache.put(key, newNode);
         }else {
             cacheNode.value = value;
-            moveNodeAfterHead(cacheNode);
+            moveToLast(cacheNode);
         }
     }
 

@@ -48,15 +48,15 @@ public class Solution {
     }
 
 
-    public boolean wordBreak2(String s, List<String> wordDict) {
-        return wordBreak(s, wordDict, 0, new Boolean[s.length()]);
-    }
-
     /**
      * 优化回溯算法：
      * 如果出现s = “aaaaaab”, wordDict = [a, aa, aaa, aaaa]这种情况，s中每取出一个字串，都包含在wordDict中，就会导致重复执行多次递归
      * 所以就要用一个meto数组记录已经访问过并确定了从start开始是否可以再划分单词，当下次回溯时，如果meto中有，就直接返回meto中的记录就行
      */
+    public boolean wordBreak2(String s, List<String> wordDict) {
+        return wordBreak(s, wordDict, 0, new Boolean[s.length()]);
+    }
+
     private boolean wordBreak(String s, List<String> wordDict, int start, Boolean[] meto) {
         if(start >= s.length()) return true;
         if(meto[start] != null) return meto[start];//之前已经确认过从start开始划分的单词是否包含在wordDict中
@@ -71,7 +71,7 @@ public class Solution {
 
     /**
      * 动态规划;
-     * 对于s = leetcode395, 如果s划分后在wordDict中，则把s划分成两部分leet 和 code也在wordDict中，同理，如果leet在wordDict中，则把leet逐个划分成两部分""和leet也在wordDict中
+     * 对于s = leetcode, 如果s划分后在wordDict中，则把s划分成两部分leet 和 code也在wordDict中，同理，如果leet在wordDict中，则把leet逐个划分成两部分""和leet也在wordDict中
      * 所以对于s，我们用i和j两个指针，用i从0到s.length划分s的字串，j则继续把从[0 ... i]的字串继续划分成[0 ... j]和[j ... i]的子串, 然后判断[0 ... j]和[j ... i]是否包含在wordDict中
      * 如果[0 ... j]和[j ... i]包含在wordDict中则，[0 ... i]包含在wordDict中，则dp[i] = true, 否则dp[i] = false, 然后我们初始化dp[0] = true, 表示空字符串一定包含在wordDict中，就这样直到i == s.length
      */

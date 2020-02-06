@@ -31,6 +31,12 @@ import java.util.Stack;
  */
 public class Solution {
 
+    /**
+     * 使用栈模拟运算：
+     * 1、新建一个栈，用来保存运算过程中用到的数和计算出来的中间值
+     * 2、从左往右遍历tokens，每当遇到数字，就把它入栈，每当遇到运算符，就判断是哪个运算符，并分别做各自运算符的运算，然后把运算结果再次放入栈顶
+     * 3、最终栈中就只剩下一个值，这个值就是返回结果
+     */
     public int evalRPN(String[] tokens) {
         if(tokens == null) return 0;
         Stack<Integer> stack = new Stack<>();

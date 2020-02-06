@@ -166,7 +166,13 @@
 
 138、[复制带随机指针的链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode138/Solution.java)
 
+142、[环形链表 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode142/Solution.java)
 
+143、[重排链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode143/Solution.java)
+
+147、[对链表进行插入排序](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode147/Solution.java)
+
+148、[排序链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode148/Solution.java)
 
 ### 树
 
@@ -226,6 +232,7 @@
 
 129、[求根到叶子节点数字之和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode129/Solution.java)
 
+144、[二叉树的前序遍历](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode144/Solution.java)
 
 ### 栈、队列
 
@@ -243,8 +250,9 @@
 
 #### 中等：
 
-71、[ 简化路径](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode71/Solution.java)
+71、[简化路径](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode71/Solution.java)
 
+150、[逆波兰表达式求值](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode150/Solution.java)
 
 ## 二、算法思维
 
@@ -276,6 +284,20 @@
 
 120、[三角形最小路径和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode120/Solution.java)
 
+139、[单词拆分](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode139/Solution.java)
+
+152、[乘积最大子序列](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode152/Solution.java)
+
+### 贪心算法
+
+#### 简单：
+
+#### 中等：
+
+55、[跳跃游戏](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode55/Solution.java)
+
+134、[加油站](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode134/Solution.java)
+
 ### 博弈问题
 
 关键思想：极大极小化
@@ -293,32 +315,6 @@
 486、[预测赢家](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode486/Solution.java)
 
 877、[石子游戏](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode877/Solution.java)
-
-
-### 二分查找
-
-关键思想：找位置，找边界，找目标值
-
-#### 简单：
-
-35、[搜索插入位置](https://github.com/rain9155/LeetCodeSolution/blob/76f3bf73ff16ec170b9b9aac5e40b1bdbbf57828/src/easy/leetcode35/Solution.java)
-
-69、[x的平方根](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode69/Solution.java)
-
-374、[猜数字大小](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode374/Solution.java)
-
-367、[有效的完全平方数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode367/Solution.java)
-
-#### 中等：
-
-33、[搜索旋转排序数组](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode33/Solution.java)
-
-34、[在排序数组中查找元素的第一个和最后一个位置](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode34/Solution.java)
-
-74、[搜索二维矩阵](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode74/Solution.java)
-
-81、[搜索旋转排序数组 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode81/Solution.java)
-
 
 ### 双指针
 
@@ -345,6 +341,8 @@
 82、[删除排序链表中的重复元素 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode82/Solution.java)
 
 86、[分隔链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode86/Solution.java)
+
+151、[翻转字符串里的单词](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode151/Solution.java)
 
 ### 回溯算法：
 
@@ -376,34 +374,37 @@
 
 131、[分割回文串](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode131/Solution.java)
 
-
 ### 搜索算法
 
-关键思想：dfs，bfs
+关键思想：dfs，bfs，二分查找
 
 #### 简单：
 
+35、[搜索插入位置](https://github.com/rain9155/LeetCodeSolution/blob/76f3bf73ff16ec170b9b9aac5e40b1bdbbf57828/src/easy/leetcode35/Solution.java)
+
+69、[x的平方根](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode69/Solution.java)
+
+374、[猜数字大小](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode374/Solution.java)
+
+367、[有效的完全平方数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode367/Solution.java)
+
 #### 中等：
 
+33、[搜索旋转排序数组](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode33/Solution.java)
+
+34、[在排序数组中查找元素的第一个和最后一个位置](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode34/Solution.java)
+
+74、[搜索二维矩阵](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode74/Solution.java)
+
 79、[单词搜索](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode79/Solution.java)
+
+81、[搜索旋转排序数组 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode81/Solution.java)
 
 127、[单词接龙](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode127/Solution.java)
 
 130、[被围绕的区域](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode130/Solution.java)
 
 133、[克隆图](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode133/Solution.java)
-
-
-### 贪心算法
-
-#### 简单：
-
-#### 中等：
-
-55、[跳跃游戏](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode55/Solution.java)
-
-134、[加油站](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode134/Solution.java)
-
 
 ### 数学
 
@@ -447,8 +448,6 @@
 
 50、[Pow(x, n)](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode50/Solution.java)
 
-
-
 ### 位运算
 
 关键思想：n & 1， n & (n - 1),  >> ， << ， ^ 
@@ -474,6 +473,10 @@
 89、[格雷编码](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode89/Solution.java)
 
 137、[只出现一次的数字 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode137/Solution.java)
+
+## 三、其他
+
+146、[LRU缓存机制](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode146/LRUCache.java)
 
 
 

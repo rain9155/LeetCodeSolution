@@ -1,6 +1,7 @@
 package medium.leetcode144;
 
 import common.node.TreeNode;
+import common.structure.Tree;
 
 import java.util.*;
 
@@ -20,7 +21,28 @@ import java.util.*;
  */
 public class Solution {
 
-    public List<Integer> preorderTraversal(TreeNode root) {
+    /**
+     * 递归实现：
+     */
+    public List<Integer> preorderTraversal(TreeNode root){
+        List<Integer> ret = new ArrayList<>();
+        preTraversal(root, ret);
+        return ret;
+    }
+
+    private void preTraversal(TreeNode root, List<Integer> list){
+        if(root == null){
+            return;
+        }
+        list.add(root.val);
+        preTraversal(root.left, list);
+        preTraversal(root.right, list);
+    }
+
+    /**
+     * 基于栈的非递归实现：
+     */
+    public List<Integer> preorderTraversal2(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         if(root == null) return list;
         Stack<TreeNode> stack = new Stack<>();

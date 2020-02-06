@@ -3,6 +3,7 @@ package medium.leetcode152;
 /**
  * 乘积最大子序列:
  * 给定一个整数数组 nums ，找出一个序列中乘积最大的连续子序列（该序列至少包含一个数）。
+ *
  * 示例 1:
  * 输入: [2,3,-2,4]
  * 输出: 6
@@ -34,30 +35,30 @@ public class Solution {
     /**
      * O(n)
      * 动态规划：
-     * 遍历数组时计算当前最大值max，不断更新
-     * 令tempMax为当前最大值，则当前最大值为：  tempMax = Math.max(nums[i], tempMax * nums[i])
-     * 由于存在负数，那么会导致最大的变最小的，最小的变最大的，因此还需要维护前最小值：tempMin = Math.min(nums[i], tempMin * nums[i]);
-     * 当负数出现时则tempMax与tempMin进行交换再进行下一步计算
+     * 如果数组中负数为偶数个，那么最大乘积为整个数组的和，如果数组中负数为奇数个，那么最大乘积就要动态规划：
+     * 1、设置两个max和min，遍历数组时不断更新当前最大值max和最小值min
+     * 2、由于存在负数，那么会导致最大的变最小的，最小的变最大的，因此当负数出现时，把max和min进行交换后再进行1步骤
      */
     public int maxProduct2(int[] nums) {
         if(nums == null || nums.length == 0) return 0;
-        int max = nums[0];
-        int tempMax = max;
-        int tempMin = max;
-        for(int i = 0; i < nums.length; i++){
-
+        int res = nums[0];
+        int max = res;//记录到目前i为止，连续子数组的最大乘积
+        int min = res;//记录到目前i为止，连续子数组的最小乘积
+        for(int i = 1; i < nums.length; i++){
+            //当元素小于0时，会导致最大值变为最小值，最小值变为最大值
+            //所以这里交换最大值和最小值，让下面的累乘满足记录最大值和最小值情况
             if(nums[i] < 0){
-                int temp = tempMax;
-                tempMax = tempMin;
-                tempMin = temp;
+                int temp = max;
+                max = min;
+                min = temp;
             }
-
-            tempMax = Math.max(nums[i], tempMax * nums[i]);
-            tempMin = Math.min(nums[i], tempMin * nums[i]);
-
-            max = Math.max(tempMax, max);
+            //不断的更新最大值和最小值
+            max = Math.max(nums[i], max * nums[i]);
+            min = Math.min(nums[i], min * nums[i]);
+            //返回结果取最大值
+            res = Math.max(max, res);
         }
-        return max;
+        return res;
     }
 
 }
