@@ -17,34 +17,37 @@ import java.util.Stack;
 public class Solution {
 
     /**
-     * 参考：https://leetcode-cn.com/problems/decode-string/solution/decode-string-fu-zhu-zhan-fa-di-gui-fa-by-jyd/
      * 双栈：
+     * 1、使用两个栈numStack和strStack，numStack用来记录连续子串重复的次数，strStack用来记录重复的连续子串
+     * 2、遍历s，如果遇到数字或字符，就分别用count和ret拼接，当遇到‘[’时，就把count重复次数和ret连续子串分别入栈
+     * 3、如果遇到']'，就代表准备出栈，这时从numStack栈顶中取出记录的重复次数，把连续子串重复拼接后再和strStack栈顶连续子串拼接成新的ret
+     * 4、重复2、3步骤直到遍历完s，ret就是返回结果
      */
     public String decodeString(String s) {
         if(s.length() == 0) return "";
         char[] chars = s.toCharArray();
         StringBuilder ret = new StringBuilder();
+        int count = 0;
         Stack<Integer> numStack = new Stack<>();
         Stack<String> strStack = new Stack<>();
-        int count = 0;
         for(int i = 0; i < chars.length; i++){
             char c = chars[i];
-            if(c == '[') {
+            if(c >= '0' && c <= '9'){
+                count = count * 10 + Integer.parseInt("" + c);
+            }else if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')){
+                ret.append(c);
+            }else if(c == '[') {
                 numStack.push(count);
                 strStack.push(ret.toString());
                 count = 0;
                 ret = new StringBuilder();
             } else if(c == ']') {
                 StringBuilder tmp = new StringBuilder();
-                int cur_count =  numStack.pop();
-                for(int j = 0; j < cur_count; j++) {
+                int repeat =  numStack.pop();
+                for(int j = 0; j < repeat; j++) {
                     tmp.append(ret);
                 }
                 ret = new StringBuilder(strStack.pop() + tmp);
-            } else if(c >= '0' && c <= '9'){
-                count = count * 10 + Integer.parseInt("" + c);
-            } else {
-                ret.append(c);
             }
         }
         return ret.toString();

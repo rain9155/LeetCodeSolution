@@ -254,6 +254,9 @@
 
 150、[逆波兰表达式求值](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode150/Solution.java)
 
+
+394、[字符串解码](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode394/Solution.java)
+
 ## 二、算法思维
 
 ### 动态规划
@@ -405,6 +408,9 @@
 130、[被围绕的区域](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode130/Solution.java)
 
 133、[克隆图](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode133/Solution.java)
+
+153、[寻找旋转排序数组中的最小值](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode153/Solution.java)
+
 
 ### 数学
 

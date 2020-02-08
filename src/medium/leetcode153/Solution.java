@@ -15,24 +15,39 @@ package medium.leetcode153;
  */
 public class Solution {
 
+    boolean isValid = false;
+
     /**
-     * 二分搜索:
-     * 通过二分查找不断缩小范围，目标值的要求是小于左右相邻的值 三个重新界定左右边界的条件
-     * 右边界小于左边界，且mid位置的值小于右边界，说明最小值在旋转后的数组的右半段。
-     * 右边界大于左边界，说明范围内数组由小到大排列，直接收敛r=l。
-     * mid位置的值大于右边界，说明最小值在mid值的右边。
+     * 二分查找：
+     * 把数组旋转后，数组被分为两段，第一段子数组的每一个元素都大于第二段的子数组的任何元素
+     * 1、我们使用两个指针p1，p2，p1指向第一段子数组的第一个元素，p2指向第二段子数组的最后一个元素
+     * 2、取数组中值，当中值比p1指向的元素大时，说明断层点在中值的后面，这时把p1指向中值
+     *               当中值比p2指向的元素小时，说明断层点在中值的前面，这时把p2指向中值
+     * 3、不断缩小p1和p2，直到p1和p2相邻一个元素，这时p2指向的元素就是断层点，断层点就是最小的元素
      */
     public int findMin(int[] nums) {
-        int l = 0, r = nums.length - 1;
-        while (l < r) {
-            int mid = (r - l) / 2 + l;
-            if (nums[mid] < nums[r]) {
-                r = mid;
-            } else {
-                l = mid + 1;
+        if(nums == null || nums.length == 0){
+            isValid = true;
+            return -1;
+        }
+        int p1 = 0, p2 = nums.length - 1;
+        //特殊情况：如果整个数组都是有序的，或者这个数组只有一个元素，第一个元素就是最小元素
+        if(nums[p2] >= nums[p1]){
+            return nums[p1];
+        }
+        //进行二分查找，不断缩小p1和p2，直到p1和p2相邻，这时p2指向的元素就是断层点，断层点就是最小的元素
+        while(p1 < p2){
+            if(p2 - p1 == 1){
+                break;
+            }
+            int mid = p1 + ((p2 - p1) >> 1);
+            if(nums[mid] > nums[p1]){
+                p1 = mid;
+            }else if(nums[mid] < nums[p1]){
+                p2 = mid;
             }
         }
-        return nums[l];
+        return nums[p2];
     }
 
 }
