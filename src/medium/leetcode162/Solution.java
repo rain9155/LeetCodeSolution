@@ -37,8 +37,11 @@ public class Solution {
     /**
      * O(nlogn):
      * 二分查找;
-     * 为什么二分查找大的那一半一定会有峰值呢？（即nums[mid]<nums[mid+1]时，mid+1~N一定存在峰值）
-     * 首先已知 nums[mid+1]>nums[mid]，那么mid+2只有两种可能，一个是大于mid+1，一个是小于mid+1;
+     * 找到上坡的第一个拐点
+     * 1、当nums[mid] <  nums[mid+1], 拐点一定在mid的右边，所以l = mid + 1
+     * 2、当nums[mid] >= nums[mid+ 1], 那么mid可能是拐点，收拢r靠近mid，所以r = mid;
+     * 为什么二分查找大的那一半一定会有峰值呢？即nums[mid] < nums[mid+1]时，[mid+1,N]一定存在峰值
+     * 首先已知，那么mid+2只有两种可能，一个是大于mid+1，一个是小于mid+1;
      * 小于mid+1的情况，那么mid+1就是峰值;
      * 大于mid+1的情况，继续向右推，如果一直到数组的末尾都是大于的，那么可以肯定最后一个元素是峰值,因为nums[nums.length]=负无穷
      */

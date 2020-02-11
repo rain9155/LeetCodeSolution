@@ -15,6 +15,37 @@ package medium.leetcode137;
 public class Solution {
 
     /**
+     * 使用额外的空间：
+     * 只有一个数字出现一次，其余数字均出现三次，用一个32位数组记录nums中每个元素的二进制的1的出现次数
+     * 最终32位数组中每个位置统计的次数只有两种可能：3的倍数，3的倍数 + 1，如果是3的倍数，说明这个位置的1出现了3的倍数次
+     * 如果不是3的倍数，说明这个位置的1出现了不止3的倍数次，所以这个位置的1出现在只出现一次的数字的二进制位中
+     * 所以使用一个res，把不是3的倍数的位置的相应二进制位置为1，最终这个res就是只出现一次的数字
+     */
+    public int singleNumber(int[] nums) {
+        int[] count = new int[32];
+        //统计每个元素二进制的1出现的次数
+        for(int i = 0; i < nums.length; i++){
+            int num = nums[i];
+            int mask = 1;
+            for(int j = 31; j >= 0; j--){
+                if((num & mask) != 0){
+                    count[j]++;
+                }
+                mask <<= 1;
+            }
+        }
+        int res = 0;
+        //把不是3的倍数的相应二进制位置置为1
+        for(int i = 0; i < 32; i++){
+            res <<= 1;
+            if(count[i] % 3 == 1){
+                res |= 1;
+            }
+        }
+        return res;
+    }
+
+    /**
      * 参考：https://leetcode-cn.com/problems/single-number-ii/solution/single-number-ii-mo-ni-san-jin-zhi-fa-by-jin407891/
      * 位运算：
      * 通过某种运算$，使a $ a $ a = 0，0 $ a = a：
@@ -25,7 +56,7 @@ public class Solution {
      * 每轮完成时，当threes里某位为1时（代表此位出现了3次），需要将ones twos的对应位清零。
      * 这样将整个arr遍历后，出现3次的位都被置零了，留下的都是只出现一次的位，即one
      */
-    public int singleNumber(int[] nums) {
+    public int singleNumber2(int[] nums) {
         int one = 0;//one是一个32位的二进制，如果one中某一位为1，说明该位出现一次
         int two = 0;//two是一位32位的二进制，如果two中某一位为1，说明该位出现两次
         int three = 0;//three是一位32位的二进制，如果three中某一位为1，说明该位出现三次

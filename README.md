@@ -62,6 +62,8 @@
 
 73、[矩阵置零](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode73/Solution.java)
 
+179、[最大数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode179/Solution.java)
+
 
 ### 字符串
 
@@ -96,6 +98,9 @@
 5、[最长回文子串](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode5/Solution.java)
 
 6、[Z 字形变换](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode6/Solution.java)
+
+165、[比较版本号](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode165/Solution.java)
+
 
 ### 哈希表
 
@@ -134,6 +139,8 @@
 36、[有效的数独](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode36/Solution.java)
 
 49、[字母异位词分组](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode49/Solution.java)
+
+187、[重复的DNA序列](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode187/Solution.java)
 
 
 ### 链表
@@ -233,6 +240,9 @@
 129、[求根到叶子节点数字之和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode129/Solution.java)
 
 144、[二叉树的前序遍历](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode144/Solution.java)
+
+166、[二叉搜索树迭代器](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode166/BSTlterator.java)
+
 
 ### 栈、队列
 
@@ -411,6 +421,8 @@
 
 153、[寻找旋转排序数组中的最小值](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode153/Solution.java)
 
+162、[寻找峰值](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode162/Solution.java)
+
 
 ### 数学
 
@@ -453,6 +465,9 @@
 43、[字符串相乘](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode43/Solution.java)
 
 50、[Pow(x, n)](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode50/Solution.java)
+
+166、[分数到小数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode166/Solution.java)
+
 
 ### 位运算
 

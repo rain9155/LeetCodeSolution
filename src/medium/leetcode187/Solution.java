@@ -18,7 +18,7 @@ public class Solution {
 
     /**
      * 蛮力法：
-     * 用一个set保存遍历过的s的字串（字串长度都为10），当某个字串在set中出现过时就把它添加进ret
+     * 用一个set保存遍历过的s的子串（子串长度都为10），当某个字串在set中出现过时就把它添加进ret
      */
     public List<String> findRepeatedDnaSequences(String s) {
         List<String> ret = new ArrayList<>();
