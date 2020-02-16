@@ -81,8 +81,6 @@ public class Solution {
             }
         }
 
-
-
         return numCourses == 0;
     }
 

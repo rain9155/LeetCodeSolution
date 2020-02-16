@@ -1,6 +1,6 @@
 package medium.leetcode200;
 
-import java.math.BigInteger;
+import common.structure.UF;
 
 /**
  * 岛屿数量:
@@ -53,5 +53,36 @@ public class Solution {
         dfs(grid, row, col, i, j - 1);
         dfs(grid, row, col, i, j + 1);
     }
+
+    /**
+     * 并查集：
+     * 1、新建并查集，并新增一个虚拟节点连通分量
+     * 2、遇到0就把它连接到虚拟节点上，遇到1就把周围的1连接起来
+     * 3、返回结果就是并查集的连通分量 - 1
+     */
+    public int numIslands2(char[][] grid) {
+        if(grid == null || grid.length == 0) return 0;
+        int row = grid.length;
+        int col = grid[0].length;
+        UF uf = new UF(row * col + 1);
+        int[][] d = {{0, 1}, {1, 0}};
+        for(int i = 0; i < row; i++){
+            for(int j = 0; j < col; j++){
+                if(grid[i][j] == '0'){
+                    uf.isConnected(i * col + j, row * col + 1);
+                }else if(grid[i][j] == '1'){
+                    for(int t = 0; t < 2; t++){
+                        int x = d[t][0] + i;
+                        int y = d[t][1] + j;
+                        if(x >= 0 && x < row && y >= 0 && y < col && grid[x][y] == '1'){
+                            uf.isConnected(i * col + j, x * col + y);
+                        }
+                    }
+                }
+            }
+        }
+        return uf.getCount() - 1;
+    }
+
 
 }

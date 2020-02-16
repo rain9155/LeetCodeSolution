@@ -267,6 +267,21 @@
 
 394、[字符串解码](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode394/Solution.java)
 
+### 图
+
+关键思想：dfs，bfs，拓扑
+
+#### 简单:
+
+#### 中等：
+
+133、[克隆图](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode133/Solution.java)
+
+207、[课程表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode207/Solution.java)
+
+210、[课程表 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode210/Solution.java)
+
+
 ## 二、算法思维
 
 ### 动态规划
@@ -417,11 +432,13 @@
 
 130、[被围绕的区域](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode130/Solution.java)
 
-133、[克隆图](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode133/Solution.java)
-
 153、[寻找旋转排序数组中的最小值](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode153/Solution.java)
 
 162、[寻找峰值](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode162/Solution.java)
+
+199、[二叉树的右视图](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode199/Solution.java)
+
+200、[岛屿数量](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode200/Solution.java)
 
 
 ### 数学
@@ -494,6 +511,8 @@
 89、[格雷编码](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode89/Solution.java)
 
 137、[只出现一次的数字 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode137/Solution.java)
+
+201、[数字范围按位与](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode201/Solution.java)
 
 ## 三、其他
 

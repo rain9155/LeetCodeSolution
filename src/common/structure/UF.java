@@ -46,7 +46,7 @@ public class UF {
     /**
      * 判断节点x和节点y是否在同一个连通分量下
      */
-    public boolean connected(int x, int y){
+    public boolean isConnected(int x, int y){
         int rootX = find(x);
         int rootY = find(y);
         return rootX == rootY;

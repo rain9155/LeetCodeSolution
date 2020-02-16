@@ -104,7 +104,7 @@ public class Solution {
         for(int i = 1; i < row - 1; i++){
             for(int j = 1; j < col - 1; j++){
                 //把不和边界连通的O置为X
-                if(board[i][j] == 'O' && !uf.connected(col * i + j, dummy)){
+                if(board[i][j] == 'O' && !uf.isConnected(col * i + j, dummy)){
                     board[i][j] = 'X';
                 }
             }
