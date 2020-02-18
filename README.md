@@ -346,7 +346,7 @@
 
 ### 双指针
 
-关键思想：双指针、三指针、快慢指针
+关键思想：双指针、三指针、快慢指针，滑动窗口
 
 #### 简单：
 
@@ -371,6 +371,9 @@
 86、[分隔链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode86/Solution.java)
 
 151、[翻转字符串里的单词](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode151/Solution.java)
+
+209、[长度最小的子数组](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode209/Solution.java)
+
 
 ### 回溯算法：
 
@@ -514,9 +517,17 @@
 
 201、[数字范围按位与](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode201/Solution.java)
 
-## 三、其他
+## 三、设计题
 
 146、[LRU缓存机制](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode146/LRUCache.java)
+
+208、[实现 Trie (前缀树)](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode208/Trie.java)
+
+211、[添加与搜索单词 - 数据结构设计](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode211/WordDictionary.java)
+
+
+
+
 
 
 
