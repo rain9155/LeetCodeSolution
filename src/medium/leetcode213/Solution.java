@@ -19,8 +19,38 @@ package medium.leetcode213;
  */
 public class Solution {
 
+    /**
+     * 动态规划：
+     * 参考198题，本题和198题不同的是房间是围起来的
+     * 所以只要把第一间房间和最后一间房间分别去掉
+     * 然后分别对[1, len]和[0, len - 1]的房间做动态规划，取最大值即可
+     */
     public int rob(int[] nums) {
+        if(nums == null || nums.length == 0){
+            return 0;
+        }
+        int len = nums.length;
+        if(len == 1){
+            return nums[0];
+        }
+        if(len == 2){
+            return Math.max(nums[0], nums[1]);
+        }
+        return Math.max(
+                rob(nums, 1, nums.length - 1),
+                rob(nums, 0, nums.length - 2)
+        );
+    }
 
+    private int rob(int[] nums, int start, int end){
+        int pre = 0;
+        int cur = nums[start];
+        for(int i = start + 1; i <= end; i++){
+            int temp = cur;
+            cur = Math.max(pre + nums[i], cur);
+            pre = temp;
+        }
+        return cur;
     }
 
 }

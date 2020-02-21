@@ -243,6 +243,7 @@
 
 166、[二叉搜索树迭代器](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode166/BSTlterator.java)
 
+222、[完全二叉树的节点个数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode222/Solution.java)
 
 ### 栈、队列
 
@@ -282,6 +283,19 @@
 210、[课程表 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode210/Solution.java)
 
 
+### 有序集合(ordered map)
+
+关键思想：堆、二叉平衡树
+
+#### 简单：
+
+#### 中等：
+
+215、[数组中的第K个最大元素](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode215/Solution.java)
+
+220、[存在重复元素 III](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode220/Solution.java)
+
+
 ## 二、算法思维
 
 ### 动态规划
@@ -315,6 +329,11 @@
 139、[单词拆分](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode139/Solution.java)
 
 152、[乘积最大子序列](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode152/Solution.java)
+
+213、[打家劫舍 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode213/Solution.java)
+
+221、[最大正方形](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode221/Solution.java)
+
 
 ### 贪心算法
 
@@ -405,6 +424,8 @@
 
 131、[分割回文串](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode131/Solution.java)
 
+216、[组合总和 III](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode216/Solution.java)
+
 ### 搜索算法
 
 关键思想：dfs，bfs，二分查找
@@ -487,6 +508,9 @@
 50、[Pow(x, n)](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode50/Solution.java)
 
 166、[分数到小数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode166/Solution.java)
+
+223、[矩形面积](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode223/Solution.java)
+
 
 
 ### 位运算

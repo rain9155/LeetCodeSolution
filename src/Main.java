@@ -16,7 +16,6 @@ public class Main {
             }
             System.out.println(solution.minIntervalCount(intervals, l));
         }
-        StringBuilder stringBuilder = new StringBuilder();
     }
 
     public int minIntervalCount(int[][] intervals, int l){
