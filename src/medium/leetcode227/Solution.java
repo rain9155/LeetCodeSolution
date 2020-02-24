@@ -90,4 +90,61 @@ public class Solution {
         return ret;
     }
 
+    /**
+     * 数据栈：
+     * 只使用一个栈，这个栈只用来记录s中的数字
+     * 如果数字前面是'+'，就直接把这个数字入栈
+     * 如果数字前面是'-'，就把这个数字的相反数入栈
+     * 如果数字前面是'*'或'/'，就把这个数字与栈顶的数字做了运算后再入栈
+     * 最终栈中的数字不是正数就是负数，把栈中的所有数字累加后就是返回结果
+     */
+    public int calculate2(String s) {
+        if(s == null || s.length() == 0){
+            return -1;
+        }
+        Stack<Integer> stack = new Stack<>();
+        //初始化符号为 +
+        char sign = '+';
+        //初始化数字为 0
+        int num = 0;
+        for(int i = 0; i < s.length(); i++){
+            char c = s.charAt(i);
+            if(isDigital(c)){//如果是数字就累加
+                num = num * 10 + (c - '0');
+            }
+
+            if((!isDigital(c) && c != ' ') || i == s.length() - 1){//如果遇到符号，就根据num前面的符号sign把num的运算结果入栈
+                switch(sign){
+                    case '+':
+                        stack.push(num);
+                        break;
+                    case '-':
+                        stack.push(-num);
+                        break;
+                    case '*':
+                        stack.push((stack.pop() * num));
+                        break;
+                    case '/':
+                        stack.push(stack.pop() / num);
+                        break;
+                    default:
+                        break;
+                }
+                //重置num
+                num = 0;
+                //更新符号
+                sign = c;
+            }
+        }
+        int res = 0;
+        while(!stack.isEmpty()){
+            res += stack.pop();
+        }
+        return res;
+    }
+
+    private boolean isDigital(char c){
+        return c >= '0' && c <= '9';
+    }
+
 }
