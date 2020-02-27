@@ -64,6 +64,11 @@
 
 179、[最大数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode179/Solution.java)
 
+229、[求众数 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode229/Solution.java)
+
+238、[除自身以外数组的乘积](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode238/Solution.java)
+
+
 
 ### 字符串
 
@@ -245,6 +250,9 @@
 
 222、[完全二叉树的节点个数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode222/Solution.java)
 
+236、[二叉树的最近公共祖先](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode236/Solution.java)
+
+
 ### 栈、队列
 
 关键思想：递归，遍历，辅助栈
@@ -284,6 +292,17 @@
 
 210、[课程表 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode210/Solution.java)
 
+### 并查集
+
+关键思想：新增虚拟节点
+
+#### 简单:
+
+#### 中等：
+
+130、[被围绕的区域](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode130/Solution.java)
+
+200、[岛屿数量](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode200/Solution.java)
 
 ### 有序集合(ordered map)
 
@@ -457,15 +476,13 @@
 
 127、[单词接龙](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode127/Solution.java)
 
-130、[被围绕的区域](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode130/Solution.java)
-
 153、[寻找旋转排序数组中的最小值](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode153/Solution.java)
 
 162、[寻找峰值](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode162/Solution.java)
 
 199、[二叉树的右视图](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode199/Solution.java)
 
-200、[岛屿数量](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode200/Solution.java)
+240、[搜索二维矩阵 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode240/Solution.java)
 
 
 ### 数学
@@ -515,7 +532,6 @@
 223、[矩形面积](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode223/Solution.java)
 
 
-
 ### 位运算
 
 关键思想：n & 1， n & (n - 1),  >> ， << ， ^ 
@@ -543,6 +559,7 @@
 137、[只出现一次的数字 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode137/Solution.java)
 
 201、[数字范围按位与](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode201/Solution.java)
+
 
 ## 三、设计题
 

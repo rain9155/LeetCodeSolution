@@ -65,11 +65,12 @@ public class Solution {
 
     /**
      * 递归2：
-     * 参考235，我们以root为递归起点分别从左右子树查找p、q：
-     *          如果找到了那么root就是LCA
-     *          如果在左子树找不到p，那么p就在右子树，则LCA在右子树，返回右子树的结果
-     *          如果在右子树找不到q，那么q就在左子树，则LCA在左子树，返回左子树的结果
-     *          如果左右子树都找不到p、q，那么就没有LCA
+     * 1、如果root的值是p的值或q的值，那么这个root就是LCA
+     * 2、否则LCA一定在root的左子树或右子树，我们以root为递归起点分别从左右子树查找p、q
+     *     如果p在左子树，q在右子树，那么root就是LCA；
+     *     如果在左子树找不到p和q，那么p和q就在右子树，则LCA在右子树，返回右子树的结果
+     *     如果在右子树找不到p和q，那么p和q就在左子树，则LCA在左子树，返回左子树的结果
+     *     如果左右子树都找不到p、q，那么就没有LCA
      */
     public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q){
         if(root == null) return null;
