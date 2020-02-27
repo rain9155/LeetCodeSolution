@@ -68,7 +68,7 @@ public class Solution {
     }
 
     private void helper(TreeNode root){
-        if(root == null) return;
+        if(root == null || order < 0) return;
         helper(root.left);
         if(order == 1){
             ret = root.val;

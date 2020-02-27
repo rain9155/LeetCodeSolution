@@ -18,8 +18,9 @@ import java.util.List;
 public class Solution {
 
     /**
-     * 投票算法：
+     * 投票算法：参考169题
      * nums中所有出现超过 n/k 次的元素，最多只有 k - 1个，所以本题最多只有2个元素出现超过 n/3
+     * 所以设定两个候选人进行投票，当投票完毕时，还要检查两个候选人是否满足次数出现操过n/3的条件
      */
     public List<Integer> majorityElement(int[] nums) {
         List<Integer> ret = new ArrayList<>();

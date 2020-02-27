@@ -26,13 +26,52 @@ public class Solution {
 
     /**
      * 递归：
+     * 1、如果root的值是p的值或q的值，那么这个root就是LCA
+     * 2、否则LCA一定在root的左子树或右子树，分别递归查找p或q是否在左子树或右子树
+     *    如果p和q分别在左子树和右子树，那么root就是LCA；
+     *    如果p和q都不在左子树，那么LCA一定在右子树，递归往右子树找；
+     *    如果p和q都不在右子树，那么LCA一定在左子树，递归往左子树找.
+     */
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        if(root == null){
+            return null;
+        }
+        if(root.val == p.val || root.val == q.val){
+            return root;
+        }
+        boolean inLeft = findPQ(root.left, p, q);
+        boolean inRight = findPQ(root.right, p, q);
+        if(!inLeft){
+            return lowestCommonAncestor(root.right, p, q);
+        }else if(!inRight){
+            return lowestCommonAncestor(root.left, p, q);
+        }else{
+            return root;
+        }
+    }
+
+    /**
+     * 如果p或q在这颗树上，返回true，如果p和q都不在这颗树上，返回false
+     */
+    private boolean findPQ(TreeNode root, TreeNode p, TreeNode q){
+        if(root == null){
+            return false;
+        }
+        if(root.val == p.val || root.val == q.val){
+            return true;
+        }
+        return findPQ(root.left, p, q) || findPQ(root.right, p, q);
+    }
+
+    /**
+     * 递归2：
      * 参考235，我们以root为递归起点分别从左右子树查找p、q：
      *          如果找到了那么root就是LCA
      *          如果在左子树找不到p，那么p就在右子树，则LCA在右子树，返回右子树的结果
      *          如果在右子树找不到q，那么q就在左子树，则LCA在左子树，返回左子树的结果
      *          如果左右子树都找不到p、q，那么就没有LCA
      */
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q){
+    public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q){
         if(root == null) return null;
         if(root.val == p.val || root.val == q.val) return root;
         TreeNode left = lowestCommonAncestor(root.left, p, q);
