@@ -24,7 +24,6 @@ public class Solution {
 
     /**
      * 排序：
-     *
      * 1、首先看到h个元素大于等于某个值，N-h个元素小于等于某个值，这显然是一个有序序列的特征，所以自然而然的想到先将数组排序；
      * 2、将数组排序之后，对于给定的某个i，我们知道有citations.length - i篇论文的引用数 ≥ citations[i]，i篇论文的引用数 ≤ citations[i]；
      * 3、不妨设h = citations.length - i，即h篇论文，根据题意，h不能大于论文被引用的次数，如果h大于论文被引用的次数，就不满足论文要至少被引用h次，而是至少被引用citations[i]次

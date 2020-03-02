@@ -68,6 +68,9 @@
 
 238、[除自身以外数组的乘积](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode238/Solution.java)
 
+274、[H指数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode274/Solution.java)
+
+275、[H指数 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode275/Solution.java)
 
 
 ### 字符串
@@ -485,6 +488,17 @@
 240、[搜索二维矩阵 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode240/Solution.java)
 
 
+### 分治算法
+
+关键思想：分解、组合
+
+#### 简单：
+
+#### 中等：
+
+241、[为运算表达式设计优先级](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode241/Solution.java)
+
+
 ### 数学
 
 关键思想：找数学规律，位运算
@@ -560,6 +574,8 @@
 
 201、[数字范围按位与](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode201/Solution.java)
 
+260、[只出现一次的数字 III](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode260/Solution.java)
+
 
 ## 三、设计题
 
@@ -568,6 +584,9 @@
 208、[实现 Trie (前缀树)](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode208/Trie.java)
 
 211、[添加与搜索单词 - 数据结构设计](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode211/WordDictionary.java)
+
+284、[顶端迭代器](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode284/PeekingIterator.java)
+
 
 
 

@@ -1,5 +1,6 @@
 package medium.leetcode241;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -24,8 +25,44 @@ import java.util.List;
  */
 public class Solution {
 
+    /**
+     * 分治算法：
+     * 1、把input表达式根据运算符划分为左右子表达式
+     * 2、分别对左右子表达式递归1步骤，直到子表达式只剩下一个数字
+     * 3、当递归返回时，根据左右子表达式的返回结果算出当前运算符的所有组合结果
+     */
     public List<Integer> diffWaysToCompute(String input) {
-        return null;
+        List<Integer> res = new ArrayList<>();
+        if(input.length() == 0){
+            return res;
+        }
+        for(int i = 0; i < input.length(); i++){
+            char c = input.charAt(i);
+            if(!isDigital(c)){
+                List<Integer> res1 = diffWaysToCompute(input.substring(0, i));
+                List<Integer> res2 = diffWaysToCompute(input.substring(i + 1, input.length()));
+                for(Integer num1 : res1){
+                    for(Integer num2 : res2){
+                        if(c == '+'){
+                            res.add(num1 + num2);
+                        }else if(c == '-'){
+                            res.add(num1 - num2);
+                        }else if(c == '*'){
+                            res.add(num1 * num2);
+                        }
+                    }
+                }
+            }
+        }
+        //input中只有一个数字
+        if(res.size() == 0){
+            res.add(Integer.valueOf(input));
+        }
+        return res;
+    }
+
+    private boolean isDigital(char c){
+        return c >= '0' && c <= '9';
     }
 
 }
