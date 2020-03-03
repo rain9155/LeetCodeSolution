@@ -358,6 +358,9 @@
 
 221、[最大正方形](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode221/Solution.java)
 
+264、[丑数 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode264/Solution.java)
+
+279、[完全平方数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode279/Solution.java)
 
 ### 贪心算法
 

@@ -80,31 +80,37 @@ public class Solution {
     }
 
     /**
-     * 三指针法：
-     * 一部分是丑数数组，另一部分是权重2，3，5。
-     * 下一个丑数，定义为丑数数组中的数乘以权重，所得的最小值。
-     * 那么，2该乘以谁？3该乘以谁？5该乘以谁？
-     * 1、使用三个指针p2, p3, p5，告诉它们。比如，2应该乘以ugly[p2]，即数组中的第p2个值。（权重2，3，5分别对应指针p2, p3, p5）
-     * 2，当命中下一个丑数时，说明该指针指向的丑数 乘以对应权重所得积最小。此时，指针应该指向下一个丑数
-     * 3，要使用三个并列的if让指针指向一个更大的数，不能用if-else。因为有这种情况：
-     *      丑数6，可能由于丑数2乘以权重3产生；也可能由于丑数3乘以权重2产生。
-     *      丑数10，... 等等
+     * O(n)
+     * 使用额外的空间：
+     * 1、定义一个数组，数组中第i个元素表示第i个丑数，再定义三个指针p1, p2, p3，分别代表相乘权重2，3，5
+     * 2、把p1，p2，p3所指向数组的元素分别乘以相应的权重后，取其中的最小值就是数组的下一个丑数nextUglyNum
+     * 3、把下一个丑数nextUglyNum放进数组，然后找出是哪个指针乘以权重得出的这个丑数
+     * 4、找到这个指针后，把指针向后移动，这样所有指针乘以权重得出的数都会大于当前丑数
+     * 就这样重复1，2，3，4直到遍历完数组，最终数组的最后一个元素就是第n个丑数
      */
     public int nthUglyNumber3(int n) {
-        if(n < 1) return -1;
-        int[] ret = new int[n];
-        ret[0] = 1;
-        int p2 = 0, p3 = 0, p5 = 0;
-        int i = 1;
-        while (i < n){
-            int min = Math.min(ret[p2] * 2, Math.min(ret[p3] * 3, ret[p5] * 5));
-            if(ret[p2] * 2 == min) p2++;
-            if(ret[p3] * 3 == min) p3++;
-            if(ret[p5] * 5 == min) p5++;
-            ret[i] = min;
-            i++;
+        if(n <= 0){
+            return -1;
         }
-        return ret[n - 1];
+        int[] uglyNum = new int[n];
+        uglyNum[0] = 1;
+        int p1 = 0;
+        int p2 = 0;
+        int p3 = 0;
+        for(int i = 1; i < n; i++){
+            int nextUglyNum = Math.min(Math.min(uglyNum[p1] * 2, uglyNum[p2] * 3), uglyNum[p3] * 5);
+            uglyNum[i] = nextUglyNum;
+            if(uglyNum[p1] * 2 == nextUglyNum){
+                p1++;
+            }
+            if(uglyNum[p2] * 3 == nextUglyNum){
+                p2++;
+            }
+            if(uglyNum[p3] * 5 == nextUglyNum){
+                p3++;
+            }
+        }
+        return uglyNum[n - 1];
     }
 
 }
