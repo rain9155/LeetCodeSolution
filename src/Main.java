@@ -1,16 +1,17 @@
-import common.structure.Tree;
-import medium.leetcode241.Solution;
-
-import java.util.PriorityQueue;
-import java.util.TreeSet;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 public class Main {
 
-    public static void main(String[] args){
-        Solution solution = new Solution();
-        solution.diffWaysToCompute("11");
-        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+    public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, ClassNotFoundException {
+        Class<?> stringClass1 = Class.forName("java.lang.String");
+        Class<String> stringClass2 = String.class;
+        Class<?> stringClass3 = new String().getClass();
+
     }
+
+
+
 
 
 }

@@ -72,6 +72,9 @@
 
 275、[H指数 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode275/Solution.java)
 
+289、[生命游戏](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode289/Solution.java)
+
+304、[二维区域和检索 - 矩阵不可变](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode304/NumMatrix.java)
 
 ### 字符串
 
@@ -109,7 +112,6 @@
 
 165、[比较版本号](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode165/Solution.java)
 
-
 ### 哈希表
 
 关键思想：映射（map，数组）
@@ -125,6 +127,8 @@
 242、[有效的字母异位词](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode242/Solution.java)
 
 290、[单词规律](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode290/Solution.java)
+
+299、[猜数字游戏](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode299/Solution.java)
 
 349、[两个数组的交集](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode349/Solution.java)
 
@@ -283,7 +287,7 @@
 
 ### 图
 
-关键思想：dfs，bfs，拓扑
+关键思想：dfs，bfs，拓扑、减治法
 
 #### 简单:
 
@@ -294,6 +298,8 @@
 207、[课程表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode207/Solution.java)
 
 210、[课程表 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode210/Solution.java)
+
+310、[最小高度树](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode310/Solution.java)
 
 ### 并查集
 
@@ -319,6 +325,15 @@
 
 220、[存在重复元素 III](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode220/Solution.java)
 
+### 线段树
+
+307、[区域和检索 - 数组可修改](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode307/NumArray.java)
+
+### 字典树
+
+208、[实现 Trie (前缀树)](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode208/Trie.java)
+
+211、[添加与搜索单词 - 数据结构设计](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode211/WordDictionary.java)
 
 ## 二、算法思维
 
@@ -361,6 +376,12 @@
 264、[丑数 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode264/Solution.java)
 
 279、[完全平方数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode279/Solution.java)
+
+300、[最长上升子序列](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode300/Solution.java)
+
+309、[最佳买卖股票时机含冷冻期](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode309/Solution.java)
+
+313、[超级丑数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode313/Solution.java)
 
 ### 贪心算法
 
@@ -454,6 +475,8 @@
 
 216、[组合总和 III](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode216/Solution.java)
 
+306、[累加数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode306/Solution.java)
+
 ### 搜索算法
 
 关键思想：dfs，bfs，二分查找
@@ -490,6 +513,7 @@
 
 240、[搜索二维矩阵 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode240/Solution.java)
 
+287、[寻找重复数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode287/Solution.java)
 
 ### 分治算法
 
@@ -501,6 +525,37 @@
 
 241、[为运算表达式设计优先级](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode241/Solution.java)
 
+### 位运算
+
+关键思想：n & 1， n & (n - 1),  >> ， << ， ^ 
+
+#### 简单：
+
+136、[只出现一次的数字](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode136/Solution.java)
+
+190、[颠倒二进制位](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode190/Solution.java)
+
+191、[1的个数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode191/Solution.java)
+
+231、[2的幂](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode231/Solution.java)
+
+342、[4的幂](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode342/Solution.java)
+
+371、[两整数之和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode371/Solution.java)
+
+401、[二进制手表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode401/Solution.java)
+
+#### 中等：
+
+89、[格雷编码](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode89/Solution.java)
+
+137、[只出现一次的数字 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode137/Solution.java)
+
+201、[数字范围按位与](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode201/Solution.java)
+
+260、[只出现一次的数字 III](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode260/Solution.java)
+
+318、[最大单词长度乘积](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode318/Solution.java)
 
 ### 数学
 
@@ -548,45 +603,11 @@
 
 223、[矩形面积](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode223/Solution.java)
 
-
-### 位运算
-
-关键思想：n & 1， n & (n - 1),  >> ， << ， ^ 
-
-#### 简单：
-
-136、[只出现一次的数字](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode136/Solution.java)
-
-190、[颠倒二进制位](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode190/Solution.java)
-
-191、[1的个数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode191/Solution.java)
-
-231、[2的幂](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode231/Solution.java)
-
-342、[4的幂](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode342/Solution.java)
-
-371、[两整数之和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode371/Solution.java)
-
-401、[二进制手表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode401/Solution.java)
-
-#### 中等：
-
-89、[格雷编码](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode89/Solution.java)
-
-137、[只出现一次的数字 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode137/Solution.java)
-
-201、[数字范围按位与](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode201/Solution.java)
-
-260、[只出现一次的数字 III](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode260/Solution.java)
-
+319、[灯泡开关](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode319/Solution.java)
 
 ## 三、设计题
 
 146、[LRU缓存机制](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode146/LRUCache.java)
-
-208、[实现 Trie (前缀树)](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode208/Trie.java)
-
-211、[添加与搜索单词 - 数据结构设计](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode211/WordDictionary.java)
 
 284、[顶端迭代器](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode284/PeekingIterator.java)
 
