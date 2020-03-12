@@ -1,6 +1,7 @@
 package medium.leetcode322;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 /**
  * 零钱兑换:
@@ -48,15 +49,20 @@ public class Solution {
     }
 
     /**
+     * 参考：https://leetcode-cn.com/problems/coin-change/solution/dong-tai-gui-hua-tao-lu-xiang-jie-by-wei-lai-bu-ke/
      * 动态规划：
-     * 自底向上，参考：https://leetcode-cn.com/problems/coin-change/solution/dong-tai-gui-hua-tao-lu-xiang-jie-by-wei-lai-bu-ke/
+     * 自底向上，dp[i]表示以i为总金额所组成的最少硬币个数
+     * 状态转移方程为：dp[i] = min(dp[i], dp[i - coins[j]] + 1), 0 <= j < coins.length, 1 <= i <= amount
+     * base case: dp[0] = 0，表示目标金额为0所组成的最少硬币个数为0
      */
     public int coinChange2(int[] coins, int amount) {
         if(coins == null || coins.length == 0 || amount == 0) return 0;
         int[] dp = new int[amount + 1];
+        //初始化dp[i]为一个不可能的值，因为能凑成amount金额的最大硬币数为amount，这时amount由所有面值为1的硬币组成
         Arrays.fill(dp, amount + 1);
         dp[0] = 0;
         for(int i = 1; i <= amount; i++){
+            //如果无法添加任何一个coin后得到目标金额i，那么dp[i]保持不变，即保持为一个不可能的值
             for(int j = 0; j < coins.length; j++){
                 if(coins[j] <= i){
                     dp[i] = Math.min(dp[i], dp[i - coins[j]] + 1);
@@ -65,4 +71,41 @@ public class Solution {
         }
         return dp[amount] > amount ? -1 : dp[amount];
     }
+
+    /**
+     * 参考：https://leetcode-cn.com/problems/coin-change/solution/322-by-ikaruga/
+     * 贪心算法：
+     */
+    int min = Integer.MAX_VALUE;
+
+    public int coinChange3(int[] coins, int amount) {
+        if(coins == null || coins.length == 0 || amount < 0){
+            return 0;
+        }
+        Arrays.sort(coins);
+        count(coins, amount, coins.length - 1, 0);
+        return min == Integer.MAX_VALUE ? -1 : min;
+    }
+
+
+    private void count(int[] coins, int amount, int index, int count) {
+        if(amount == 0){
+            min = Math.min(min, count);
+            return;
+        }
+        if(index < 0){
+            return;
+        }
+        //算出当前amount里面有多少个这样面值的硬币
+        int k = amount / coins[index];
+        while(k >= 0 && k + count < min){
+            //算出还剩下多少金额可以继续用其他硬币组合
+            int remain = amount - k * coins[index];
+            //用剩余的目标金额remain继续递归计算它的最大硬币组合数
+            count(coins, remain, index - 1, k + count);
+            //回溯，减少一个硬币数量
+            k--;
+        }
+    }
+
 }

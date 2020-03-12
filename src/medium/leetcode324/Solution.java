@@ -36,7 +36,7 @@ public class Solution {
         int bigLen = len / 2;
         int[] small = new int[smallLen];
         int[] big = new int[bigLen];
-        //像对数组排序
+        //对数组排序
         Arrays.sort(nums);
         //然后把数组分为两部分：small和big，big里面的元素都比small中的元素大
         System.arraycopy(nums, 0, small, 0, smallLen);
@@ -49,5 +49,10 @@ public class Solution {
             nums[j] = big[i];
         }
     }
+
+    //O(n)算法：
+    //可以采用快速排序的划分算法找到数组的中位数，这样就把数组分为3部分：
+    //第一部分的数都小于中位数，第二部分的数就是中位数，第三部分的数都大于中位数
+    //然后对第一部分和中位数 + 第二部分进行穿插放置
 
 }

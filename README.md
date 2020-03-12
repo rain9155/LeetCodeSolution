@@ -76,6 +76,9 @@
 
 304、[二维区域和检索 - 矩阵不可变](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode304/NumMatrix.java)
 
+324、[摆动排序 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode324/Solution.java)
+
+
 ### 字符串
 
 关键思想：哈希表，双指针(滑动窗口)
@@ -385,6 +388,8 @@
 
 ### 贪心算法
 
+关键思想：选择目前最优的方案
+
 #### 简单：
 
 #### 中等：
@@ -392,6 +397,8 @@
 55、[跳跃游戏](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode55/Solution.java)
 
 134、[加油站](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode134/Solution.java)
+
+322、[零钱兑换](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode322/Solution.java)
 
 ### 博弈问题
 
@@ -442,6 +449,9 @@
 209、[长度最小的子数组](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode209/Solution.java)
 
 228、[汇总区间](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode228/Solution.java)
+
+328、[奇偶链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode328/Solution.java)
+
 
 ### 回溯算法：
 
