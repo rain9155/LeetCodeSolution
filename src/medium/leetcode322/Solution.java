@@ -75,9 +75,12 @@ public class Solution {
     /**
      * 参考：https://leetcode-cn.com/problems/coin-change/solution/322-by-ikaruga/
      * 贪心算法：
+     * 1、首先把所有硬币按照面值从小到大排序
+     * 2、每次选择面额最大的硬币，看目标金额最多可以减去多少个这样的硬币
+     * 3、用剩余的目标金额继续递归重复2，直到剩余的目标金额为0，这样就找到了一个组合，取最小值
+     * 4、如果目标金额因为减多了硬币导致最后无法凑出总额，再回溯减少减去的最大硬币数量
+     * 如果最终没有任何一个组合可以拼凑出目标金额，返回-1，否则返回最小硬币数量
      */
-    int min = Integer.MAX_VALUE;
-
     public int coinChange3(int[] coins, int amount) {
         if(coins == null || coins.length == 0 || amount < 0){
             return 0;
@@ -87,7 +90,16 @@ public class Solution {
         return min == Integer.MAX_VALUE ? -1 : min;
     }
 
+    //最少的硬币数量
+    int min = Integer.MAX_VALUE;
 
+    /**
+     * 按照贪心策略进行硬币的组合
+     * @param coins 从小到大排序的硬币
+     * @param amount 目标金额
+     * @param index 当前面值最大的硬币的下标
+     * @param count 当前的硬币组合数
+     */
     private void count(int[] coins, int amount, int index, int count) {
         if(amount == 0){
             min = Math.min(min, count);
@@ -98,7 +110,7 @@ public class Solution {
         }
         //算出当前amount里面有多少个这样面值的硬币
         int k = amount / coins[index];
-        while(k >= 0 && k + count < min){
+        while(k >= 0 && k + count < min){//剪枝(k + count < min)
             //算出还剩下多少金额可以继续用其他硬币组合
             int remain = amount - k * coins[index];
             //用剩余的目标金额remain继续递归计算它的最大硬币组合数

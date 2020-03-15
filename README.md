@@ -285,6 +285,8 @@
 
 227、[基本计算器 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode227/Solution.java)
 
+331、[验证二叉树的前序序列化](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode331/Solution.java)
+
 
 394、[字符串解码](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode394/Solution.java)
 
@@ -303,6 +305,8 @@
 210、[课程表 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode210/Solution.java)
 
 310、[最小高度树](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode310/Solution.java)
+
+332、[重新安排行程](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode332/Solution.java)
 
 ### 并查集
 
@@ -451,6 +455,8 @@
 228、[汇总区间](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode228/Solution.java)
 
 328、[奇偶链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode328/Solution.java)
+
+334、[递增的三元子序列](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode334/Solution.java)
 
 
 ### 回溯算法：
