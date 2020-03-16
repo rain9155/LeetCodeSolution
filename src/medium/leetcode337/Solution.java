@@ -71,4 +71,30 @@ public class Solution {
         return cache.get(root);
     }
 
+
+    /**
+     * 后序遍历：
+     */
+    public int rob2(TreeNode root) {
+        if(root == null){
+            return 0;
+        }
+        int[] res = helper(root);
+        return Math.max(res[0], res[1]);
+    }
+
+    private int[] helper(TreeNode root){
+        int[] res = {0, 0};
+        if(root == null){
+            return res;
+        }
+        int[] left = helper(root.left);
+        int[] right = helper(root.right);
+        //偷
+        res[0] = root.val + left[1] + right[1];
+        //不偷
+        res[1] = Math.max(left[0], left[1]) + Math.max(right[0], right[1]);
+        return res;
+    }
+
 }

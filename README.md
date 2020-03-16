@@ -157,6 +157,8 @@
 
 187、[重复的DNA序列](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode187/Solution.java)
 
+347、[前 K 个高频元素](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode347/Solution.java)
+
 
 ### 链表
 
@@ -390,6 +392,9 @@
 
 313、[超级丑数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode313/Solution.java)
 
+337、[打家劫舍 III](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode337/Solution.java)
+
+
 ### 贪心算法
 
 关键思想：选择目前最优的方案
@@ -403,6 +408,9 @@
 134、[加油站](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode134/Solution.java)
 
 322、[零钱兑换](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode322/Solution.java)
+
+343、[整数拆分](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode343/Solution.java)
+
 
 ### 博弈问题
 
@@ -573,6 +581,9 @@
 
 318、[最大单词长度乘积](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode318/Solution.java)
 
+338、[比特位计数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode338/Solution.java)
+
+
 ### 数学
 
 关键思想：找数学规律，位运算
@@ -626,6 +637,9 @@
 146、[LRU缓存机制](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode146/LRUCache.java)
 
 284、[顶端迭代器](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode284/PeekingIterator.java)
+
+341、[扁平化嵌套列表迭代器](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode341/NestedIterator.java)
+
 
 
 
