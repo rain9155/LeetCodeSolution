@@ -334,6 +334,8 @@
 
 220、[存在重复元素 III](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode220/Solution.java)
 
+373、[查找和最小的K对数字](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode373/Solution.java)
+
 ### 线段树
 
 307、[区域和检索 - 数组可修改](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode307/NumArray.java)
@@ -393,6 +395,12 @@
 313、[超级丑数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode313/Solution.java)
 
 337、[打家劫舍 III](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode337/Solution.java)
+
+357、[计算各个位数不同的数字个数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode357/Solution.java)
+
+368、[最大整除子集](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode368/Solution.java)
+
+376、[摆动序列](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode376/Solution.java)
 
 
 ### 贪心算法
@@ -632,6 +640,9 @@
 
 319、[灯泡开关](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode319/Solution.java)
 
+365、[水壶问题](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode365/Solution.java)
+
+
 ## 三、设计题
 
 146、[LRU缓存机制](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode146/LRUCache.java)
@@ -639,6 +650,8 @@
 284、[顶端迭代器](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode284/PeekingIterator.java)
 
 341、[扁平化嵌套列表迭代器](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode341/NestedIterator.java)
+
+355、[设计推特](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode355/Twitter.java)
 
 
 

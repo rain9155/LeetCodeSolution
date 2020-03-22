@@ -12,14 +12,15 @@ package medium.leetcode357;
 public class Solution {
 
     /**
-     * 动态规划 + 排列组合：
-     * 例如n = 2，向放第一位，有9个数（1-9）放，再放第二位，有10个数（0-9）放，但是不能和第一位重复，所以第二位只能放9个数，所以当n = 2时， 各位数字都不同的数字 x = 9 * 9 种可能
+     * 动态规划：
+     * 排列组合思想，例如n = 2，向放第一位，有9个数（1-9）放，再放第二位，有10个数（0-9）放，但是不能和第一位重复，所以第二位只能放9个数，所以当n = 2时， 各位数字都不同的数字 x = 9 * 9 种可能
      * n = 0, x = 1
      * n = 1, x = 9 + 1 = 10
      * n = 2, x = 9 * 9 + 10 = 91
      * n = 3, x = 9 * 9 * 8 + 91 = 739
      * ...
-     * n = i, dp[i] = dp[i - 1] + dp[i - 1] - dp[i - 2] * (10 - i - 1)
+     * n = i, dp[i] = dp[i - 1] + (dp[i - 1] - dp[i - 2]) * (10 - i - 1)
+     * dp[i]表示在[0, 10^i）范围内各位数字都不同的数字的个数
      */
     public int countNumbersWithUniqueDigits(int n) {
         if(n < 0) return 0;
@@ -37,6 +38,9 @@ public class Solution {
         return dp[n];
     }
 
+    /**
+     * 不使用额外空间的动态规划
+     */
     public int countNumbersWithUniqueDigits2(int n) {
         if(n < 0) return 0;
         int prePreCur = 1;

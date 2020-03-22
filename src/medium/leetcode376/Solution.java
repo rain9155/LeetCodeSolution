@@ -66,7 +66,7 @@ public class Solution {
      * O(n):
      * 优化后的动态规划：
      * 不使用二维数组，只使用两个状态maxUp和maxDown来维护在i之前的最大上升序列长度和最大下降序列长度
-     * 当前maxUp取决于前一个maxDown，同理当前maxDown取决于前一个maxUo
+     * 当前maxUp取决于前一个maxDown，同理当前maxDown取决于前一个maxUp
      * 由此得出状态转移方程：
      *                  maxUp = Math.max(maxUp, maxDown + 1); （nums[i] > nums[i - 1]）
      *                  maxDown = Math.max(maxDown, maxUp + 1); （nums[i] < nums[i - 1]）

@@ -20,41 +20,52 @@ import java.util.List;
  */
 public class Solution {
 
-
     /**
      * 动态规划：
      * 1、先把nums排序
-     * 2、准备两个dp数组，dp[i]代表nums中到i为止的最大子集长度，dp2[i]表示nums中通过dp[j] + 1构成i成为最大子集长度的前驱元素j的位置
-     * 3、dp初始化为1，dp2初始化为-1
-     * 4、遍历nums，dp[i] = max(dp[i], dp[j] + 1), 其中(0 <= j < i)，而dp2[i]则等于j，当且仅当dp[j] + 1是dp[i]，表示从nums j 这个位置 +1 让i成为最大子集长度,同时记录dp[i]的最大值
-     * 5、再次遍历nums，先找到等于dp[i]的最大值max的i的位置，向前遍历，然后根据dp2记录的索引位置在nums中找到所有符合条件的元素
+     * 2、准备两个数组，dp[i]代表nums中到i为止的最大子集长度，pre[i]表示nums中通过dp[j] + 1构成i成为最大子集长度的前驱元素j的位置
+     * 3、遍历nums，dp[i] = max(dp[i], dp[j] + 1), 其中(0 <= j < i)，而pre[i]则等于j，当且仅当dp[j] + 1是dp[i]
+     * 4、变量dp数组，找出dp[i]的最大值的位置maxIndex
+     * 5、再次遍历nums，根据pre数组由maxIndex向前遍历，从nums中找到所有符合条件的元素
      */
     public List<Integer> largestDivisibleSubset(int[] nums) {
-        List<Integer> ret = new LinkedList<>();
-        if(nums == null || nums.length == 0) return ret;
+        List<Integer> res = new ArrayList<>();
+        if(nums == null || nums.length == 0){
+            return res;
+        }
+        //先把nums排序
         Arrays.sort(nums);
+        //dp[i]表示以nums[i]结尾的最大子集长度
         int[] dp = new int[nums.length];
-        int[] dp2 = new int[nums.length];
-        Arrays.fill(dp, 1);
-        Arrays.fill(dp2, -1);
-        int max = Integer.MIN_VALUE;
-        int maxIndex = Integer.MIN_VALUE;
+        //pre[i]表示构成以nums[i]结尾为最大子集长度的前驱元素的位置
+        int[] pre = new int[nums.length];
+        //动态规划，
         for(int i = 0; i < nums.length; i++){
+            dp[i] = 1;
+            pre[i] = -1;
             for(int j = 0; j < i; j++){
-                if(nums[i] % nums[j] == 0 && dp[j] + 1 > dp[i]){
+                //状态转移方程：dp[i] = max(dp[i], dp[j] + 1)
+                //同时记录由哪个元素转移而来构成最大子集长度的位置pre[i]
+                if(nums[i] % nums[j] == 0 && dp[i] < dp[j] + 1){
                     dp[i] = dp[j] + 1;
-                    dp2[i] = j;
+                    pre[i] = j;
                 }
             }
-            if(dp[i] > max){
+        }
+        //找出构成最大子集长度的元素位置maxIndex
+        int maxIndex = 0;
+        int max = dp[0];
+        for(int i = 1; i < nums.length; i++){
+            if(max < dp[i]){
                 max = dp[i];
                 maxIndex = i;
             }
         }
-        for(int i = maxIndex; i >= 0; i = dp2[i]){
-            ret.add(0, nums[maxIndex]);
+        //根据pre数组从maxIndex开始回溯找出这个最大子集中的所有元素
+        for(int i = maxIndex; i >= 0; i = pre[i]){
+            res.add(0, nums[i]);
         }
-        return ret;
+        return res;
     }
 
 

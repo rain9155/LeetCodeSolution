@@ -77,6 +77,30 @@ public class Twitter {
     }
 
     /**
+     * followerId 关注 followeeId
+     */
+    public void follow(int followerId, int followeeId) {
+        if(followerId == followeeId) return;
+        followers.computeIfAbsent(followerId, k -> new HashSet<>());
+        Set<Integer> followees = followers.get(followerId);
+        followees.add(followeeId);
+    }
+
+    /**
+     * followerId 取消关注 followeeId
+     */
+    public void unfollow(int followerId, int followeeId) {
+        if(followers.containsKey(followerId)){
+            Set<Integer> followees = followers.get(followerId);
+            followees.remove(followeeId);
+            if(followees.isEmpty()){
+                followers.remove(followerId);
+            }
+        }
+    }
+
+
+    /**
      * userId 获取关注人和自己的最近十条Tweet的tweetId
      */
     public List<Integer> getNewsFeed(int userId) {
@@ -103,29 +127,6 @@ public class Twitter {
             ret.add(tweet.id);
         }
         return ret;
-    }
-
-    /**
-     * followerId 关注 followeeId
-     */
-    public void follow(int followerId, int followeeId) {
-        if(followerId == followeeId) return;
-        followers.computeIfAbsent(followerId, k -> new HashSet<>());
-        Set<Integer> followees = followers.get(followerId);
-        followees.add(followeeId);
-    }
-
-    /**
-     * followerId 取消关注 followeeId
-     */
-    public void unfollow(int followerId, int followeeId) {
-        if(followers.containsKey(followerId)){
-            Set<Integer> followees = followers.get(followerId);
-            followees.remove(followeeId);
-            if(followees.isEmpty()){
-                followers.remove(followerId);
-            }
-        }
     }
 
     /**

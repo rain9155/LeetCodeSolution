@@ -25,6 +25,10 @@ import java.util.*;
  */
 public class Solution {
 
+    /**
+     * 优先级队列：
+     * 用小顶堆保存和最小的前k个数对
+     */
     public List<List<Integer>> kSmallestPairs(int[] nums1, int[] nums2, int k) {
         List<List<Integer>> ret = new LinkedList<>();
         if(nums1.length == 0 || nums2.length == 0) return ret;
