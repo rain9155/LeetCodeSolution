@@ -2,7 +2,7 @@ package medium.leetcode372;
 
 /**
  * 超级次方:
- * 你的任务是计算 ab 对 1337 取模，a 是一个正整数，b 是一个非常大的正整数且会以数组形式给出。
+ * 你的任务是计算 a^b 对 1337 取模，a 是一个正整数，b 是一个非常大的正整数且会以数组形式给出。
  *
  * 示例 1:
  * 输入: a = 2, b = [3]
@@ -15,6 +15,7 @@ public class Solution {
 
     /**
      * 超时
+     * 蛮力法：
      * 因为输入的b是大数，所以不可以直接把b所有的十进制数相加得出幂，所以可以使用分解：
      * (a ^ b) % m = ((a % m) ^ b) % m
      * 例如输入a = 3，b = [1,2,3], 计算(3^123)%1337
@@ -95,6 +96,53 @@ public class Solution {
             ret = ret / n * (n - 1);
         }
         return ret;
+    }
+
+    /**
+     * 参考：https://mp.weixin.qq.com/s/GjS9ORJv3KtXEOU5WsyqYQ
+     * 递归：
+     */
+    public int superPow3(int a, int[] b) {
+        if(a <= 0 || b.length == 0){
+            return 0;
+        }
+        return superPow(a, b, b.length - 1);
+    }
+
+    /**
+     * 这个方法返回a的b次方对 1337 取模的结果
+     * 1、把b数组分为两部分，第一部分为b数组的最后一个数字last，第二部分b数字除去最后一个数字后剩下的数字
+     * 2、所以a^b = a^last * a^((b - last)*10), 则(a^b) % 1337 = (a^last % 1337) * (a^((b - last)*10) % 1337) % 1337
+     * 3、分别对这两部分递归地计算a的k次方对 1337 取模的结果
+     */
+    private int superPow(int a, int[] b, int lastIndex){
+        if(lastIndex < 0){
+            return 1;
+        }
+        int last = b[lastIndex];
+        int pow2 = pow(a, last);
+        int pow1 = pow(superPow(a, b, lastIndex - 1), 10);
+        return (pow1 * pow2) % 1337;
+    }
+
+    /**
+     * 返回a的k次方对 1337 取模的结果
+     * 里面使用快速幂运算：
+     *       a * a^(k-1), k是奇数
+     * a^k =
+     *       a^(k/2) * a^(k/2), k是偶数
+     */
+    private int pow(int a, int k){
+        if(k == 0){
+            return 1;
+        }
+        a %= 1337;
+        if((k & 1) == 0){
+            int pow = pow(a, k / 2);
+            return (pow * pow) % 1337;
+        }else{
+            return (a * pow(a, k - 1)) % 1337;
+        }
     }
 
 }

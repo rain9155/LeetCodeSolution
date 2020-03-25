@@ -642,6 +642,8 @@
 
 365、[水壶问题](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode365/Solution.java)
 
+372、[超级次方](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode372/Solution.java)
+
 
 ## 三、设计题
 
