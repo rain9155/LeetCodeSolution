@@ -402,6 +402,7 @@
 
 376、[摆动序列](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode376/Solution.java)
 
+377、[组合总和 Ⅳ](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode377/Solution.java)
 
 ### 贪心算法
 
@@ -546,6 +547,9 @@
 240、[搜索二维矩阵 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode240/Solution.java)
 
 287、[寻找重复数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode287/Solution.java)
+
+378、[有序矩阵中第K小的元素](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode378/Solution.java)
+
 
 ### 分治算法
 

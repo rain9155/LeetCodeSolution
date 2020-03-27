@@ -30,7 +30,7 @@ public class Solution {
 
     /**
      * 参考：https://leetcode-cn.com/problems/combination-sum-iv/solution/dong-tai-gui-hua-python-dai-ma-by-liweiwei1419/
-     * 动态规划：
+     * 动态规划(自顶向下)：
      * 例如，nums = [1, 2, 3], target = 4
      * 4 = 1 + 3, 求target为3的组合个数
      * 4 = 2 + 2，求为target为2的组合个数
@@ -58,7 +58,14 @@ public class Solution {
         return cache[target] = ret;
     }
 
-
+    /**
+     * 动态规划(自底向上)：
+     * dp[i]表示在nums中target为i的组合个数
+     * 状态转移方程：
+     *          1, (i == 0)
+     * dp[i] =
+     *          dp[i] + dp[i - nums[j]], (i >= nums[j])
+     */
     public int combinationSum42(int[] nums, int target) {
         if(nums.length == 0) return 0;
         int[] dp = new int[target + 1];
