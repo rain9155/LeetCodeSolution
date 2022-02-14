@@ -8,9 +8,9 @@
 - [图解leetcode](https://github.com/ZXZxin/ZXBlog/blob/master/Algorithm/LeetCode/LeetCodeSolutionIndex.md)
 - [Leetcode动画](https://github.com/MisterBooo/LeetCodeAnimation)
 
-## 一、数据结构
+## 1、数据结构
 
-### 数组
+### 1.1、数组
 
 关键思想：双指针，位运算，排序预处理，二分查找
 
@@ -79,7 +79,7 @@
 324、[摆动排序 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode324/Solution.java)
 
 
-### 字符串
+### 1.2、字符串
 
 关键思想：哈希表，双指针(滑动窗口)
 
@@ -115,7 +115,7 @@
 
 165、[比较版本号](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode165/Solution.java)
 
-### 哈希表
+### 1.3、哈希表
 
 关键思想：映射（map，数组）
 
@@ -160,7 +160,7 @@
 347、[前 K 个高频元素](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode347/Solution.java)
 
 
-### 链表
+### 1.4、链表
 
 关键思想：快慢指针，双指针，递归（相当于链表的前序、后序遍历，栈的思想），哈希表
 
@@ -198,7 +198,7 @@
 
 148、[排序链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode148/Solution.java)
 
-### 树
+### 1.5、树
 
 关键思想：bfs，dfs，树的遍历(前序、中序、后序、层次)，递归，分治法，链表
 
@@ -265,7 +265,7 @@
 236、[二叉树的最近公共祖先](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode236/Solution.java)
 
 
-### 栈、队列
+### 1.6、栈、队列
 
 关键思想：递归，遍历，辅助栈
 
@@ -292,7 +292,7 @@
 
 394、[字符串解码](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode394/Solution.java)
 
-### 图
+### 1.7、图
 
 关键思想：dfs，bfs，拓扑、减治法
 
@@ -310,7 +310,7 @@
 
 332、[重新安排行程](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode332/Solution.java)
 
-### 并查集
+### 1.8、并查集
 
 关键思想：新增虚拟节点
 
@@ -322,7 +322,7 @@
 
 200、[岛屿数量](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode200/Solution.java)
 
-### 有序集合(ordered map)
+### 1.9、有序集合(ordered map)
 
 关键思想：堆、二叉平衡树
 
@@ -336,19 +336,19 @@
 
 373、[查找和最小的K对数字](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode373/Solution.java)
 
-### 线段树
+### 1.10、线段树
 
 307、[区域和检索 - 数组可修改](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode307/NumArray.java)
 
-### 字典树
+### 1.11、字典树
 
 208、[实现 Trie (前缀树)](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode208/Trie.java)
 
 211、[添加与搜索单词 - 数据结构设计](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode211/WordDictionary.java)
 
-## 二、算法思维
+## 2、算法思维
 
-### 动态规划
+### 2.1、动态规划
 
 关键思想：递归 + 备忘录，dp数组(一维，二维)
 
@@ -404,7 +404,7 @@
 
 377、[组合总和 Ⅳ](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode377/Solution.java)
 
-### 贪心算法
+### 2.2、贪心算法
 
 关键思想：选择目前最优的方案
 
@@ -421,7 +421,7 @@
 343、[整数拆分](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode343/Solution.java)
 
 
-### 博弈问题
+### 2.3、博弈问题
 
 关键思想：极大极小化
 
@@ -439,7 +439,7 @@
 
 877、[石子游戏](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode877/Solution.java)
 
-### 双指针
+### 2.4、双指针
 
 关键思想：双指针、三指针、快慢指针，滑动窗口
 
@@ -476,7 +476,7 @@
 334、[递增的三元子序列](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode334/Solution.java)
 
 
-### 回溯算法：
+### 2.5、回溯算法：
 
 关键思想：字符串，递归
 
@@ -510,7 +510,7 @@
 
 306、[累加数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode306/Solution.java)
 
-### 搜索算法
+### 2.6、搜索算法
 
 关键思想：dfs，bfs，二分查找
 
@@ -551,7 +551,7 @@
 378、[有序矩阵中第K小的元素](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode378/Solution.java)
 
 
-### 分治算法
+### 2.7、分治算法
 
 关键思想：分解、组合
 
@@ -561,7 +561,7 @@
 
 241、[为运算表达式设计优先级](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode241/Solution.java)
 
-### 位运算
+### 2.8、位运算
 
 关键思想：n & 1， n & (n - 1),  >> ， << ， ^ 
 
@@ -596,7 +596,7 @@
 338、[比特位计数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode338/Solution.java)
 
 
-### 数学
+### 2.9、数学
 
 关键思想：找数学规律，位运算
 
@@ -649,7 +649,7 @@
 372、[超级次方](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode372/Solution.java)
 
 
-## 三、设计题
+## 3、设计题
 
 146、[LRU缓存机制](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode146/LRUCache.java)
 
