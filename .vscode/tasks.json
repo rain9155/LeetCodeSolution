@@ -8,6 +8,7 @@
                 "-fcolor-diagnostics",
                 "-fansi-escape-codes",
                 "-g",
+                "${fileDirname}/easy/*.cpp",
                 "${file}",
                 "-o",
                 "${workspaceFolder}/out/cpp/${fileBasenameNoExtension}"
