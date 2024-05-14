@@ -9,7 +9,6 @@
                 "-fansi-escape-codes",
                 "-g",
                 "${fileDirname}/common/*.cpp",
-                "${fileDirname}/easy/*.cpp",
                 "${file}",
                 "-o",
                 "${workspaceFolder}/out/cpp/${fileBasenameNoExtension}"
