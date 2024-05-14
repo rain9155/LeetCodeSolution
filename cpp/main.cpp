@@ -1,22 +1,13 @@
 #include <iostream>
-#include "./easy/leetcode88_solution.h"
+#include "./common/struct.h"
+#include "./common/utils.h"
 
-using namespace Leetcode88;
+using namespace Common;
 
 int main()
 {
-    const int m = 3;
-    const int n = 3;
-    std::vector<int> nums1 = {1, 2, 3, 0, 0, 0};
-    std::vector<int> nums2 = {2, 5, 6};
-
-    Solution s;
-    s.merge(nums1, m, nums2, n);
-
-    for(int i = 0; i < nums1.size(); i++)
-    {
-        std::cout << nums1[i] << " ";
-    }
-
+    std::vector<int> nums = {1, 2, 3, 4};
+    ListNode* head = StructHelper::initList(nums);
+    Utils::printList(head);
     return 0;
 }
