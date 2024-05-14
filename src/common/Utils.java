@@ -33,24 +33,24 @@ public class Utils {
     /**
      * 打印数组
      */
-    public static void printNums(int[] nums){
-      for(int num : nums){
-          System.out.print(num + "  ");
-      }
-      System.out.println();
+    public static void printNums(int[] nums) {
+        for(int i = 0 ; i < nums.length; i++) {
+            System.out.print(nums[i]);
+            if(i != nums.length - 1) {
+                System.out.print(" ");
+            }else {
+                System.out.println();
+            }
+        }
     }
 
     /**
      * 打印二维数组
-=     */
+     */
     public static void printMartix(int[][] martix){
         for(int[] nums : martix){
-            for(int num : nums){
-                System.out.print(num + " ");
-            }
-            System.out.println();
+            printNums(nums);
         }
     }
-
 
 }
