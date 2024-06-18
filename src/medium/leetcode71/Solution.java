@@ -1,5 +1,7 @@
 package medium.leetcode71;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Stack;
 
 /**
@@ -34,35 +36,73 @@ import java.util.Stack;
 public class Solution {
 
     /**
-     * 首先用正则表达式把path用“/”分隔成一个String[]
-     * 然后从右到左遍历这个String[], 遇到“..”就把它压入栈Stack中
-     * 遇到单词时，先检查Stack中有没有“..”，如果有忽略这个单词，如果没有就把这个单词加一个“/”压入另外一个栈Stack2中
-     * 最后Stack2中的出栈顺序就是要求的正确路径
+     * 使用两个栈：
+     * 首先用正则表达式把path用“/”分隔成一个String[]，然后从右到左遍历这个String[]
+     * 遇到“..”就把它压入栈Stack中，遇到单词时，先检查Stack中有没有“..”，如果有忽略这个单词
+     * 如果没有就把这个单词压入另外一个栈Stack2中，最后Stack2中的出栈顺序就是要求的正确路径
      */
     public String simplifyPath(String path) {
-        if(path == null || path.length() == 0) return "";
-        StringBuilder builder = new StringBuilder();
+        if(path == null || path.length() == 0) {
+            return "";
+        }
         Stack<String> stack = new Stack<>();
         Stack<String> stack2 = new Stack<>();
         String[] strPath = path.split("/");
         for(int i = strPath.length - 1; i >= 0; i--){
             String s = strPath[i];
-            if("..".equals(s)){//遇到“..”就压栈
+            if("..".equals(s)){
+                //遇到“..”就把它压入stack
                 stack.push(s);
-            }else if(!".".equals(s) && !"/".equals(s) && !"".equals(s)){
+            }else if(!".".equals(s) && !"".equals(s)) {
+                //遇到单词，如果stack中没有“..”，就把这个单词压入stack2中
+                //如果stack中有“..”, 忽略这个单词并且“..”出栈
                 if(stack.isEmpty()){
                     stack2.push(s);
-                    stack2.push("/");
                 }else {
                     stack.pop();
                 }
             }
         }
+        StringBuilder builder = new StringBuilder();
         if(stack2.isEmpty()){
             builder.append("/");
         }else {
             while (!stack2.isEmpty()){
-                builder.append(stack2.pop());
+                builder.append("/").append(stack2.pop());
+            }
+        }
+        return builder.toString();
+    }
+
+    /**
+     * 使用一个栈：
+     * 首先用正则表达式把path用“/”分隔成一个String[]，然后从左到右遍历这个String[]
+     * 遇到“..”就弹出Stack中的一个单词，遇到单词就把这个单词压入Stack中
+     * 最后再从左向右遍历Stack，将栈底到栈顶的字符串用“/”进行拼接就是要求的正确路径
+     */
+    public String simplifyPath2(String path) {
+        if(path == null || path.length() == 0) {
+            return "";
+        }
+        Stack<String> stack = new Stack<>();
+        String[] strs = path.split("/");
+        for(String str : strs) {
+            if("..".equals(str)) {
+                //遇到“..”就从stack中弹出一个单词
+                if(!stack.isEmpty()) {
+                    stack.pop();
+                }
+            }else if(!"".equals(str) && !".".equals(str)) {
+                //遇到单词就把它压入stack中
+                stack.push(str);
+            }
+        }
+        StringBuilder builder = new StringBuilder();
+        if(stack.isEmpty()) {
+            builder.append("/");
+        }else {
+            for(String str : stack) {
+                builder.append("/").append(str);
             }
         }
         return builder.toString();

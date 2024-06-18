@@ -10,6 +10,7 @@ public class ListNode {
 
     public ListNode(int x){
         this.val = x;
+        this.next = null;
     }
 
 }

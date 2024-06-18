@@ -5,7 +5,6 @@
 **推荐阅读**：
 
 - [Leetcode题解](https://github.com/azl397985856/leetcode)
-- [图解leetcode](https://github.com/ZXZxin/ZXBlog/blob/master/Algorithm/LeetCode/LeetCodeSolutionIndex.md)
 - [Leetcode动画](https://github.com/MisterBooo/LeetCodeAnimation)
 
 ## 1、数据结构
@@ -30,11 +29,7 @@
 
 119、[杨辉三角 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode119/Solution.java)
 
-167、[两数之和 II - 输入有序数组](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode167/Solution.java)
-
 169、[求众数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode169/Solution.java)
-
-189、[旋转数组](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode189/Solution.java)
 
 268、[缺失数字](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode268/Solution.java)
 
@@ -58,11 +53,17 @@
 
 56、[合并区间](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode56/Solution.java)
 
+57、[插入区间](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode57/Solution.java)
+
 59、[螺旋矩阵 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode59/Solution.java)
 
 73、[矩阵置零](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode73/Solution.java)
 
+167、[两数之和 II - 输入有序数组](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode167/Solution.java)
+
 179、[最大数](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode179/Solution.java)
+
+189、[旋转数组](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode189/Solution.java)
 
 229、[求众数 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode229/Solution.java)
 
@@ -184,6 +185,8 @@
 
 #### 中等：
 
+2、[两数相加](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode2/Solution.java)
+
 61、[旋转链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode61/Solution.java)
 
 92、[反转链表 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode92/Solution.java)
@@ -195,8 +198,6 @@
 143、[重排链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode143/Solution.java)
 
 147、[对链表进行插入排序](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode147/Solution.java)
-
-148、[排序链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode148/Solution.java)
 
 ### 1.5、树
 
@@ -211,8 +212,6 @@
 104、[二叉树的最大深度](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode104/Solution.java)
 
 107、[二叉树的层次遍历 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode107/Solution.java)
-
-108、[将有序数组转换为二叉搜索树](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode108/Solution.java)
 
 110、[平衡二叉树](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode110/Solution.java)
 
@@ -229,6 +228,10 @@
 404、[左叶子之和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode404/Solution.java)
 
 437、[路径总和 III](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode437/Solution.java)
+
+530、[二叉搜索树的最小绝对差](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode530/Solution.java)
+
+637、[二叉树的层平均值](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode637/Solution.java)
 
 #### 中等：
 
@@ -264,7 +267,6 @@
 
 236、[二叉树的最近公共祖先](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode236/Solution.java)
 
-
 ### 1.6、栈、队列
 
 关键思想：递归，遍历，辅助栈
@@ -272,8 +274,6 @@
 #### 简单：
 
 20、[有效的括号](https://github.com/rain9155/LeetCodeSolution/blob/b0618cc851d249e33785f490f9c689ff12d5cc00/src/easy/leetcode20/Solution.java)
-
-155、[最小栈](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode155/MinStack.java)
 
 225、[用队列实现栈](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode225/MyStack.java)
 
@@ -284,6 +284,8 @@
 71、[简化路径](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode71/Solution.java)
 
 150、[逆波兰表达式求值](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode150/Solution.java)
+
+155、[最小栈](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode155/MinStack.java)
 
 227、[基本计算器 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode227/Solution.java)
 
@@ -309,6 +311,8 @@
 310、[最小高度树](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode310/Solution.java)
 
 332、[重新安排行程](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode332/Solution.java)
+
+433、[前 K 个高频元素](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode433/Solution.java)
 
 ### 1.8、并查集
 
@@ -354,8 +358,6 @@
 
 #### 简单：
 
-53、[最大子序和](https://github.com/rain9155/LeetCodeSolution/blob/76f3bf73ff16ec170b9b9aac5e40b1bdbbf57828/src/easy/leetcode53/Solution.java)
-
 70、[爬楼梯](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode70/Solution.java)
 
 121、[买卖股票的最佳时机](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode121/Solution.java)
@@ -365,6 +367,8 @@
 198、[打家劫舍](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode198/Solution.java)
 
 #### 中等：
+
+53、[最大子数组和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode53/Solution.java)
 
 62、[不同路径](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode62/Solution.java)
 
@@ -378,7 +382,7 @@
 
 139、[单词拆分](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode139/Solution.java)
 
-152、[乘积最大子序列](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode152/Solution.java)
+152、[乘积最大子数组](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode152/Solution.java)
 
 213、[打家劫舍 II](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode213/Solution.java)
 
@@ -404,6 +408,8 @@
 
 377、[组合总和 Ⅳ](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode377/Solution.java)
 
+918、[环形子数组的最大和](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode918/Solution.java)
+
 ### 2.2、贪心算法
 
 关键思想：选择目前最优的方案
@@ -420,6 +426,7 @@
 
 343、[整数拆分](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode343/Solution.java)
 
+452、[用最少数量的箭引爆气球](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode452/Solution.java)
 
 ### 2.3、博弈问题
 
@@ -557,9 +564,16 @@
 
 #### 简单：
 
+108、[将有序数组转换为二叉搜索树](https://github.com/rain9155/LeetCodeSolution/blob/master/src/easy/leetcode108/Solution.java)
+
 #### 中等：
 
+148、[排序链表](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode148/Solution.java)
+
 241、[为运算表达式设计优先级](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode241/Solution.java)
+
+427、[建立四叉树](https://github.com/rain9155/LeetCodeSolution/blob/master/src/medium/leetcode427/Solution.java)
+
 
 ### 2.8、位运算
 

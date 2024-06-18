@@ -19,18 +19,25 @@ package easy.leetcode392;
 public class Solution {
 
     /**
-     * 后续挑战: 用一个集合把t缓存，后续根据索引来找
+     * 双指针：O(n + m)
+     * 初始化两个指针i、j，分别指向s、t的初始位置，然后遍历t
+     * 当两个指针指向的字符相同时，i、j同时向后移动，否则j向后移动
+     * 如果i向后移动到s的末尾，说明s中所有的字符都能在t中匹配
      */
     public boolean isSubsequence(String s, String t) {
-        if(s.length() == 0) return true;
-        int index = 0;
-        for(int i = 0; i < t.length(); i++){
-            if(t.charAt(i) == s.charAt(index)){
-                index++;
+        if(s.length() == 0) {
+            return true;
+        }
+        int i = 0;
+        int j = 0;
+        while (i < s.length() && j < t.length()) {
+            if(s.charAt(i) == t.charAt(j)) {
+                i++;
             }
-            if(index == s.length()){
+            if(i == s.length()) {
                 return true;
             }
+            j++;
         }
         return false;
     }

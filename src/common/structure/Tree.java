@@ -6,22 +6,20 @@ import java.util.*;
 import java.util.List;
 
 /**
- * 树
+ * 二叉树
  */
 public class Tree {
 
-    public TreeNode initBiTree(int[] nums){
-        if(nums == null || nums.length == 0) return null;
-        TreeNode t = new TreeNode(nums[0]);
-        createBiTree(t, nums, 0);
-        int len = nums.length;
-        return t;
+    /**
+     * todo: 给定数组初始化一颗二叉树
+     */
+    public TreeNode initTree(int[] nums){
+        return null;
     }
 
-    private TreeNode createBiTree(TreeNode root, int[] nums, int index){
-        return root;
-    }
-
+    /**
+     * 前序遍历一颗二叉树
+     */
     public List<Integer> preorderTree(TreeNode root){
         List<Integer> ret = new ArrayList<>();
         traversal(root, ret);

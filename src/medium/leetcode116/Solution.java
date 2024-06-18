@@ -1,7 +1,5 @@
 package medium.leetcode116;
 
-import common.node.Node;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -21,6 +19,23 @@ import java.util.Queue;
  * 使用递归解题也符合要求，本题中递归程序占用的栈空间不算做额外的空间复杂度。
  */
 public class Solution {
+
+    public class Node {
+
+        public int val;
+        public Node left;
+        public Node right;
+        public Node next;
+    
+        public Node() {}
+        public Node(int _val, Node _left, Node _right, Node _next) {
+            val = _val;
+            left = _left;
+            right = _right;
+            next = _next;
+        }
+    
+    }
 
     /**
      * 非递归 + 使用队列(使用了额外的空间)：
@@ -64,7 +79,5 @@ public class Solution {
         connect2(root.left);
         return root;
     }
-
-
 
 }

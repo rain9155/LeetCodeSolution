@@ -1,6 +1,5 @@
-package easy.leetcode155;
+package medium.leetcode155;
 
-import java.nio.charset.StandardCharsets;
 import java.util.Stack;
 
 /**

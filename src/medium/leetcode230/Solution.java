@@ -19,6 +19,7 @@ import java.util.List;
  *   \
  *    2
  * 输出: 1
+ * 
  * 示例 2:
  * 输入: root = [5,3,6,2,4,null,null,1], k = 3
  *        5
@@ -29,6 +30,7 @@ import java.util.List;
  *   /
  *  1
  * 输出: 3
+ * 
  * 进阶：
  * 如果二叉搜索树经常被修改（插入/删除操作）并且你需要频繁地查找第 k 小的值，你将如何优化 kthSmallest 函数？
  */
@@ -85,7 +87,6 @@ public class Solution {
      * 如果左子树的节点数目等于 k-1，那么 root 就是结果，直接返回
      * 否则如果左子树节点数目小于 k-1，那么结果必然在右子树，递归在右子树继续搜索
      * 否则如果左子树的节点数目大于 k-1，那么结果必然在左子树，递归在左子树继续搜索
-     *
      */
     public int kthSmallest3(TreeNode root, int k) {
         if(root == null) return 0;

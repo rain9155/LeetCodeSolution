@@ -17,11 +17,10 @@ package easy.leetcode303;
  * Your NumArray object will be instantiated and called as such:
  * NumArray obj = new NumArray(nums);
  * int param_1 = obj.sumRange(i,j);
- *
  */
 
 /**
- * 哈希表：
+ * 一维前缀和：
  * 用一个一维数组datas缓存[0, i]累加的和，然后在求[i, j]范围的和时，只需要返回datas[j + 1] - datas[i]
  */
 public class NumArray {

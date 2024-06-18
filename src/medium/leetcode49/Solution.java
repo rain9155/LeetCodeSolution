@@ -5,6 +5,7 @@ import java.util.*;
 /**
  * 字母异位词分组:
  * 给定一个字符串数组，将字母异位词组合在一起。字母异位词指字母相同，但排列不同的字符串。
+ * 
  * 示例:
  * 输入: ["eat", "tea", "tan", "ate", "nat", "bat"],
  * 输出:
@@ -13,6 +14,7 @@ import java.util.*;
  *   ["nat","tan"],
  *   ["bat"]
  * ]
+ * 
  * 说明：
  * 所有输入均为小写字母。
  * 不考虑答案输出的顺序
@@ -20,12 +22,12 @@ import java.util.*;
 public class Solution {
 
     /**
-     * O(nklogk): 其中N 是 strs 的长度，而 K 是 strs 中字符串的最大长度
-     * 按排序数组分类：
+     * 按排序数组分类：O(nklogk)，其中N 是 strs 的长度，而 K 是 strs 中字符串的最大长度
      * 当且仅当它们的排序字符串相等时，两个字符串是字母异位词。
      * 维护一个映射 map : {String -> List}，其中每个键是一个排序字符串
      * 然后遍历这个strs，取出它的每一个字符K，排序，记排序后的字符串为T
      * 然后看map中是否有这个T，如果有，就取出T对应的List，把K放入List中，如果没有，就把在map中建立{T -> List}的映射，并把K放入List中
+     * 最后输出map中每个键对应的List集合就是结果
      */
     public List<List<String>> groupAnagrams(String[] strs) {
         if(strs== null || strs.length == 0) return new ArrayList<>();
@@ -54,10 +56,10 @@ public class Solution {
     }
 
     /**
-     * O(nk)
-     * 按计数分类：
+     * 按计数分类：O(nk)
      * 当且仅当它们的字符计数（每个字符的出现次数）相同时，两个字符串是字母异位词
      * 维护一个映射 map : {String -> List}，其中每个键是一个计数排序的字符串
+     * 最后输出map中每个键对应的List集合就是结果
      */
     public List<List<String>> groupAnagrams2(String[] strs) {
         if (strs.length == 0) return new ArrayList();

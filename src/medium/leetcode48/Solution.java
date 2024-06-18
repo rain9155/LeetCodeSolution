@@ -4,8 +4,10 @@ package medium.leetcode48;
  * 旋转图像:
  * 给定一个 n × n 的二维矩阵表示一个图像。
  * 将图像顺时针旋转 90 度。
+ * 
  * 说明：
  * 你必须在原地旋转图像，这意味着你需要直接修改输入的二维矩阵。请不要使用另一个矩阵来旋转图像。
+ * 
  * 示例 1:
  * 给定 matrix =
  * [
@@ -19,6 +21,7 @@ package medium.leetcode48;
  *   [8,5,2],
  *   [9,6,3]
  * ]
+ * 
  * 示例 2:
  * 给定 matrix =
  * [
@@ -38,7 +41,7 @@ package medium.leetcode48;
 public class Solution {
 
     /**
-     * 使用额外的空间：
+     * 使用额外的空间：O（n^2）
      * 从上到下的每一行的放到从左到右的每一列
      */
     public void rotate(int[][] matrix) {
@@ -55,8 +58,9 @@ public class Solution {
     }
 
     /**
-     * O（n^2）
-     * 先转置，再翻转每一行
+     * 原地修改：O（n^2）
+     * 先对矩阵进行转置，即将矩阵的行和列进行交换
+     * 然后对每一行进行翻转，即将每一行的元素顺序进行翻转
      */
     public void rotate2(int[][] matrix) {
         if(matrix.length == 0 || matrix.length != matrix[0].length) return;
@@ -83,8 +87,7 @@ public class Solution {
     }
 
     /**
-     * O（n^2）
-     * 找规律，
+     * 找规律：O（n^2）
      *                  (i,j)
      *  (n -j-1, i)                 (j, n-i-1)
      *              (n-i-1, n-j-1)

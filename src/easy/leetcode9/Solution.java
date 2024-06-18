@@ -7,10 +7,12 @@ package easy.leetcode9;
  * 示例 1:
  * 输入: 121
  * 输出: true
+ * 
  * 示例 2:
  * 输入: -121
  * 输出: false
  * 解释: 从左向右读, 为 -121 。 从右向左读, 为 121- 。因此它不是一个回文数。
+ * 
  * 示例 3:
  * 输入: 10
  * 输出: false
@@ -22,7 +24,8 @@ package easy.leetcode9;
 public class Solution {
 
     /**
-     * 先把整数转换成字符串，再判断字符串是否是回文（如果字符串是回文，则反转后的字符串与源字符串相同）(O(n))
+     * 字符串：O(n)
+     * 先把整数转换成字符串，再判断字符串是否是回文（如果字符串是回文，则反转后的字符串与源字符串相同）
      */
     public boolean isPalindrome(int x) {
         StringBuilder stringBuilder = new StringBuilder(String.valueOf(x));
@@ -30,7 +33,8 @@ public class Solution {
     }
 
     /**
-     * 反转一半数字, 再把反转的一半数字与前一半比较，如果相同就是回文数(O(log10(n)))
+     * 数学：O(log10(n))
+     * 反转一半数字, 再把反转的一半数字与前一半比较，如果相同就是回文数
      */
     public boolean isPalindrome2(int x) {
         //负数不是回文

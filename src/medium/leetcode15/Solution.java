@@ -1,30 +1,40 @@
 package medium.leetcode15;
 
 import common.Sorts;
-import common.Utils;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /**
  * 三数之和：
- * 给定一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，
+ * 给定一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c 
  * 使得 a + b + c = 0 ？找出所有满足条件且不重复的三元组。
  *
  * 注意：答案中不可以包含重复的三元组。
  *
- * 例如, 给定数组 nums = [-1, 0, 1, 2, -1, -4]，
- * 满足要求的三元组集合为：
- * [
- *   [-1, 0, 1],
- *   [-1, -1, 2]
- * ]
+ * 示例 1:
+ * 输入：nums = [-1, 0, 1, 2, -1, -4]，
+ * 输出：[[-1, 0, 1],[-1, -1, 2]]
+ * 解释：
+ * nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0 
+ * nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0 
+ * nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0 
+ * 不同的三元组是 [-1,0,1] 和 [-1,-1,2] ，注意，输出的顺序和三元组的顺序并不重要
+ * 
+ * 示例 2：
+ * 输入：nums = [0,1,1]
+ * 输出：[]
+ * 解释：唯一可能的三元组和不为 0 
+ * 
+ * 示例 3：
+ * 输入：nums = [0,0,0]
+ * 输出：[[0,0,0]]
+ * 解释：唯一可能的三元组和为 0 
  */
 public class Solution {
 
     /**
-     * 先排序，后蛮力法：（O(n^3)）
+     * 先排序，后蛮力法：O(n^3)
      */
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> ret = new ArrayList<List<Integer>>();
@@ -43,8 +53,7 @@ public class Solution {
     }
 
     /**
-     * O(n^2)
-     * 双指针：
+     * 双指针：O(n^2)
      * 先排序，定义三个指针，i，j，k，遍历i，
      * 那么这个问题就可以转化为在i之后的数组中寻找 nums[j] + nums[k] = 0 - nums[i] 这个问题，
      * 也就将三数之和问题转变为二数之和, 用双指针遍历求两数之和。

@@ -1,7 +1,5 @@
 package medium.leetcode73;
 
-import java.util.Arrays;
-
 /**
  * 矩阵置零:
  * 给定一个 m x n 的矩阵，如果一个元素为 0，则将其所在行和列的所有元素都设为 0。请使用原地算法。
@@ -41,8 +39,7 @@ import java.util.Arrays;
 public class Solution {
 
     /**
-     * O(mn)
-     * 使用额外的空间：
+     * 使用额外的空间：O(mn)
      * 1、首先创建一个和matrix一样大小的二维数组temp，然后把matrix复制给temp
      * 2、遍历matrix，当遇到matrix[i][j]等于0时，就把temp的第i行和第j列的元素都置为0
      * 3、最后把temp复制给matrix
@@ -82,8 +79,7 @@ public class Solution {
 
 
     /**
-     * O(nm(n + m))：
-     * 原地算法：
+     * 原地算法：O(nm(n + m))
      * 1、遍历原始矩阵，如果发现如果某个元素 matrix[i][j] 为 0， 我们将第 i 行和第 j 列的所有非零元素设成很大的负虚拟值
      * 2、最后，我们遍历整个矩阵将所有等于虚拟值的元素设为 0。
      */
@@ -123,8 +119,7 @@ public class Solution {
     }
 
     /**
-     * O(nm)
-     * 原地算法：
+     * 原地算法：O(nm)
      * 1、把matrix的第一行和第一列留出来，然后记录第一行和第一列是否会全为0，从第二行和第二列开始遍历
      * 2、每matrix[i][j] = 0时，就把第一行的第j列置为0，第一列第i行置为0
      * 3、当matrix遍历完后，分别遍历matrix的第一行或第一列，如果为0，就把这一行或这一列置为0

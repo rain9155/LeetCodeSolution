@@ -1,9 +1,5 @@
 package easy.leetcode198;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Queue;
-
 /**
  * 打家劫舍:
  * 你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。
@@ -14,6 +10,7 @@ import java.util.Queue;
  * 输出: 4
  * 解释: 偷窃 1 号房屋 (金额 = 1) ，然后偷窃 3 号房屋 (金额 = 3)。
  *      偷窃到的最高金额 = 1 + 3 = 4 。
+ * 
  * 示例 2:
  * 输入: [2,7,9,3,1]
  * 输出: 12

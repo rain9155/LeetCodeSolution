@@ -8,6 +8,7 @@ package easy.leetcode14;
  * 示例 1:
  * 输入: ["flower","flow","flight"]
  * 输出: "fl"
+ * 
  * 示例 2:
  * 输入: ["dog","racecar","car"]
  * 输出: ""

@@ -1,4 +1,4 @@
-package easy.leetcode189;
+package medium.leetcode189;
 
 /**
  * 旋转数组:
@@ -74,7 +74,5 @@ public class Solution {
             end--;
         }
     }
-
-
 
 }
